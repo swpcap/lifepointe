@@ -456,7 +456,7 @@ function create_elder_type() {
     'show_in_menu' => true, 
     'query_var' => true,
     'rewrite' => true,
-    'capability_type' => 'elder',
+    'capability_type' => 'staff',
     'has_archive' => true, 
     'hierarchical' => true,
     'menu_icon' => $directory . '/images/staff.png',
