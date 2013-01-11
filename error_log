@@ -28,3 +28,4 @@
 [19-Nov-2012 18:06:39] PHP Warning:  readfile(http://sharethelife.org/wp-content/uploads/why-does-lpc-exist.png) [<a href='function.readfile'>function.readfile</a>]: failed to open stream: HTTP request failed! HTTP/1.1 404 Not Found
  in /home/lpcgator/public_html/wp-content/themes/lifepointe/download.php on line 21
 [22-Dec-2012 07:23:05] PHP Warning:  readfile() [<a href='function.readfile'>function.readfile</a>]: Filename cannot be empty in /home/lpcgator/public_html/wp-content/themes/lifepointe/download.php on line 21
+[09-Jan-2013 16:18:40] PHP Warning:  readfile() [<a href='function.readfile'>function.readfile</a>]: Filename cannot be empty in /home/lpcgator/public_html/wp-content/themes/lifepointe/download.php on line 21
