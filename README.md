@@ -1,4 +1,4 @@
 lifepointe
 ==========
 
-Theme developed for LifePointe Church of Fort Collins, CO
+Theme developed for LifePointe Church of Fort Collins, Colorado
