@@ -368,6 +368,9 @@ a .entry-title {
 .type-staff .entry-title {
 	font: 2em "BlueHighwayRegular";
 }
+.type-elder .entry-title {
+	font: 2em "BlueHighwayRegular";
+}
 .sticky {
 }
 .entry-meta {
@@ -930,6 +933,9 @@ a.more-link:active {
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#004193', endColorstr='#1891da');
 }
 .staff .more-link {
+	float: right;
+}
+.esder .more-link {
 	float: right;
 }
 
