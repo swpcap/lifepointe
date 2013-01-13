@@ -19,7 +19,7 @@ get_header(); ?>
 			<?php if ( have_posts() ) : ?>
 
 				<header>
-					<h1 class="page-title">Elder</h1>
+					<h1 class="page-title">Elders</h1>
 				</header>
 
 				<?php /* Start the Loop */ ?>
