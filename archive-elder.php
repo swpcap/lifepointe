@@ -62,8 +62,8 @@ get_header(); ?>
 
 				<aside id="ns1">
 					<?php
-						$settings = get_option('lifepointe_elder');
-						$ns1_slug = $settings['elderns1'];
+						$settings = get_option('lifepointe_staff');
+						$ns1_slug = $settings['staffns1'];
 						$ns1_page = get_page_by_path($ns1_slug);
 						$ns1_value = $ns1_page->ID;
 						if ( has_post_thumbnail($ns1_value)) {
@@ -79,8 +79,8 @@ get_header(); ?>
 
 				<aside id="ns2" class="widget">
 					<?php
-						$settings = get_option('lifepointe_elder');
-						$ns2_slug = $settings['elderns2'];
+						$settings = get_option('lifepointe_staff');
+						$ns2_slug = $settings['staffns2'];
 						$ns2_page = get_page_by_path($ns2_slug);
 						$ns2_value = $ns2_page->ID;
 						if ( has_post_thumbnail($ns2_value)) {
@@ -96,8 +96,8 @@ get_header(); ?>
 
 				<aside id="ns3" class="widget">
 					<?php
-						$settings = get_option('lifepointe_elder');
-						$ns3_slug = $settings['elderns3'];
+						$settings = get_option('lifepointe_staff');
+						$ns3_slug = $settings['staffns3'];
 						$ns3_page = get_page_by_path($ns3_slug);
 						$ns3_value = $ns3_page->ID;
 						if ( has_post_thumbnail($ns3_value)) {
