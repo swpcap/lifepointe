@@ -682,6 +682,7 @@ function my_meta_boxes() {
 	add_meta_box("week18", "Week 18", "week18", "sermon", "normal", "high");
 	add_meta_box("week19", "Week 19", "week19", "sermon", "normal", "high");
 	add_meta_box("week20", "Week 20", "week20", "sermon", "normal", "high");
+	add_meta_box("week21", "Week 21", "week21", "sermon", "normal", "high");
 	
 	add_meta_box('ns_meta', 'Next Steps', 'ns_meta', 'post', 'side', 'high');
 	add_meta_box('ns_meta', 'Next Steps', 'ns_meta', 'page', 'side', 'high');
@@ -2036,6 +2037,70 @@ function week20() {
 	<?php
 }
 
+/* Week 21 */
+function week21() {
+	global $post;
+	$custom = get_post_custom($post->ID);
+	$week21_title = $custom["week21_title"] [0];
+	$week21_passage = $custom["week21_passage"] [0];
+        $week21_date = $custom["week21_date"] [0];
+	$week21_speaker = $custom["week21_speaker"] [0];
+	$week21_audio = $custom["week21_audio"] [0];
+	$week21_vimeo_title = $custom["week21_vimeo_title"] [0];
+	$week21_vimeo_id = $custom["week21_vimeo_id"] [0];
+	$week21_pdf = $custom["week21_pdf"] [0];
+?>
+    <p><label>Title</label> 
+	<input type="text" size="40" name="week21_title" value="<?php echo $week21_title; ?>" />&nbsp;&nbsp;&nbsp;
+	<label>Date</label>
+	<script>jQuery(document).ready(function(){jQuery( "input[name='week21_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('.week21-audio-upload').click(function() {
+            tb_show('', 'media-upload.php?TB_iframe=true');
+            window.send_to_editor = function(html) {
+                url = jQuery(html).attr('href');
+                jQuery('#week21_audio').val(url);
+                tb_remove();
+            };
+        return false;
+        });
+    });
+    jQuery(document).ready(function() {
+        jQuery('.week21-pdf-upload').click(function() {
+            tb_show('', 'media-upload.php?TB_iframe=true');
+            window.send_to_editor = function(html) {
+                url = jQuery(html).attr('href');
+                jQuery('#week21_pdf').val(url);
+                tb_remove();
+            };
+        return false;
+        });
+    });
+    </script>
+	<?php 
+	$dateMeta = get_post_meta($post->ID, 'week21_date', true);
+    if (get_post_meta($post->ID, 'week21_date', true)) {
+	$displayDate = date('F j, Y', $dateMeta);
+	} else { $displayDate = '';
+	}
+	?>
+	<input type="text" name="week21_date" id="week21_date" value="<?php echo $displayDate ?>" /></p>
+	<p><label>Passage</label> 
+	<input type="text" size="25" name="week21_passage" value="<?php echo $week21_passage; ?>" />&nbsp;&nbsp;&nbsp;
+	<label>Speaker</label> 
+	<input type="text" size="25" name="week21_speaker" value="<?php echo $week21_speaker; ?>" /></p>
+	<p><label>MP3 File
+	<input type="text" size="25" id="week21_audio" name="week21_audio" value="<?php echo $week21_audio; ?>" />  <a class="week21-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
+	<label>Presentation
+	<input type="text" size="25" id="week21_pdf" name="week21_pdf" value="<?php echo $week21_pdf; ?>" />  <a class="week21-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
+    <p><label>Vimeo Title</label> 
+	<input type="text" size="25" name="week21_vimeo_title" value="<?php echo $week21_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label> 
+	<input type="text" size="25" name="week21_vimeo_id" value="<?php echo $week21_vimeo_id; ?>" /></p>
+	<?php
+}
+
 /* Next Steps */
 function feed_cat() {
 	global $post;
@@ -2257,6 +2322,15 @@ function save_details(){
 	update_post_meta($post->ID, "week20_vimeo_id", $_POST["week20_vimeo_id"]);
 	update_post_meta($post->ID, "week20_pdf", $_POST["week20_pdf"]);
 	update_post_meta($post->ID, "week20_date", strtotime($_POST["week20_date"]));
+	
+	update_post_meta($post->ID, "week21_title", $_POST["week21_title"]);
+	update_post_meta($post->ID, "week21_passage", $_POST["week21_passage"]);
+	update_post_meta($post->ID, "week21_speaker", $_POST["week21_speaker"]);
+	update_post_meta($post->ID, "week21_audio", $_POST["week21_audio"]);
+	update_post_meta($post->ID, "week21_vimeo_title", $_POST["week21_vimeo_title"]);
+	update_post_meta($post->ID, "week21_vimeo_id", $_POST["week21_vimeo_id"]);
+	update_post_meta($post->ID, "week21_pdf", $_POST["week21_pdf"]);
+	update_post_meta($post->ID, "week21_date", strtotime($_POST["week21_date"]));
 	
 	update_post_meta($post->ID, "feed_term", $_POST["feed_term"]);
 
