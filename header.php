@@ -103,24 +103,7 @@ function popUp (c) {
 			<?php get_search_form(); ?>
 		</aside>
 
-		<a href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png">
-                <?php
-
-		$settings = get_option('lifepointe_general');
-		if( $settings['beta'] === '1' ) {
-
-		    echo '<div class="status">';
-                
-                    $theme_name = 'lifepointe'; 
-                                
-                    $theme_data = get_theme_data(WP_CONTENT_DIR . '/themes/' . $theme_name . '/style.css');
-                    echo $theme_data['Version'];
-
-		    echo '</div>';
-
-		}
-                
-                ?></a>
+		<a href="<?php echo site_url(); ?>"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/logo.png"></a>
 
 		<nav id="access" role="navigation">
 			<h1 class="assistive-text section-heading"><?php _e( 'Main menu', 'lifepointe' ); ?></h1>
