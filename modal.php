@@ -33,26 +33,26 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php
-	/*
-	 * Print the <title> tag based on what is being viewed.
-	 */
-	global $page, $paged;
+  /*
+   * Print the <title> tag based on what is being viewed.
+   */
+  global $page, $paged;
 
-	wp_title( '|', true, 'right' );
+  wp_title( '|', true, 'right' );
 
-	// Add the blog name.
-	bloginfo( 'name' );
+  // Add the blog name.
+  bloginfo( 'name' );
 
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
+  // Add the blog description for the home/front page.
+  $site_description = get_bloginfo( 'description', 'display' );
+  if ( $site_description && ( is_home() || is_front_page() ) )
+    echo " | $site_description";
 
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'lifepointe' ), max( $paged, $page ) );
+  // Add a page number if necessary:
+  if ( $paged >= 2 || $page >= 2 )
+    echo ' | ' . sprintf( __( 'Page %s', 'lifepointe' ), max( $paged, $page ) );
 
-	?></title>
+  ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/style-theme.php" />
@@ -61,8 +61,8 @@
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <?php if ( is_single('76') ): 
-	echo '<meta http-equiv="refresh" content="0; url=http://www.churchteams.com/Login.asp?oID=8895&amp;secID=bktxaTN1aWJhSXA5OFd4d3JSbmg3MlExMjZmUmEwam0%3D&amp;page=GroupBrowseNew.asp?filter=y~q34726=164211~Title=" />';
-	endif ?>
+  echo '<meta http-equiv="refresh" content="0; url=http://www.churchteams.com/Login.asp?oID=8895&amp;secID=bktxaTN1aWJhSXA5OFd4d3JSbmg3MlExMjZmUmEwam0%3D&amp;page=GroupBrowseNew.asp?filter=y~q34726=164211~Title=" />';
+  endif ?>
 <![endif]-->
 
 <?php wp_head(); ?>
@@ -70,18 +70,18 @@
 
 <body <?php body_class(); ?>>
 
-			<div id="primary" class="full-width">
-				<div id="content">
+      <div id="primary" class="full-width">
+        <div id="content">
 
-					<?php while ( have_posts() ) : the_post(); ?>
+          <?php while ( have_posts() ) : the_post(); ?>
 
-						<?php get_template_part( 'content', 'page' ); ?>
+            <?php get_template_part( 'content', 'page' ); ?>
 
-						<?php comments_template( '', true ); ?>
+            <?php comments_template( '', true ); ?>
 
-					<?php endwhile; // end of the loop. ?>
-				</div>
-			</div>
+          <?php endwhile; // end of the loop. ?>
+        </div>
+      </div>
 
 <?php //Load footer ?>
 
