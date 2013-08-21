@@ -52,9 +52,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-                  <?php
-                    $audio = wp_get_attachment_url();
-          echo do_shortcode( '[audio ' .  $audio .'|animation=no]' ) ?>
-                    <a class="download" href="<?php echo $audio ?>">Right-click to download</a>
+  <?php the_title(); ?>
+  <?php $audio = wp_get_attachment_url(); echo do_shortcode( '[audio ' .  $audio .']' ) ?>
 </body>
 </html>
