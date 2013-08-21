@@ -14,8 +14,9 @@
 	<footer id="colophon" role="contentinfo">
 		<div id="contactinfo">
 		<!-- Celebration Sunday October 28 Service Time 9:30am -->
-		<h2>Service Times are 9:30am and 11:00am on Sundays</h2>
-                LifePointe Church<span class="sep"> | </span>900 E Prospect Rd<span class="sep"> | </span>Fort Collins, CO 80524<span class="sep"> | </span>970.484.4053
+		<h2>Sunday Worship @ 9:30am and LifeGroups @ 11:00am</h2>
+		<a href="http://sharethelife.org/about/">
+                LifePointe Church<span class="sep"> | </span>900 E Prospect Rd<span class="sep"> | </span>Fort Collins, CO 80524<span class="sep"> | </span>970.484.4053</a>
 		<div id="site-generator">
 			<?php do_action( 'lifepointe_credits' ); ?>
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'lifepointe' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'lifepointe' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'lifepointe' ), 'WordPress' ); ?></a>
