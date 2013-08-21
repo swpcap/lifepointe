@@ -9,6 +9,6 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?include (ABSPATH . '/wp-content/plugins/coin-slider-4-wp/coinslider.php'); ?>
+  <?include (ABSPATH . '/wp-content/plugins/coin-slider-4-wp/coinslider.php'); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->
