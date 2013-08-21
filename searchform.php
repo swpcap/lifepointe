@@ -1,5 +1,5 @@
 <?php
-	$settings = get_option('lifepointe_general');
+  $settings = get_option('lifepointe_general');
 ?>
 
 <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
