@@ -11,6 +11,42 @@
   $series_img = wp_get_attachment_image_src( $id, 'podcast' );
 } ?>
 <?php //Define keys
+  if ( get_post_meta($post->ID, 'week21_date', true) ) {
+    $dateMeta21 = get_post_meta($post->ID, 'week21_date', true);
+    $week21_date = date('D, j M Y', $dateMeta21);
+  }
+  if ( get_post_meta($post->ID, 'week20_date', true) ) {
+    $dateMeta20 = get_post_meta($post->ID, 'week20_date', true);
+    $week20_date = date('D, j M Y', $dateMeta20);
+  }
+  if ( get_post_meta($post->ID, 'week19_date', true) ) {
+    $dateMeta19 = get_post_meta($post->ID, 'week19_date', true);
+    $week19_date = date('D, j M Y', $dateMeta19);
+  }
+  if ( get_post_meta($post->ID, 'week18_date', true) ) {
+    $dateMeta18 = get_post_meta($post->ID, 'week18_date', true);
+    $week18_date = date('D, j M Y', $dateMeta18);
+  }
+  if ( get_post_meta($post->ID, 'week17_date', true) ) {
+    $dateMeta17 = get_post_meta($post->ID, 'week17_date', true);
+    $week17_date = date('D, j M Y', $dateMeta17);
+  }
+  if ( get_post_meta($post->ID, 'week16_date', true) ) {
+    $dateMeta16 = get_post_meta($post->ID, 'week16_date', true);
+    $week16_date = date('D, j M Y', $dateMeta16);
+  }
+  if ( get_post_meta($post->ID, 'week15_date', true) ) {
+    $dateMeta15 = get_post_meta($post->ID, 'week15_date', true);
+    $week15_date = date('D, j M Y', $dateMeta15);
+  }
+  if ( get_post_meta($post->ID, 'week14_date', true) ) {
+    $dateMeta14 = get_post_meta($post->ID, 'week14_date', true);
+    $week14_date = date('D, j M Y', $dateMeta14);
+  }
+  if ( get_post_meta($post->ID, 'week13_date', true) ) {
+    $dateMeta13 = get_post_meta($post->ID, 'week13_date', true);
+    $week13_date = date('D, j M Y', $dateMeta13);
+  }
   if ( get_post_meta($post->ID, 'week12_date', true) ) {
     $dateMeta12 = get_post_meta($post->ID, 'week12_date', true);
     $week12_date = date('D, j M Y', $dateMeta12);
@@ -60,6 +96,330 @@
     $week1_date = date('D, j M Y', $dateMeta1);
   }
 ?>
+<?php if ( get_post_meta($post->ID, 'week21_audio', true) ) : ?>
+<item>
+  <?php $audioMeta21 = get_post_meta($post->ID, 'week21_audio', true);
+        $week21_id = url_to_postid( $audioMeta21 );
+        $week21_file = wp_get_attachment_url( $week21_id );
+        $week21_length = filesize( get_attached_file( $week21_id ) );
+        $week21_duration = get_post_meta( $week21_id , '_duration', true);
+        $week21_keywords = get_post_meta( $week21_id , '_keywords', true);
+        $week21_post = get_post($week21_id);
+        $week21_content = $week21_post->post_content;
+        $week21_content = apply_filters('the_content', $week21_content);
+        $week21_content = str_replace(']]>', ']]>', $week21_content);
+        $week21_summary = strip_tags($week21_content);
+  ?>
+  <title><?php the_title(); ?> - <?php meta('week21_title') ?></title>
+  
+  <itunes:author><?php meta('week21_speaker') ?></itunes:author>
+  
+  <itunes:subtitle>Scripture: <?php meta('week21_passage') ?></itunes:subtitle>
+  
+  <itunes:summary><?php echo $week21_summary; ?></itunes:summary>
+  
+  <itunes:image href="<?php echo $series_img[0]; ?>" />
+  
+  <enclosure url="<?php echo $week21_file; ?>" length="<?php echo $week21_length; ?>" type="audio/mpeg" />
+  
+  <guid><?php echo $week21_file; ?></guid>
+  
+  <pubDate><?php echo $week21_date; ?> 11:00:00 MDT</pubDate>
+  
+  <itunes:duration><?php echo $week21_duration; ?></itunes:duration>
+  
+  <itunes:keywords><?php echo $week21_keywords; ?></itunes:keywords>
+
+</item>
+<?php endif; ?>
+<?php if ( get_post_meta($post->ID, 'week20_audio', true) ) : ?>
+<item>
+  <?php $audioMeta20 = get_post_meta($post->ID, 'week20_audio', true);
+        $week20_id = url_to_postid( $audioMeta20 );
+        $week20_file = wp_get_attachment_url( $week20_id );
+        $week20_length = filesize( get_attached_file( $week20_id ) );
+        $week20_duration = get_post_meta( $week20_id , '_duration', true);
+        $week20_keywords = get_post_meta( $week20_id , '_keywords', true);
+        $week20_post = get_post($week20_id);
+        $week20_content = $week20_post->post_content;
+        $week20_content = apply_filters('the_content', $week20_content);
+        $week20_content = str_replace(']]>', ']]>', $week20_content);
+        $week20_summary = strip_tags($week20_content);
+  ?>
+  <title><?php the_title(); ?> - <?php meta('week20_title') ?></title>
+  
+  <itunes:author><?php meta('week20_speaker') ?></itunes:author>
+  
+  <itunes:subtitle>Scripture: <?php meta('week20_passage') ?></itunes:subtitle>
+  
+  <itunes:summary><?php echo $week20_summary; ?></itunes:summary>
+  
+  <itunes:image href="<?php echo $series_img[0]; ?>" />
+  
+  <enclosure url="<?php echo $week20_file; ?>" length="<?php echo $week20_length; ?>" type="audio/mpeg" />
+  
+  <guid><?php echo $week20_file; ?></guid>
+  
+  <pubDate><?php echo $week20_date; ?> 11:00:00 MDT</pubDate>
+  
+  <itunes:duration><?php echo $week20_duration; ?></itunes:duration>
+  
+  <itunes:keywords><?php echo $week20_keywords; ?></itunes:keywords>
+
+</item>
+<?php endif; ?>
+<?php if ( get_post_meta($post->ID, 'week19_audio', true) ) : ?>
+<item>
+  <?php $audioMeta19 = get_post_meta($post->ID, 'week19_audio', true);
+        $week19_id = url_to_postid( $audioMeta19 );
+        $week19_file = wp_get_attachment_url( $week19_id );
+        $week19_length = filesize( get_attached_file( $week19_id ) );
+        $week19_duration = get_post_meta( $week19_id , '_duration', true);
+        $week19_keywords = get_post_meta( $week19_id , '_keywords', true);
+        $week19_post = get_post($week19_id);
+        $week19_content = $week19_post->post_content;
+        $week19_content = apply_filters('the_content', $week19_content);
+        $week19_content = str_replace(']]>', ']]>', $week19_content);
+        $week19_summary = strip_tags($week19_content);
+  ?>
+  <title><?php the_title(); ?> - <?php meta('week19_title') ?></title>
+  
+  <itunes:author><?php meta('week19_speaker') ?></itunes:author>
+  
+  <itunes:subtitle>Scripture: <?php meta('week19_passage') ?></itunes:subtitle>
+  
+  <itunes:summary><?php echo $week19_summary; ?></itunes:summary>
+  
+  <itunes:image href="<?php echo $series_img[0]; ?>" />
+  
+  <enclosure url="<?php echo $week19_file; ?>" length="<?php echo $week19_length; ?>" type="audio/mpeg" />
+  
+  <guid><?php echo $week19_file; ?></guid>
+  
+  <pubDate><?php echo $week19_date; ?> 11:00:00 MDT</pubDate>
+  
+  <itunes:duration><?php echo $week19_duration; ?></itunes:duration>
+  
+  <itunes:keywords><?php echo $week19_keywords; ?></itunes:keywords>
+
+</item>
+<?php endif; ?>
+<?php if ( get_post_meta($post->ID, 'week18_audio', true) ) : ?>
+<item>
+  <?php $audioMeta18 = get_post_meta($post->ID, 'week18_audio', true);
+        $week18_id = url_to_postid( $audioMeta18 );
+        $week18_file = wp_get_attachment_url( $week18_id );
+        $week18_length = filesize( get_attached_file( $week18_id ) );
+        $week18_duration = get_post_meta( $week18_id , '_duration', true);
+        $week18_keywords = get_post_meta( $week18_id , '_keywords', true);
+        $week18_post = get_post($week18_id);
+        $week18_content = $week18_post->post_content;
+        $week18_content = apply_filters('the_content', $week18_content);
+        $week18_content = str_replace(']]>', ']]>', $week18_content);
+        $week18_summary = strip_tags($week18_content);
+  ?>
+  <title><?php the_title(); ?> - <?php meta('week18_title') ?></title>
+  
+  <itunes:author><?php meta('week18_speaker') ?></itunes:author>
+  
+  <itunes:subtitle>Scripture: <?php meta('week18_passage') ?></itunes:subtitle>
+  
+  <itunes:summary><?php echo $week18_summary; ?></itunes:summary>
+  
+  <itunes:image href="<?php echo $series_img[0]; ?>" />
+  
+  <enclosure url="<?php echo $week18_file; ?>" length="<?php echo $week18_length; ?>" type="audio/mpeg" />
+  
+  <guid><?php echo $week18_file; ?></guid>
+  
+  <pubDate><?php echo $week18_date; ?> 11:00:00 MDT</pubDate>
+  
+  <itunes:duration><?php echo $week18_duration; ?></itunes:duration>
+  
+  <itunes:keywords><?php echo $week18_keywords; ?></itunes:keywords>
+
+</item>
+<?php endif; ?>
+<?php if ( get_post_meta($post->ID, 'week17_audio', true) ) : ?>
+<item>
+  <?php $audioMeta17 = get_post_meta($post->ID, 'week17_audio', true);
+        $week17_id = url_to_postid( $audioMeta17 );
+        $week17_file = wp_get_attachment_url( $week17_id );
+        $week17_length = filesize( get_attached_file( $week17_id ) );
+        $week17_duration = get_post_meta( $week17_id , '_duration', true);
+        $week17_keywords = get_post_meta( $week17_id , '_keywords', true);
+        $week17_post = get_post($week17_id);
+        $week17_content = $week17_post->post_content;
+        $week17_content = apply_filters('the_content', $week17_content);
+        $week17_content = str_replace(']]>', ']]>', $week17_content);
+        $week17_summary = strip_tags($week17_content);
+  ?>
+  <title><?php the_title(); ?> - <?php meta('week17_title') ?></title>
+  
+  <itunes:author><?php meta('week17_speaker') ?></itunes:author>
+  
+  <itunes:subtitle>Scripture: <?php meta('week17_passage') ?></itunes:subtitle>
+  
+  <itunes:summary><?php echo $week17_summary; ?></itunes:summary>
+  
+  <itunes:image href="<?php echo $series_img[0]; ?>" />
+  
+  <enclosure url="<?php echo $week17_file; ?>" length="<?php echo $week17_length; ?>" type="audio/mpeg" />
+  
+  <guid><?php echo $week17_file; ?></guid>
+  
+  <pubDate><?php echo $week17_date; ?> 11:00:00 MDT</pubDate>
+  
+  <itunes:duration><?php echo $week17_duration; ?></itunes:duration>
+  
+  <itunes:keywords><?php echo $week17_keywords; ?></itunes:keywords>
+
+</item>
+<?php endif; ?>
+<?php if ( get_post_meta($post->ID, 'week16_audio', true) ) : ?>
+<item>
+  <?php $audioMeta16 = get_post_meta($post->ID, 'week16_audio', true);
+        $week16_id = url_to_postid( $audioMeta16 );
+        $week16_file = wp_get_attachment_url( $week16_id );
+        $week16_length = filesize( get_attached_file( $week16_id ) );
+        $week16_duration = get_post_meta( $week16_id , '_duration', true);
+        $week16_keywords = get_post_meta( $week16_id , '_keywords', true);
+        $week16_post = get_post($week16_id);
+        $week16_content = $week16_post->post_content;
+        $week16_content = apply_filters('the_content', $week16_content);
+        $week16_content = str_replace(']]>', ']]>', $week16_content);
+        $week16_summary = strip_tags($week16_content);
+  ?>
+  <title><?php the_title(); ?> - <?php meta('week16_title') ?></title>
+  
+  <itunes:author><?php meta('week16_speaker') ?></itunes:author>
+  
+  <itunes:subtitle>Scripture: <?php meta('week16_passage') ?></itunes:subtitle>
+  
+  <itunes:summary><?php echo $week16_summary; ?></itunes:summary>
+  
+  <itunes:image href="<?php echo $series_img[0]; ?>" />
+  
+  <enclosure url="<?php echo $week16_file; ?>" length="<?php echo $week16_length; ?>" type="audio/mpeg" />
+  
+  <guid><?php echo $week16_file; ?></guid>
+  
+  <pubDate><?php echo $week16_date; ?> 11:00:00 MDT</pubDate>
+  
+  <itunes:duration><?php echo $week16_duration; ?></itunes:duration>
+  
+  <itunes:keywords><?php echo $week16_keywords; ?></itunes:keywords>
+
+</item>
+<?php endif; ?>
+<?php if ( get_post_meta($post->ID, 'week15_audio', true) ) : ?>
+<item>
+  <?php $audioMeta15 = get_post_meta($post->ID, 'week15_audio', true);
+        $week15_id = url_to_postid( $audioMeta15 );
+        $week15_file = wp_get_attachment_url( $week15_id );
+        $week15_length = filesize( get_attached_file( $week15_id ) );
+        $week15_duration = get_post_meta( $week15_id , '_duration', true);
+        $week15_keywords = get_post_meta( $week15_id , '_keywords', true);
+        $week15_post = get_post($week15_id);
+        $week15_content = $week15_post->post_content;
+        $week15_content = apply_filters('the_content', $week15_content);
+        $week15_content = str_replace(']]>', ']]>', $week15_content);
+        $week15_summary = strip_tags($week15_content);
+  ?>
+  <title><?php the_title(); ?> - <?php meta('week15_title') ?></title>
+  
+  <itunes:author><?php meta('week15_speaker') ?></itunes:author>
+  
+  <itunes:subtitle>Scripture: <?php meta('week15_passage') ?></itunes:subtitle>
+  
+  <itunes:summary><?php echo $week15_summary; ?></itunes:summary>
+  
+  <itunes:image href="<?php echo $series_img[0]; ?>" />
+  
+  <enclosure url="<?php echo $week15_file; ?>" length="<?php echo $week15_length; ?>" type="audio/mpeg" />
+  
+  <guid><?php echo $week15_file; ?></guid>
+  
+  <pubDate><?php echo $week15_date; ?> 11:00:00 MDT</pubDate>
+  
+  <itunes:duration><?php echo $week15_duration; ?></itunes:duration>
+  
+  <itunes:keywords><?php echo $week15_keywords; ?></itunes:keywords>
+
+</item>
+<?php endif; ?>
+<?php if ( get_post_meta($post->ID, 'week14_audio', true) ) : ?>
+<item>
+  <?php $audioMeta14 = get_post_meta($post->ID, 'week14_audio', true);
+        $week14_id = url_to_postid( $audioMeta14 );
+        $week14_file = wp_get_attachment_url( $week14_id );
+        $week14_length = filesize( get_attached_file( $week14_id ) );
+        $week14_duration = get_post_meta( $week14_id , '_duration', true);
+        $week14_keywords = get_post_meta( $week14_id , '_keywords', true);
+        $week14_post = get_post($week14_id);
+        $week14_content = $week14_post->post_content;
+        $week14_content = apply_filters('the_content', $week14_content);
+        $week14_content = str_replace(']]>', ']]>', $week14_content);
+        $week14_summary = strip_tags($week14_content);
+  ?>
+  <title><?php the_title(); ?> - <?php meta('week14_title') ?></title>
+  
+  <itunes:author><?php meta('week14_speaker') ?></itunes:author>
+  
+  <itunes:subtitle>Scripture: <?php meta('week14_passage') ?></itunes:subtitle>
+  
+  <itunes:summary><?php echo $week14_summary; ?></itunes:summary>
+  
+  <itunes:image href="<?php echo $series_img[0]; ?>" />
+  
+  <enclosure url="<?php echo $week14_file; ?>" length="<?php echo $week14_length; ?>" type="audio/mpeg" />
+  
+  <guid><?php echo $week14_file; ?></guid>
+  
+  <pubDate><?php echo $week14_date; ?> 11:00:00 MDT</pubDate>
+  
+  <itunes:duration><?php echo $week14_duration; ?></itunes:duration>
+  
+  <itunes:keywords><?php echo $week14_keywords; ?></itunes:keywords>
+
+</item>
+<?php endif; ?>
+<?php if ( get_post_meta($post->ID, 'week13_audio', true) ) : ?>
+<item>
+  <?php $audioMeta13 = get_post_meta($post->ID, 'week13_audio', true);
+        $week13_id = url_to_postid( $audioMeta13 );
+        $week13_file = wp_get_attachment_url( $week13_id );
+        $week13_length = filesize( get_attached_file( $week13_id ) );
+        $week13_duration = get_post_meta( $week13_id , '_duration', true);
+        $week13_keywords = get_post_meta( $week13_id , '_keywords', true);
+        $week13_post = get_post($week13_id);
+        $week13_content = $week13_post->post_content;
+        $week13_content = apply_filters('the_content', $week13_content);
+        $week13_content = str_replace(']]>', ']]>', $week13_content);
+        $week13_summary = strip_tags($week13_content);
+  ?>
+  <title><?php the_title(); ?> - <?php meta('week13_title') ?></title>
+  
+  <itunes:author><?php meta('week13_speaker') ?></itunes:author>
+  
+  <itunes:subtitle>Scripture: <?php meta('week13_passage') ?></itunes:subtitle>
+  
+  <itunes:summary><?php echo $week13_summary; ?></itunes:summary>
+  
+  <itunes:image href="<?php echo $series_img[0]; ?>" />
+  
+  <enclosure url="<?php echo $week13_file; ?>" length="<?php echo $week13_length; ?>" type="audio/mpeg" />
+  
+  <guid><?php echo $week13_file; ?></guid>
+  
+  <pubDate><?php echo $week13_date; ?> 11:00:00 MDT</pubDate>
+  
+  <itunes:duration><?php echo $week13_duration; ?></itunes:duration>
+  
+  <itunes:keywords><?php echo $week13_keywords; ?></itunes:keywords>
+
+</item>
+<?php endif; ?>
 <?php if ( get_post_meta($post->ID, 'week12_audio', true) ) : ?>
 <item>
   <?php $audioMeta12 = get_post_meta($post->ID, 'week12_audio', true);
