@@ -31,7 +31,6 @@ elseif ( has_post_thumbnail() )
 								<div id="article-teaser">
 						<a href="<?php the_permalink(); ?>"><h1 class="entry-title"><?php the_title(); ?></h1></a>
 						<div class="entry-meta">
-			<?php lifepointe_posted_on(); ?>
 		</div><!-- .entry-meta -->
 						<?php the_content('Read More'); ?>
 					</div>
