@@ -14,22 +14,22 @@ Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-
 /* =Global
 -------------------------------------------------------------- */
 a {
-	color: #9bdbf6;
+  color: #9bdbf6;
 }
 body {
-	color: #fff;
-	background: #004193;
-	background-image: url("images/water.jpg");
-	background-position: center top;
-	background-repeat: repeat-x;
+  color: #fff;
+  background: #004193;
+  background-image: url("images/water.jpg");
+  background-position: center top;
+  background-repeat: repeat-x;
 }
 pre {
-	background: #e0e6e9;
-	color: #000;
+  background: #e0e6e9;
+  color: #000;
 }
 #content {
-	background: #0a61af; /* IE */
-	background: rgba(24, 145, 218, 0.6);
+  background: #0a61af; /* IE */
+  background: rgba(24, 145, 218, 0.6);
 } 
 
 
@@ -44,25 +44,25 @@ pre {
 }
 #access a,
 #access2 a {
-	color: #004193;
+  color: #004193;
 }
 #access ul ul,
 #access2 ul ul {
-	box-shadow: 0 3px 3px rgba(0,0,0,0.2); /* IE9, Firefox 4, Chrome, Opera, and Safari 5.1.1 */
+  box-shadow: 0 3px 3px rgba(0,0,0,0.2); /* IE9, Firefox 4, Chrome, Opera, and Safari 5.1.1 */
 }
 #access ul ul a,
 #access2 ul ul a {
-	background: #1891da;
-	color: #fff;
+  background: #1891da;
+  color: #fff;
 }
 #access li:hover > a,
 #access2 li:hover > a {
-	color: #1891da;
+  color: #1891da;
 }
 #access ul ul a:hover,
 #access2 ul ul a:hover {
-	background: #fff;
-	color: #004193;
+  background: #fff;
+  color: #004193;
 }
 #access ul ul li:hover > a,
 #access2 ul ul li:hover > a {
@@ -72,17 +72,17 @@ pre {
 /* =Content
 -------------------------------------------------------------- */
 a .entry-title {
-	color: #fff;
+  color: #fff;
 }
 
 /* Notices */
 .post .notice {
-	background: rgb(167,49,49);
+  background: rgb(167,49,49);
 }
 
 /* Image Attachments */
 .image-attachment .entry-content .entry-attachment {
-	background: #eee;
+  background: #eee;
 }
 
 
@@ -90,56 +90,56 @@ a .entry-title {
 -------------------------------------------------------------- */
 #s:hover,
 #s:focus {
-	background: #9bdbf6;
+  background: #9bdbf6;
 }
 input#s {
-	color: #004193;
-	background: #9bdbf6;
+  color: #004193;
+  background: #9bdbf6;
 }
 /* Class for labelling required form items */
 .required {
-	color: #d43837;
+  color: #d43837;
 }
 
 
 /* =Footer
 -------------------------------------------------------------- */
 #colophon {
-	background: #1891da; /* IE */
-	background: rgba(24, 145, 218, 0.6);
+  background: #1891da; /* IE */
+  background: rgba(24, 145, 218, 0.6);
 }
 #contactinfo h2 {
-	color: #fff;
+  color: #fff;
 }
 #buttons img {
-	background: #fff;
+  background: #fff;
 }
 #buttons img:hover {
-	background: #9bdbf6;
+  background: #9bdbf6;
 }
 #buttons #contact,
 #buttons #prayer {
-	color: #0055c0;
-	background: #fff;
+  color: #0055c0;
+  background: #fff;
 }
 #buttons #contact:hover,
 #buttons #prayer:hover {
-	background: #9bdbf6;
+  background: #9bdbf6;
 }
 
 
 /* =Next Steps
 -------------------------------------------------------------- */
 .ns-title {
-	background: #ccd0d3; /* IE */
-	background: rgba(224,230,233,0.9);
-	color: #004193;
+  background: #ccd0d3; /* IE */
+  background: rgba(224,230,233,0.9);
+  color: #004193;
 }
 #ns1:hover .ns-title,
 #ns2:hover .ns-title,
 #ns3:hover .ns-title {
-	background: #e0e6e9; /* IE */
-	background: rgba(224,230,233,1);
+  background: #e0e6e9; /* IE */
+  background: rgba(224,230,233,1);
 }
 
 
@@ -225,9 +225,9 @@ a.lbutton {
 -------------------------------------------------------------- */
 .lslide,
 .ltoggle {
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+  box-shadow: 0 1px 2px rgba(0,0,0,.2);
     text-shadow: none;
     color: #004193;
     background: #ffffff;
@@ -254,26 +254,26 @@ a.ltoggle:active {
 /* =Formidable Forms
 -------------------------------------------------------------- */
 .form-field input[type="text"] {
-	background: rgb(224,230,233);
-	color: rgb(0,85,192);
+  background: rgb(224,230,233);
+  color: rgb(0,85,192);
 }
 .form-field textarea {
-	background: rgb(224,230,233);
-	color: rgb(0,85,192);
+  background: rgb(224,230,233);
+  color: rgb(0,85,192);
 }
 #recaptcha_table {
-	background: #fff;
+  background: #fff;
 }
 #form_flipside .form-field input[type="text"] {
-	background: rgb(224,230,233);
-	color: rgb(0,85,192);
+  background: rgb(224,230,233);
+  color: rgb(0,85,192);
 }
 
 
 /* =TheThe Sliding Panel
 -------------------------------------------------------------- */
 #tspBottomPanel .thethe-content a {
-	color: #fff;
+  color: #fff;
 }
 
 
@@ -283,39 +283,39 @@ a.ltoggle:active {
 
 }
 .passage a {
-	color: #9bdbf6;
+  color: #9bdbf6;
 }
 
 
 /* =RefTagger
 -------------------------------------------------------------- */
 .lbsTooltip {
-	background: #e0e6e9;
-	border: 1px solid #004193;
+  background: #e0e6e9;
+  border: 1px solid #004193;
 }
 .lbsTooltipHeader {
-	background: #ffcb00;
-	color: #fff;
+  background: #ffcb00;
+  color: #fff;
 }
 .lbsTooltipBody p, .lbsTooltipBody span {
-	color: #000;
+  color: #000;
 }
 .lbsTooltipFooter a:link, .lbsTooltipFooter a:visited, .lbsTooltipFooter a:hover {
-	color: #004193;
+  color: #004193;
 }
 .lbsTooltipBody .verse-ref {
-	color: #e0e6e9;
+  color: #e0e6e9;
 }
 
 
 /* =Events Calendar
 -------------------------------------------------------------- */
 .gce-page-grid .gce-calendar .gce-month-title {
-	color: #fff;
+  color: #fff;
 }
 .gce-page-grid .gce-calendar,
 .gce-caption {
-	color: #fff!important;
+  color: #fff!important;
 }
 .gce-page-grid .gce-calendar .gce-has-events {
 color: #fff!important;
@@ -328,8 +328,8 @@ background-color: #0055c0!important;
 /* =Article Template
 -------------------------------------------------------------- */
 #article-teaser {
-	background: #0a61af; /* IE */
-	background: rgba(24, 145, 218, 0.6);
+  background: #0a61af; /* IE */
+  background: rgba(24, 145, 218, 0.6);
 }
 #comments {
 

@@ -1,188 +1,179 @@
-body a:link { 
-	color: #ff9a00; 
-	text-decoration : none; 
-} 
-body a:visited { 
-	color: #ff9a00; 
-	text-decoration: none; 
-} 
-body a:hover { 
-	color: #ff9a00; 
-	text-decoration: underline; 
+body a:link {
+  color: #ff9a00;
+  text-decoration: none;
 }
-
+body a:visited {
+  color: #ff9a00;
+  text-decoration: none;
+}
+body a:hover {
+  color: #ff9a00;
+  text-decoration: underline;
+}
 body {
-	color: #fff; 
-	line-height : 1;  
-	font : 12px "Helvetica Neue", Arial, sans-serif;
-	background: #004193;
-	background-image: url("http://sharethelife.org/wp-content/themes/lifepointe/images/water.jpg");
-	background-position: center top;
-	background-repeat: repeat-x;
-
+  color: #fff;
+  line-height: 1;
+  font: 12px "Helvetica Neue", Arial, sans-serif;
+  background: #004193;
+  background-image: url("http://sharethelife.org/wp-content/themes/lifepointe/images/water.jpg");
+  background-position: center top;
+  background-repeat: repeat-x;
 }
 .logo {
-	margin: 20px auto;
-	width: 250px;
+  margin: 20px auto;
+  width: 250px;
 }
-h2 { 
-	font-size : 14px; 
-	font-weight : bold;
-	text-align: left; 
-} 
-h3 { 
-	font-size : 12px; 
-	font-weight : bold;
-	text-align: left; 
+h2 {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: left;
 }
-
-div#tophead { 
-	text-align : center; 
-	width : 95%; 
-} 
-div#tophead h2 { 
-	padding : 0; 
-	border : 0; 
-	clear : both; 
-	top : -75px; 
-	text-align : center;
+h3 {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: left;
 }
-#GroupNameSearch { 
-	font-size : 12px; 
-	font-weight : bold; 
-	padding : 0; 
-	border : 0; 
-	clear : both; 
-	text-align: left;  
-} 
-
-div#leftnav { 
-	float : left; 
-	width : 260px; 
-	clear : none; 
-	color : #fff; 
-	line-height : 140%; 
-	padding : 0; 
-	font-size : 11px; 
-	font-family : "Helvetica Neue", Arial, sans-serif;
-	left : 20px;  
-	text-align: left; 
- 
-} 
-select { 
-	font-size : 11px; 
-	font-family : "Helvetica Neue", Arial, sans-serif;
-	text-align: left;
-} 
-select.FilterSelect { 
-	width : 170px;
-	text-align: left; 
-} 
-input { 
-	font-size : 11px; 
-	font-family : "Helvetica Neue", Arial, sans-serif;
-	text-align: left; 
+div#tophead {
+  text-align: center;
+  width: 95%;
+}
+div#tophead h2 {
+  padding: 0;
+  border: 0;
+  clear: both;
+  top: -75px;
+  text-align: center;
+}
+#GroupNameSearch {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0;
+  border: 0;
+  clear: both;
+  text-align: left;
+}
+div#leftnav {
+  float: left;
+  width: 260px;
+  clear: none;
+  color: #fff;
+  line-height: 140%;
+  padding: 0;
+  font-size: 11px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  left: 20px;
+  text-align: left;
+}
+select {
+  font-size: 11px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: left;
+}
+select.FilterSelect {
+  width: 170px;
+  text-align: left;
+}
+input {
+  font-size: 11px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  text-align: left;
 }
 table.filtertable {
-	border-radius: 5px; 
-	font-size : 11px; 
-	font-family : "Helvetica Neue", Arial, sans-serif;
-	left : -5px; 
-	color : #fff;
-	text-align: left; 
-} 
-
-div.groups { 
-	position : relative; 
-	float : right; 
-	clear : none;
-	left: -15px;
-	text-align: left; 
-	width: 70%;
+  border-radius: 5px;
+  font-size: 11px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  left: -5px;
+  color: #fff;
+  text-align: left;
 }
-div.groups div.groupshead { 
-	border-bottom : 0px solid #ff9a00;
-	padding : 3px 5px; 
-	clear : none;
-	text-align: left; 
+div.groups {
+  position: relative;
+  float: right;
+  clear: none;
+  left: -15px;
+  text-align: left;
+  width: 70%;
 }
-span.rightjustify { 
-	float : right;
-} 
-div.photo { 
-	float : left;
-} 
+div.groups div.groupshead {
+  border-bottom: 0px solid #ff9a00;
+  padding: 3px 5px;
+  clear: none;
+  text-align: left;
+}
+span.rightjustify {
+  float: right;
+}
+div.photo {
+  float: left;
+}
 div.groups h3 {
-	background: #fff;
-	color: #004193;
-	font-size: 14px;
-	font-weight: 700;
-	line-height: 1.75em;
-	text-transform: none;
-	padding: 0 0.5em 0 0.5em;
-	display: block;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	-o-text-overflow: ellipsis;
-	white-space: nowrap;
-	width: 100%;
+  background: #fff;
+  color: #004193;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.75em;
+  text-transform: none;
+  padding: 0 0.5em 0 0.5em;
+  display: block;
+  overflow: hidden;
+     text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
 }
 div.groups h3 a,
 div.groups h3 a:hover {
-	color:##004193;
+  color: ##004193;
 }
-div.groups h4 { 
-	font-size : 14px; 
-	font-weight : 700; 
-	line-height : 133%; 
-	margin : 0 0 4px; 
-	text-transform : none; 
-	padding : 0 4px 0 0; 
-	border-bottom : 0 solid #fff; 
-	display : block;
-	text-align: left; 
-} 
+div.groups h4 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 133%;
+  margin: 0 0 4px;
+  text-transform: none;
+  padding: 0 4px 0 0;
+  border-bottom: 0 solid #fff;
+  display: block;
+  text-align: left;
+}
 div.groups ol#groups {
-	background: #1891DA;
-	background: rgba(24, 145, 218, 0.6); 
-	margin : -30px 12px 0; 
-	padding : 0 0 10px;
-	text-align: left; 
-} 
-div.groups ol.grouplist .al { 
-	font-weight : 700;
-	text-align: left; 
-} 
-div.groups ol.grouplist span.groupdesc { 
-	font-size : 8px; 
-	font-weight : 700;
-	text-align: left; 
-} 
-
+  background: #1891DA;
+  background: rgba(24, 145, 218, 0.6);
+  margin: -30px 12px 0;
+  padding: 0 0 10px;
+  text-align: left;
+}
+div.groups ol.grouplist .al {
+  font-weight: 700;
+  text-align: left;
+}
+div.groups ol.grouplist span.groupdesc {
+  font-size: 8px;
+  font-weight: 700;
+  text-align: left;
+}
 #leftnav a {
-	color: #ff9a00;
+  color: #ff9a00;
 }
 h3 span.english {
-	padding-left: 65px;
+  padding-left: 65px;
 }
 a[title~=join] {
-	color: #004193!important;
-	float: right;
-	position: relative;
-	top: -33px;
-	
+  color: #004193!important;
+  float: right;
+  position: relative;
+  top: -33px;
 }
-a[title~=join]:hover {
-	color:#004193;
+a[title~=join]: hover {
+  color: #004193;
 }
 a[title~=email],
-a[title~=email]:hover {
-	color: #004193!important;
-	float: right;
-	position: relative;
-	top: -33px;
-	left: -1em;
-	
+a[title~=email]: hover {
+  color: #004193!important;
+  float: right;
+  position: relative;
+  top: -33px;
+  left: -1em;
 }
 img[title~=Filters],
 img[title~=Print],
@@ -190,14 +181,14 @@ img[title~=Map],
 span[title~=Login],
 div#FooterLinks,
 center font a {
-	display: none;
+  display: none;
 }
 .fl {
-	background: #fff;
-border-radius: 5px;
-color: #004193!important;
-float: right;
-padding: 0.125em 0.25em;
-position: relative;
-top: -33px;
+  background: #fff;
+  border-radius: 5px;
+  color: #004193!important;
+  float: right;
+  padding: 0.125em 0.25em;
+  position: relative;
+  top: -33px;
 }
