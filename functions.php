@@ -263,8 +263,7 @@ function lifepointe_comment( $comment, $args, $depth ) {
             /* translators: 1: date, 2: time */
             printf( __( '%1$s at %2$s', 'lifepointe' ), get_comment_date(), get_comment_time() ); ?>
           </time></a>
-          <?php edit_comment_link( __( '(Edit)', 'lifepointe' ), ' ' );
-          ?>
+          <?php edit_comment_link( __( '(Edit)', 'lifepointe' ), ' ' ); ?>
         </div><!-- .comment-meta .commentmetadata -->
       </footer>
 
