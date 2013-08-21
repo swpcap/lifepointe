@@ -1,15 +1,15 @@
 #adminmenu .wp-menu-image img {
-	max-height: 20px;
-	max-width: 15px;
+  max-height: 20px;
+  max-width: 15px;
 }
 
 .appearance_page_theme_options .wrap {
-	margin: 4px 15px 0 0;
-	border: 1px solid #dfdfdf;
-	padding: 4px 15px 0;
-	position: relative;
-	top: -14px;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
-	border-image: initial;
+  margin: 4px 15px 0 0;
+  border: 1px solid #dfdfdf;
+  padding: 4px 15px 0;
+  position: relative;
+  top: -14px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-image: initial;
 }
