@@ -12,25 +12,6 @@ Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-
 */
 
 
-/* =Formidable Forms
--------------------------------------------------------------- */
-.form-field input[type="text"] {
-  background: rgb(224,230,233);
-  color: rgb(0,85,192);
-}
-.form-field textarea {
-  background: rgb(224,230,233);
-  color: rgb(0,85,192);
-}
-#recaptcha_table {
-  background: #fff;
-}
-#form_flipside .form-field input[type="text"] {
-  background: rgb(224,230,233);
-  color: rgb(0,85,192);
-}
-
-
 /* =TheThe Sliding Panel
 -------------------------------------------------------------- */
 #tspBottomPanel .thethe-content a {
