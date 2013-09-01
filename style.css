@@ -1375,8 +1375,8 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
 #article-teaser {
   border-top-right-radius: 5px;
   width: 220px;
-  background: #a93b19;
-  background: rgba(169, 59, 25, 0.6);
+  background: #0a61af; /* IE */
+  background: rgba(24, 145, 218, 0.6);
   padding: 25px;
   float: left;
   margin: 0.5em 0;
