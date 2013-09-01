@@ -11,31 +11,6 @@ Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-
 
 */
 
-/* =Global
--------------------------------------------------------------- */
-a {
-  color: #9bdbf6;
-}
-body {
-  color: #fff;
-  background: #004193;
-  background-image: url("images/water.jpg");
-  background-position: center top;
-  background-repeat: repeat-x;
-}
-pre {
-  background: #e0e6e9;
-  color: #000;
-}
-#content {
-  background: #0a61af; /* IE */
-  background: rgba(24, 145, 218, 0.6);
-} 
-
-
-/* =Header
--------------------------------------------------------------- */
-
 
 /* =Menu
 -------------------------------------------------------------- */
