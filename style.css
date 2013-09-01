@@ -626,10 +626,12 @@ input#s {
 }
 #s:hover,
 #s:focus {
-  background: #9dc3e6;
+  background: #9bdbf6;
   width: 88%;
 }
 input#s {
+  color: #004193;
+  background: #9bdbf6;
   border: none;
   font-size: 10px;
   height: 14px;
@@ -637,8 +639,6 @@ input#s {
   margin: 0;
   padding: 4px;
   border-image: initial;
-  color: #0055C0;
-  background: #e0e6e9;
   border-radius: 3px;
   top: 25px;
   position: relative;
