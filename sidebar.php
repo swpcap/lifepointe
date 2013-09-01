@@ -10,7 +10,7 @@
 
         <aside id="ns1">
           <?php $ns1_slug = get_post_meta($post->ID, 'ns1', true);
-                if (!empty($ns1_slug) {
+                if (!empty($ns1_slug)) {
                   $ns1_page = get_page_by_path($ns1_slug);
                   $ns1_value = $ns1_page->ID;
                   if ( has_post_thumbnail($ns1_value)) {
@@ -22,7 +22,7 @@
         
         <aside id="ns2">
           <?php $ns2_slug = get_post_meta($post->ID, 'ns2', true);
-                if (!empty($ns2_slug) {
+                if (!empty($ns2_slug)) {
                   $ns2_page = get_page_by_path($ns2_slug);
                   $ns2_value = $ns2_page->ID;
                   if ( has_post_thumbnail($ns2_value)) {
@@ -34,7 +34,7 @@
         
         <aside id="ns3">
           <?php $ns3_slug = get_post_meta($post->ID, 'ns3', true);
-                if (!empty($ns3_slug) {
+                if (!empty($ns3_slug)) {
                   $ns3_page = get_page_by_path($ns3_slug);
                   $ns3_value = $ns3_page->ID;
                   if ( has_post_thumbnail($ns3_value)) {
