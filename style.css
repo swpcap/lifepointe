@@ -712,8 +712,8 @@ article.comment {
 #colophon {
   float: left;
   padding: 0.5em;
-  background: #a93b19; /* IE */
-  background: rgba(169, 59, 25, 0.6);
+  background: #1891da; /* IE */
+  background: rgba(24, 145, 218, 0.6);
   border-radius: 5px;
   width: 697px;
 }
@@ -752,11 +752,11 @@ footer#buttons {
   border-radius: 3px;
 }
 #buttons img:hover {
-  background: #9dc3e6;
+  background: #9bdbf6;
 }
 #buttons #contact,
 #buttons #prayer {
-  color: #0055C0;
+  color: #0055c0;
   background: #fff;
   border-radius: 3px;
   display: inline-block;
@@ -776,7 +776,7 @@ footer#buttons {
 }
 #buttons #contact:hover,
 #buttons #prayer:hover {
-  background: #9dc3e6;
+  background: #9bdbf6;
 }
 #buttons.buttons-side {
   position: fixed;
