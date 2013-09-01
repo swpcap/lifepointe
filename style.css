@@ -881,11 +881,11 @@ on January 20, 2012
   margin: 0;
 }
 .ns-title {
-  background: rgb(0,85,192); /* IE */
-  background: rgba(0,85,192,0.6);
+  background: #ccd0d3; /* IE */
+  background: rgba(224,230,233,0.9);
+  color: #004193;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
-  color: #fff;
   font-size: 1em;
   padding: 5px;
   position: relative;
@@ -894,8 +894,8 @@ on January 20, 2012
 #ns1:hover .ns-title,
 #ns2:hover .ns-title,
 #ns3:hover .ns-title {
-  background: #1891DA; /* IE */
-  background: rgba(0,85,192,0.8);
+  background: #e0e6e9; /* IE */
+  background: rgba(224,230,233,1);
 }
 #ns1 a:hover,
 #ns2 a:hover,
