@@ -11,39 +11,6 @@ Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-
 
 */
 
-
-/* =Menu
--------------------------------------------------------------- */
-#access,
-#access2 {
-}
-#access a,
-#access2 a {
-  color: #004193;
-}
-#access ul ul,
-#access2 ul ul {
-  box-shadow: 0 3px 3px rgba(0,0,0,0.2); /* IE9, Firefox 4, Chrome, Opera, and Safari 5.1.1 */
-}
-#access ul ul a,
-#access2 ul ul a {
-  background: #1891da;
-  color: #fff;
-}
-#access li:hover > a,
-#access2 li:hover > a {
-  color: #1891da;
-}
-#access ul ul a:hover,
-#access2 ul ul a:hover {
-  background: #fff;
-  color: #004193;
-}
-#access ul ul li:hover > a,
-#access2 ul ul li:hover > a {
-
-}
-
 /* =Content
 -------------------------------------------------------------- */
 a .entry-title {
