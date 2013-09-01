@@ -12,32 +12,6 @@ Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-
 */
 
 
-/* =Footer
--------------------------------------------------------------- */
-#colophon {
-  background: #1891da; /* IE */
-  background: rgba(24, 145, 218, 0.6);
-}
-#contactinfo h2 {
-  color: #fff;
-}
-#buttons img {
-  background: #fff;
-}
-#buttons img:hover {
-  background: #9bdbf6;
-}
-#buttons #contact,
-#buttons #prayer {
-  color: #0055c0;
-  background: #fff;
-}
-#buttons #contact:hover,
-#buttons #prayer:hover {
-  background: #9bdbf6;
-}
-
-
 /* =Next Steps
 -------------------------------------------------------------- */
 .ns-title {
