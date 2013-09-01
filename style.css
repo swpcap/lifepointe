@@ -1165,41 +1165,6 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
   position: relative;
 }
 
-/* =TheThe Sliding Panel
--------------------------------------------------------------- */
-.backLink {
-  display: none;
-}
-#tspBottomPanel .thethe-content {
-  font-size: 15px;
-}
-#tspBottomPanel .thethe-content a {
-  color: #fff;
-}
-#tspBottomPanel .menu-left-container {
-  float: left;
-}
-#tspBottomPanel .menu-right-container {
-  float: left;
-  margin-left: 200px;
-}
-#tspBottomPanel ul li {
-  line-height: 1.5em;
-  list-style: none;
-}
-#tspBottomPanel ul li .sub-menu {
-  padding-left: 2em;
-  padding-bottom: 0!important;
-}
-#tspBottomPanel .tspTriggerBP {
-  margin-left: 310px!important;
-}
-.secondBP {
-  left: 180px!important;
-}
-.page-template-modal-php #tspBottomPanel {
-  display: none;
-}
 
 /* =Sermon List
 -------------------------------------------------------------- */
