@@ -12,21 +12,6 @@ Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-
 */
 
 
-/* =Next Steps
--------------------------------------------------------------- */
-.ns-title {
-  background: #ccd0d3; /* IE */
-  background: rgba(224,230,233,0.9);
-  color: #004193;
-}
-#ns1:hover .ns-title,
-#ns2:hover .ns-title,
-#ns3:hover .ns-title {
-  background: #e0e6e9; /* IE */
-  background: rgba(224,230,233,1);
-}
-
-
 /* =More Link
 -------------------------------------------------------------- */
 a.more-link {
