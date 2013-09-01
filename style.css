@@ -1213,6 +1213,7 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
 }
 .passage a {
   font-weight: 700;
+  color: #9bdbf6;
 }
 .sermon-media {
   float: right;
@@ -1243,8 +1244,8 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
 }
 .lbsTooltipHeader {
   background: #ffcb00;
-  border-radius: 5px;
   color: #fff;
+  border-radius: 5px;
   font-weight:bold;
   font-size:15px;
   line-height: 18px;
@@ -1263,7 +1264,7 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
 }
 .lbsTooltipBody p, .lbsTooltipBody span {
   display: inline;
-  color: black;
+  color: #000;
   font-size: 14px;
   line-height:16px;
 }
@@ -1298,8 +1299,6 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
   top: 0px;
   position: relative;
   vertical-align: super;
-}
-.lbsTooltipBody .verse-ref {
   color: #e0e6e9;
 }
 .lbsTooltip, .lbsTooltipBody span, .lbsTooltip a, .lbsTooltipBody p {
