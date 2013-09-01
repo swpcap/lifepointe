@@ -11,38 +11,6 @@ Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-
 
 */
 
-/* =Content
--------------------------------------------------------------- */
-a .entry-title {
-  color: #fff;
-}
-
-/* Notices */
-.post .notice {
-  background: rgb(167,49,49);
-}
-
-/* Image Attachments */
-.image-attachment .entry-content .entry-attachment {
-  background: #eee;
-}
-
-
-/* =Forms
--------------------------------------------------------------- */
-#s:hover,
-#s:focus {
-  background: #9bdbf6;
-}
-input#s {
-  color: #004193;
-  background: #9bdbf6;
-}
-/* Class for labelling required form items */
-.required {
-  color: #d43837;
-}
-
 
 /* =Footer
 -------------------------------------------------------------- */
