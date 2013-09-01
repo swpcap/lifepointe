@@ -191,24 +191,6 @@ a.ltoggle:active {
   color: #e0e6e9;
 }
 
-
-/* =Events Calendar
--------------------------------------------------------------- */
-.gce-page-grid .gce-calendar .gce-month-title {
-  color: #fff;
-}
-.gce-page-grid .gce-calendar,
-.gce-caption {
-  color: #fff!important;
-}
-.gce-page-grid .gce-calendar .gce-has-events {
-color: #fff!important;
-background-color: #ff9a00;
-}
-.gce-page-grid .gce-calendar .gce-today {
-background-color: #0055c0!important;
-}
-
 /* =Article Template
 -------------------------------------------------------------- */
 #article-teaser {
