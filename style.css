@@ -913,7 +913,7 @@ a.more-link {
     text-decoration: none;
     font-size: 14px;
     padding: .5em 1em .55em;
-    text-shadow: 0 1px 1px rgba(0,0,0,.3);
+    text-shadow: none;
     -webkit-border-radius: .5em;
     -moz-border-radius: .5em;
     border-radius: .5em;
@@ -931,24 +931,24 @@ a.more-link:active {
 .more-link {
     display: block;
     width: 80px;
-    color: #fff;
+    color: #004193;
     border: none;
-    background: #004193;
-    background: -webkit-gradient(linear, left top, left bottom, from(#0055C0), to(#004193));
-    background: -moz-linear-gradient(top,  #0055C0,  #004193);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#0055C0', endColorstr='#004193');
+    background: #fff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0e6e9));
+    background: -moz-linear-gradient(top,  #fff,  #e0e6e9);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e0e6e9');
 }
 .more-link:hover {
-    background: #0055C0;
-    background: -webkit-gradient(linear, left top, left bottom, from(#004193), to(#0055C0));
-    background: -moz-linear-gradient(top,  #004193,  #0055C0);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#004193', endColorstr='#0055C0');
+    background: #e0e6e9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e0e6e9), to(#fff));
+    background: -moz-linear-gradient(top,  #e0e6e9,  #fff);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0e6e9', endColorstr='#ffffff');
 }
 .more-link:active {
-    background: #1891da; /* IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#004193), to(#1891da));
-    background: -moz-linear-gradient(top,  #004193,  #1891da);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#004193', endColorstr='#1891da');
+    background: #a5afba; /* IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#a5afba), to(#e0e6e9));
+    background: -moz-linear-gradient(top,  #a5afba,  #e0e6e9);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5afba', endColorstr='#e0e6e9');
 }
 .staff .more-link {
   float: right;
