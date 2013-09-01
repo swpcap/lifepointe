@@ -12,35 +12,6 @@ Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-
 */
 
 
-/* =More Link
--------------------------------------------------------------- */
-a.more-link {
-    text-shadow: none;
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
-}
-.more-link {
-    color: #004193;
-    background: #fff;
-    background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0e6e9));
-    background: -moz-linear-gradient(top,  #fff,  #e0e6e9);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e0e6e9');
-}
-.more-link:hover {
-    background: #e0e6e9;
-    background: -webkit-gradient(linear, left top, left bottom, from(#e0e6e9), to(#fff));
-    background: -moz-linear-gradient(top,  #e0e6e9,  #fff);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#e0e6e9', endColorstr='#ffffff');
-}
-.more-link:active {
-    background: #a5afba; /* IE */
-    background: -webkit-gradient(linear, left top, left bottom, from(#a5afba), to(#e0e6e9));
-    background: -moz-linear-gradient(top,  #a5afba,  #e0e6e9);
-    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5afba', endColorstr='#e0e6e9');
-}
-
-
 /* =[lbutton]
 -------------------------------------------------------------- */
 a.lbutton {
