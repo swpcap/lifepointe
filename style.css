@@ -318,7 +318,7 @@ strong, b {
 }
 #access a,
 #access2 a {
-  color: #fff;
+  color: #004193;
   display: block;
   line-height: 1.5em;
   padding: 0 0.5em;
@@ -344,7 +344,8 @@ strong, b {
 }
 #access ul ul a,
 #access2 ul ul a {
-  background: rgb(0,85,192);
+  background: #1891da;
+  color: #fff;
   line-height: 1.5em;
   padding: 0 0.5em;
   position: relative;
@@ -354,12 +355,12 @@ strong, b {
 }
 #access li:hover > a,
 #access2 li:hover > a {
-
+  color: #1891da;
 }
 #access ul ul a:hover,
 #access2 ul ul a:hover {
-  background: rgb(224,230,233);
-  color: rgb(0,85,192);
+  background: #fff;
+  color: #004193;
 }
 #access ul li:hover > ul,
 #access2 ul li:hover > ul {
