@@ -1376,28 +1376,6 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
   clear: both;
 }
 
-/* =Events Calendar
--------------------------------------------------------------- */
-.page-id-1304 .entry-title {
-display: none;
-}
-.gce-page-grid .gce-calendar .gce-month-title {
-  color: #fff;
-  font-family: 'BlueHighwayRegular';
-  font-size: 3em;
-}
-.gce-page-grid .gce-calendar,
-.gce-caption {
-color: #fff!important;
-}
-.gce-page-grid .gce-calendar .gce-has-events {
-color: #fff!important;
-background-color: #ff9a00;
-}
-.gce-page-grid .gce-calendar .gce-today {
-background-color: #0055c0!important;
-}
-
 /* =Article Template
 -------------------------------------------------------------- */
 .fb-like {
