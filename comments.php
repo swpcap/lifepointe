@@ -71,7 +71,7 @@
     <p class="nocomments"><?php _e( 'Comments are closed.', 'lifepointe' ); ?></p>
   <?php endif; ?>
 
-  <?php if ( comments_open && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+  <?php if ( comments_open() && ! is_page() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 <div class="fb-comments" data-href="<?php the_permalink(); ?>" data-num-posts="5" data-width="650" data-colorscheme="dark"></div>
 <?php endif; ?>
 </div><!-- #comments -->
