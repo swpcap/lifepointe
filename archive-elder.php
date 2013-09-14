@@ -58,51 +58,54 @@ get_header(); ?>
           <?php
             $settings = get_option('lifepointe_staff');
             $ns1_slug = $settings['staffns1'];
-            $ns1_page = get_page_by_path($ns1_slug);
-            $ns1_value = $ns1_page->ID;
-            if ( has_post_thumbnail($ns1_value)) {
-              echo '<a href="' . get_permalink( $ns1_value ) . '" title="' . esc_attr( $ns1_value->post_title ) . '">';
-              echo get_the_post_thumbnail($ns1_value, 'next-steps');
-              echo '</a>';
-              echo '<a href="' . get_permalink( $ns1_value ) . '" title="' . esc_attr( $ns1_value->post_title ) . '"><div class="ns-title">';
-              echo get_the_title($ns1_value);
-              echo '</div></a>';
+            if (!empty($ns1_slug)) {
+              $ns1_page = get_page_by_path($ns1_slug);
+              if ( has_post_thumbnail($ns1_page->ID)) {
+                echo '<a href="' . get_permalink( $ns1_page->ID ) . '" title="' . esc_attr( $ns1_page->ID->post_title ) . '">';
+                echo get_the_post_thumbnail($ns1_page->ID, 'next-steps');
+                echo '</a>';
+                echo '<a href="' . get_permalink( $ns1_page->ID ) . '" title="' . esc_attr( $ns1_page->ID->post_title ) . '"><div class="ns-title">';
+                echo get_the_title($ns1_page->ID);
+                echo '</div></a>';
+              }
             }
           ?>  
         </aside>
 
-        <aside id="ns2" class="widget">
+        <aside id="ns2">
           <?php
             $settings = get_option('lifepointe_staff');
             $ns2_slug = $settings['staffns2'];
-            $ns2_page = get_page_by_path($ns2_slug);
-            $ns2_value = $ns2_page->ID;
-            if ( has_post_thumbnail($ns2_value)) {
-              echo '<a href="' . get_permalink( $ns2_value ) . '" title="' . esc_attr( $ns2_value->post_title ) . '">';
-              echo get_the_post_thumbnail($ns2_value, 'next-steps');
-              echo '</a>';
-              echo '<a href="' . get_permalink( $ns2_value ) . '" title="' . esc_attr( $ns2_value->post_title ) . '"><div class="ns-title">';
-              echo get_the_title($ns2_value);
-              echo '</div></a>';
+            if (!empty($ns2_slug)) {
+              $ns2_page = get_page_by_path($ns2_slug);
+              if ( has_post_thumbnail($ns2_page->ID)) {
+                echo '<a href="' . get_permalink( $ns2_page->ID ) . '" title="' . esc_attr( $ns2_page->ID->post_title ) . '">';
+                echo get_the_post_thumbnail($ns2_page->ID, 'next-steps');
+                echo '</a>';
+                echo '<a href="' . get_permalink( $ns2_page->ID ) . '" title="' . esc_attr( $ns2_page->ID->post_title ) . '"><div class="ns-title">';
+                echo get_the_title($ns2_page->ID);
+                echo '</div></a>';
+              }
             }
-          ?>
+          ?>  
         </aside>
-
-        <aside id="ns3" class="widget">
+        
+        <aside id="ns3">
           <?php
             $settings = get_option('lifepointe_staff');
             $ns3_slug = $settings['staffns3'];
-            $ns3_page = get_page_by_path($ns3_slug);
-            $ns3_value = $ns3_page->ID;
-            if ( has_post_thumbnail($ns3_value)) {
-              echo '<a href="' . get_permalink( $ns3_value ) . '" title="' . esc_attr( $ns3_value->post_title ) . '">';
-              echo get_the_post_thumbnail($ns3_value, 'next-steps');
-              echo '</a>';
-              echo '<a href="' . get_permalink( $ns3_value ) . '" title="' . esc_attr( $ns3_value->post_title ) . '"><div class="ns-title">';
-              echo get_the_title($ns3_value);
-              echo '</div></a>';
+            if (!empty($ns3_slug)) {
+              $ns3_page = get_page_by_path($ns3_slug);
+              if ( has_post_thumbnail($ns3_page->ID)) {
+                echo '<a href="' . get_permalink( $ns3_page->ID ) . '" title="' . esc_attr( $ns3_page->ID->post_title ) . '">';
+                echo get_the_post_thumbnail($ns3_page->ID, 'next-steps');
+                echo '</a>';
+                echo '<a href="' . get_permalink( $ns3_page->ID ) . '" title="' . esc_attr( $ns3_page->ID->post_title ) . '"><div class="ns-title">';
+                echo get_the_title($ns3_page->ID);
+                echo '</div></a>';
+              }
             }
-          ?>
+          ?>  
         </aside>
 
       <?php endif; // end sidebar widget area ?>
