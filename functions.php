@@ -88,13 +88,13 @@ if ( function_exists( 'add_theme_support' ) ) {
  * Define additional picture sizes
  */
 if ( function_exists( 'add_image_size' ) ) {
-  add_image_size('small-icon', 32, 32, true);
-  add_image_size('large-icon', 64, 64, true);
-  add_image_size('profile', 120, 150, true);
-  add_image_size('next-steps', 220, 125, true);
+  add_image_size('small-icon',   32,  32, true);
+  add_image_size('large-icon',   64,  64, true);
+  add_image_size('profile',     120, 150, true);
+  add_image_size('next-steps',  220, 125, true);
+  add_image_size('podcast',     300, 300, true);
   add_image_size('small-title', 400, 225, true);
   add_image_size('large-title', 640, 360, true);
-  add_image_size('podcast', 300, 300, true);
 }
 
 /**
@@ -366,35 +366,35 @@ add_action( 'init', 'codex_custom_init' );
 function codex_custom_init() {
   $directory = get_stylesheet_directory_uri();
   $labels = array(
-    'name' => _x('Staff Members', 'post type general name'),
-    'singular_name' => _x('Staff Member', 'post type singular name'),
-    'add_new' => _x('Add New', 'staff'),
-    'add_new_item' => __('Add New Staff Member'),
-    'edit_item' => __('Edit Staff Member'),
-    'new_item' => __('New Staff Member'),
-    'all_items' => __('All Staff'),
-    'view_item' => __('View profile'),
-    'search_items' => __('Search Staff'),
-    'not_found' =>  __('No Staff Members found'),
+    'name'               => _x('Staff Members', 'post type general name'),
+    'singular_name'      => _x('Staff Member', 'post type singular name'),
+    'add_new'            => _x('Add New', 'staff'),
+    'add_new_item'       => __('Add New Staff Member'),
+    'edit_item'          => __('Edit Staff Member'),
+    'new_item'           => __('New Staff Member'),
+    'all_items'          => __('All Staff'),
+    'view_item'          => __('View profile'),
+    'search_items'       => __('Search Staff'),
+    'not_found'          => __('No Staff Members found'),
     'not_found_in_trash' => __('No Staff Members were thrown away'), 
-    'parent_item_colon' => '',
-    'menu_name' => 'Staff List'
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Staff List'
 
   );
   $args = array(
-    'labels' => $labels,
-    'public' => true,
+    'labels'             => $labels,
+    'public'             => true,
     'publicly_queryable' => true,
-    'show_ui' => true, 
-    'show_in_menu' => true, 
-    'query_var' => true,
-    'rewrite' => true,
-    'capability_type' => 'staff',
-    'has_archive' => true, 
-    'hierarchical' => true,
-    'menu_icon' => $directory . '/images/staff.png',
-    'menu_position' => 5,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' )
+    'show_ui'            => true, 
+    'show_in_menu'       => true, 
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'staff',
+    'has_archive'        => true, 
+    'hierarchical'       => true,
+    'menu_icon'          => $directory . '/images/staff.png',
+    'menu_position'      => 5,
+    'supports'           => array( 'title', 'editor', 'thumbnail', 'page-attributes' )
   ); 
   register_post_type('staff',$args);
 }
@@ -432,35 +432,35 @@ add_action( 'init', 'create_elder_type' );
 function create_elder_type() {
   $directory = get_stylesheet_directory_uri();
   $labels = array(
-    'name' => _x('Elders', 'post type general name'),
-    'singular_name' => _x('Elder', 'post type singular name'),
-    'add_new' => _x('Add New', 'elder'),
-    'add_new_item' => __('Add New Elder'),
-    'edit_item' => __('Edit Elder'),
-    'new_item' => __('New Elder'),
-    'all_items' => __('All Elders'),
-    'view_item' => __('View profile'),
-    'search_items' => __('Search Elders'),
-    'not_found' =>  __('No Elders found'),
+    'name'               => _x('Elders', 'post type general name'),
+    'singular_name'      => _x('Elder', 'post type singular name'),
+    'add_new'            => _x('Add New', 'elder'),
+    'add_new_item'       => __('Add New Elder'),
+    'edit_item'          => __('Edit Elder'),
+    'new_item'           => __('New Elder'),
+    'all_items'          => __('All Elders'),
+    'view_item'          => __('View profile'),
+    'search_items'       => __('Search Elders'),
+    'not_found'          => __('No Elders found'),
     'not_found_in_trash' => __('No Elders were thrown away'), 
-    'parent_item_colon' => '',
-    'menu_name' => 'Elder List'
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Elder List'
 
   );
   $args = array(
-    'labels' => $labels,
-    'public' => true,
+    'labels'             => $labels,
+    'public'             => true,
     'publicly_queryable' => true,
-    'show_ui' => true, 
-    'show_in_menu' => true, 
-    'query_var' => true,
-    'rewrite' => true,
-    'capability_type' => 'staff',
-    'has_archive' => true, 
-    'hierarchical' => true,
-    'menu_icon' => $directory . '/images/staff.png',
-    'menu_position' => 5,
-    'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' )
+    'show_ui'            => true, 
+    'show_in_menu'       => true, 
+    'query_var'          => true,
+    'rewrite'            => true,
+    'capability_type'    => 'staff',
+    'has_archive'        => true, 
+    'hierarchical'       => true,
+    'menu_icon'          => $directory . '/images/staff.png',
+    'menu_position'      => 5,
+    'supports'           => array( 'title', 'editor', 'thumbnail', 'page-attributes' )
   ); 
   register_post_type('elder',$args);
 }
@@ -502,33 +502,33 @@ function create_sermon_types()
 {
   $directory = get_stylesheet_directory_uri();
   $labels = array(
-    'name' => _x('Sermon Series', 'post type general name'),
-    'singular_name' => _x('Sermon Series', 'post type singular name'),
-    'add_new' => _x('Add New', 'sermon'),
-    'add_new_item' => __('Add New Series'),
-    'edit_item' => __('Edit Sermon Series'),
-    'new_item' => __('New Series'),
-    'view_item' => __('View Sermon Series'),
-    'search_items' => __('Search Sermon Archives'),
-    'not_found' =>  __('No sermons found matching that criteria'),
+    'name'               => _x('Sermon Series', 'post type general name'),
+    'singular_name'      => _x('Sermon Series', 'post type singular name'),
+    'add_new'            => _x('Add New', 'sermon'),
+    'add_new_item'       => __('Add New Series'),
+    'edit_item'          => __('Edit Sermon Series'),
+    'new_item'           => __('New Series'),
+    'view_item'          => __('View Sermon Series'),
+    'search_items'       => __('Search Sermon Archives'),
+    'not_found'          =>  __('No sermons found matching that criteria'),
     'not_found_in_trash' => __('No sermons found in Trash. Why would we throw them away?'), 
-    'parent_item_colon' => '',
-    'menu_name' => 'Sermon Archives',
+    'parent_item_colon'  => '',
+    'menu_name'          => 'Sermon Archives',
   );
   $args = array(
-    'labels' => $labels,
-    'public' => true,
+    'labels'             => $labels,
+    'public'             => true,
     'publicly_queryable' => true,
-    'show_ui' => true, 
-    'show_in_menu' => true, 
-    'query_var' => true,
-    'menu_icon' => $directory . '/images/sermon.png',
-    'capability_type' => 'sermon',
-    'has_archive' => true, 
-    'rewrite' => array('slug' => 'series'),
-    'hierarchical' => false,
-    'menu_position' => 5,
-    'supports' => array('title', 'editor', 'thumbnail')
+    'show_ui'            => true, 
+    'show_in_menu'       => true, 
+    'query_var'          => true,
+    'menu_icon'          => $directory . '/images/sermon.png',
+    'capability_type'    => 'sermon',
+    'has_archive'        => true, 
+    'rewrite'            => array('slug' => 'series'),
+    'hierarchical'       => false,
+    'menu_position'      => 5,
+    'supports'           => array('title', 'editor', 'thumbnail')
   ); 
   register_post_type('sermon',$args);
 }
@@ -540,29 +540,29 @@ function create_sermon_taxonomies()
 {
 /* Sermon Topics */
 $labels = array(  
-  'name' => _x( 'Sermon Topics', 'custom taxonomy general name'),
-  'singular_name' => _x( 'Sermon Topics', 'custom taxonomy singular name' ),
-  'menu_name' => __( 'Sermon Topics'),
-  'search_items' => __( 'Search sermon topics' ), 
-  'popular_items' => __( 'Most popular sermon topics' ), 
-  'all_items' => __( 'All sermon topics' ),
-  'edit_item' => __( 'Edit sermon topic' ),
-  'update_item' => __( 'Update sermon topic' ), 
-  'add_new_item' => __( 'Add new sermon topic' ),
-  'new_item_name' => __( 'New sermon topic' ), 
+  'name'                       => _x( 'Sermon Topics', 'custom taxonomy general name'),
+  'singular_name'              => _x( 'Sermon Topics', 'custom taxonomy singular name' ),
+  'menu_name'                  => __( 'Sermon Topics'),
+  'search_items'               => __( 'Search sermon topics' ), 
+  'popular_items'              => __( 'Most popular sermon topics' ), 
+  'all_items'                  => __( 'All sermon topics' ),
+  'edit_item'                  => __( 'Edit sermon topic' ),
+  'update_item'                => __( 'Update sermon topic' ), 
+  'add_new_item'               => __( 'Add new sermon topic' ),
+  'new_item_name'              => __( 'New sermon topic' ), 
   'separate_items_with_commas' => __( 'Separate sermon topics with commas' ),
-  'add_or_remove_items' => __( 'Add or remove sermon topics' ),
-  'choose_from_most_used' => __( 'Choose from most used sermon topics' ),
-  'parent_item' => null,
-    'parent_item_colon' => null,
+  'add_or_remove_items'        => __( 'Add or remove sermon topics' ),
+  'choose_from_most_used'      => __( 'Choose from most used sermon topics' ),
+  'parent_item'                => null,
+  'parent_item_colon'          => null,
 );
 
 register_taxonomy('sermon-topics','sermon', array(
   'hierarchical' => true, 
-  'labels' => $labels, 
-  'show_ui' => true,
-  'query_var' => true,
-    'rewrite' => true,
+  'labels'       => $labels, 
+  'show_ui'      => true,
+  'query_var'    => true,
+  'rewrite'      => true,
 ));
 }
 // END - Custom Taxonomies
@@ -612,8 +612,8 @@ function custom_search_where($content)
   {
     $search = get_search_query();  
     $content .= " or ({$wpdb->prefix}postmeta.meta_key = 'week1_passage' and {$wpdb->prefix}postmeta.meta_value LIKE '%{$search}%') ";
-  $content .= " or ({$wpdb->prefix}postmeta.meta_key = 'week1_date' and {$wpdb->prefix}postmeta.meta_value LIKE '%{$search}%') ";
-  $content .= " or ({$wpdb->prefix}postmeta.meta_key = 'week1_speaker' and {$wpdb->prefix}postmeta.meta_value LIKE '%{$search}%') ";
+    $content .= " or ({$wpdb->prefix}postmeta.meta_key = 'week1_date' and {$wpdb->prefix}postmeta.meta_value LIKE '%{$search}%') ";
+    $content .= " or ({$wpdb->prefix}postmeta.meta_key = 'week1_speaker' and {$wpdb->prefix}postmeta.meta_value LIKE '%{$search}%') ";
   }
   
   return $content;
@@ -647,7 +647,7 @@ add_action('admin_enqueue_scripts', 'admin_script_post');
 function admin_script_post() {
   $directory = get_stylesheet_directory_uri();
   global $post_type;
-      wp_enqueue_script('jquery');
+    wp_enqueue_script('jquery');
     wp_enqueue_script('media-upload');
     wp_enqueue_script('jquery-ui-datepicker');
     wp_enqueue_script('jquery-ui-dialog');
@@ -706,114 +706,62 @@ add_action( 'admin_menu' , 'hide_meta_boxes' );
 function ns_meta() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $ns1 = $custom["ns1"] [0];
-  $ns2 = $custom["ns2"] [0];
-    $ns3 = $custom["ns3"] [0];
 ?>
-    <p><label>First Box</label> 
-  <input type="text" size="15" name="ns1" value="<?php echo $ns1; ?>" /></p>
-    <p><label>Second Box</label> 
-  <input type="text" size="15" name="ns2" value="<?php echo $ns2; ?>" /></p>
-  <p><label>Third Box</label> 
-  <input type="text" size="15" name="ns3" value="<?php echo $ns3; ?>" /></p>
-  <?php
+    <p><label>First Box</label> <input type="text" size="15" name="ns1" value="<?php if (isset($custom['ns1'])) { echo $custom["ns1"][0]; } ?>" /></p>
+    <p><label>Second Box</label><input type="text" size="15" name="ns2" value="<?php if (isset($custom['ns2'])) { echo $custom["ns2"][0]; } ?>" /></p>
+    <p><label>Third Box</label> <input type="text" size="15" name="ns3" value="<?php if (isset($custom['ns3'])) { echo $custom["ns3"][0]; } ?>" /></p><?php
 }
 
 /* Staff Details */
 function staff_meta() {
   global $post;
-  $custom = get_post_custom($post->ID);
-  $staff_title = $custom["staff_title"] [0];
-  $staff_email = $custom["staff_email"] [0];
-      $staff_phone = $custom["staff_phone"] [0];
-?>
-    <p><label>Title</label> 
-  <input type="text" size="25" name="staff_title" value="<?php echo $staff_title; ?>" /></p>
-    <p><label>Email</label> 
-  <input type="text" size="25" name="staff_email" value="<?php echo $staff_email; ?>" /></p>
-  <p><label>Phone</label> 
-  <input type="text" size="25" name="staff_phone" value="<?php echo $staff_phone; ?>" /></p>
-  <?php
+  $custom = get_post_custom($post->ID); ?>
+  
+  <p><label>Name</label> <input type="text"  size="10" name="staff_title" value="<?php if (isset($custom['staff_title'])) { echo $custom["staff_title"][0]; } ?>" /></p>
+  <p><label>Phone</label><input type="tel"   size="10" name="staff_phone" value="<?php if (isset($custom['staff_phone'])) { echo $custom["staff_phone"][0]; } ?>" /></p>
+  <p><label>Email</label><input type="email" size="10" name="staff_email" value="<?php if (isset($custom['staff_email'])) { echo $custom["staff_email"][0]; } ?>" /></p><?php
 }
 
 /* Elder Details */
 function elder_meta() {
   global $post;
-  $custom = get_post_custom($post->ID);
-  $elder_title = $custom["elder_title"] [0];
-  $elder_email = $custom["elder_email"] [0];
-      $elder_phone = $custom["elder_phone"] [0];
-?>
-    <p><label>Title</label> 
-  <input type="text" size="25" name="elder_title" value="<?php echo $elder_title; ?>" /></p>
-    <p><label>Email</label> 
-  <input type="text" size="25" name="elder_email" value="<?php echo $elder_email; ?>" /></p>
-  <p><label>Phone</label> 
-  <input type="text" size="25" name="elder_phone" value="<?php echo $elder_phone; ?>" /></p>
-  <?php
+  $custom = get_post_custom($post->ID); ?>
+  
+  <p><label>Name</label> <input type="text"  size="10" name="elder_title" value="<?php if (isset($custom['elder_title'])) { echo $custom["elder_title"][0]; } ?>" /></p>
+  <p><label>Phone</label><input type="tel"   size="10" name="elder_phone" value="<?php if (isset($custom['elder_phone'])) { echo $custom["elder_phone"][0]; } ?>" /></p>
+  <p><label>Email</label><input type="email" size="10" name="elder_email" value="<?php if (isset($custom['elder_email'])) { echo $custom["elder_email"][0]; } ?>" /></p><?php
 }
 
 /* Week 1 */
 function week1() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week1_title = $custom["week1_title"] [0];
-  $week1_passage = $custom["week1_passage"] [0];
-    $week1_date = $custom["week1_date"] [0];
-  $week1_speaker = $custom["week1_speaker"] [0];
-  $week1_audio = $custom["week1_audio"] [0];
-  $week1_vimeo_title = $custom["week1_vimeo_title"] [0];
-  $week1_vimeo_id = $custom["week1_vimeo_id"] [0];
-  $week1_pdf = $custom["week1_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week1_title" value="<?php echo $week1_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week1_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week1-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week1_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week1-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week1_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week1_date', true);
-    if (get_post_meta($post->ID, 'week1_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week1_date" id="week1_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week1_passage" value="<?php echo $week1_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week1_speaker" value="<?php echo $week1_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week1_audio" name="week1_audio" value="<?php echo $week1_audio; ?>" />  <a class="week1-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week1_pdf" name="week1_pdf" value="<?php echo $week1_pdf; ?>" />  <a class="week1-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week1_vimeo_title" value="<?php echo $week1_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week1_vimeo_id" value="<?php echo $week1_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week1_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week1-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week1_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week1-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week1_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week1_title" value="<?php if (isset($custom['week1_title'])) { echo                 $custom["week1_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week1_date"  value="<?php if (isset($custom['week1_date']))  { echo date( 'F j, Y', $custom["week1_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week1_passage" value="<?php if (isset($custom['week1_passage'])) { echo $custom["week1_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week1_speaker" value="<?php if (isset($custom['week1_speaker'])) { echo $custom["week1_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week1_audio" name="week1_audio" value="<?php if (isset($custom['week1_audio'])) { echo $custom["week1_audio"][0]; } ?>" /><a class="week1-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week1_pdf"   name="week1_pdf"   value="<?php if (isset($custom['week1_pdf']))   { echo $custom["week1_pdf"][0];   } ?>" /><a class="week1-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week1_vimeo_title" value="<?php if (isset($custom['week1_vimeo_title'])) { echo $custom["week1_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week1_vimeo_id"    value="<?php if (isset($custom['week1_vimeo_id']))    { echo $custom["week1_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -821,64 +769,32 @@ function week1() {
 function week2() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week2_title = $custom["week2_title"] [0];
-  $week2_passage = $custom["week2_passage"] [0];
-    $week2_date = $custom["week2_date"] [0];
-  $week2_speaker = $custom["week2_speaker"] [0];
-  $week2_audio = $custom["week2_audio"] [0];
-  $week2_vimeo_title = $custom["week2_vimeo_title"] [0];
-  $week2_vimeo_id = $custom["week2_vimeo_id"] [0];
-  $week2_pdf = $custom["week2_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week2_title" value="<?php echo $week2_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week2_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week2-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week2_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week2-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week2_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week2_date', true);
-    if (get_post_meta($post->ID, 'week2_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week2_date" id="week2_date" value="<?php echo $displayDate ?>" /></p>
-
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week2_passage" value="<?php echo $week2_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week2_speaker" value="<?php echo $week2_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week2_audio" name="week2_audio" value="<?php echo $week2_audio; ?>" />  <a class="week2-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week2_pdf" name="week2_pdf" value="<?php echo $week2_pdf; ?>" />  <a class="week2-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week2_vimeo_title" value="<?php echo $week2_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week2_vimeo_id" value="<?php echo $week2_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week2_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week2-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week2_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week2-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week2_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week2_title" value="<?php if (isset($custom['week2_title'])) { echo                 $custom["week2_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week2_date"  value="<?php if (isset($custom['week2_date']))  { echo date( 'F j, Y', $custom["week2_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week2_passage" value="<?php if (isset($custom['week2_passage'])) { echo $custom["week2_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week2_speaker" value="<?php if (isset($custom['week2_speaker'])) { echo $custom["week2_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week2_audio" name="week2_audio" value="<?php if (isset($custom['week2_audio'])) { echo $custom["week2_audio"][0]; } ?>" /><a class="week2-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week2_pdf"   name="week2_pdf"   value="<?php if (isset($custom['week2_pdf']))   { echo $custom["week2_pdf"][0];   } ?>" /><a class="week2-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week2_vimeo_title" value="<?php if (isset($custom['week2_vimeo_title'])) { echo $custom["week2_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week2_vimeo_id"    value="<?php if (isset($custom['week2_vimeo_id']))    { echo $custom["week2_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -886,63 +802,32 @@ function week2() {
 function week3() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week3_title = $custom["week3_title"] [0];
-  $week3_passage = $custom["week3_passage"] [0];
-    $week3_date = $custom["week3_date"] [0];
-  $week3_speaker = $custom["week3_speaker"] [0];
-  $week3_audio = $custom["week3_audio"] [0];
-  $week3_vimeo_title = $custom["week3_vimeo_title"] [0];
-  $week3_vimeo_id = $custom["week3_vimeo_id"] [0];
-  $week3_pdf = $custom["week3_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week3_title" value="<?php echo $week3_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week3_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week3-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week3_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week3-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week3_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week3_date', true);
-    if (get_post_meta($post->ID, 'week3_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week3_date" id="week3_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week3_passage" value="<?php echo $week3_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week3_speaker" value="<?php echo $week3_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week3_audio" name="week3_audio" value="<?php echo $week3_audio; ?>" />  <a class="week3-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week3_pdf" name="week3_pdf" value="<?php echo $week3_pdf; ?>" />  <a class="week3-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week3_vimeo_title" value="<?php echo $week3_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week3_vimeo_id" value="<?php echo $week3_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week3_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week3-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week3_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week3-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week3_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week3_title" value="<?php if (isset($custom['week3_title'])) { echo                 $custom["week3_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week3_date"  value="<?php if (isset($custom['week3_date']))  { echo date( 'F j, Y', $custom["week3_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week3_passage" value="<?php if (isset($custom['week3_passage'])) { echo $custom["week3_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week3_speaker" value="<?php if (isset($custom['week3_speaker'])) { echo $custom["week3_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week3_audio" name="week3_audio" value="<?php if (isset($custom['week3_audio'])) { echo $custom["week3_audio"][0]; } ?>" /><a class="week3-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week3_pdf"   name="week3_pdf"   value="<?php if (isset($custom['week3_pdf']))   { echo $custom["week3_pdf"][0];   } ?>" /><a class="week3-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week3_vimeo_title" value="<?php if (isset($custom['week3_vimeo_title'])) { echo $custom["week3_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week3_vimeo_id"    value="<?php if (isset($custom['week3_vimeo_id']))    { echo $custom["week3_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -950,128 +835,65 @@ function week3() {
 function week4() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week4_title = $custom["week4_title"] [0];
-  $week4_passage = $custom["week4_passage"] [0];
-    $week4_date = $custom["week4_date"] [0];
-  $week4_speaker = $custom["week4_speaker"] [0];
-  $week4_audio = $custom["week4_audio"] [0];
-  $week4_vimeo_title = $custom["week4_vimeo_title"] [0];
-  $week4_vimeo_id = $custom["week4_vimeo_id"] [0];
-  $week4_pdf = $custom["week4_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week4_title" value="<?php echo $week4_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week4_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week4-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week4_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week4-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week4_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week4_date', true);
-    if (get_post_meta($post->ID, 'week4_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week4_date" id="week4_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week4_passage" value="<?php echo $week4_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week4_speaker" value="<?php echo $week4_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week4_audio" name="week4_audio" value="<?php echo $week4_audio; ?>" />  <a class="week4-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week4_pdf" name="week4_pdf" value="<?php echo $week4_pdf; ?>" />  <a class="week4-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week4_vimeo_title" value="<?php echo $week4_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week4_vimeo_id" value="<?php echo $week4_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week4_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week4-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week4_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week4-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week4_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week4_title" value="<?php if (isset($custom['week4_title'])) { echo                 $custom["week4_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week4_date"  value="<?php if (isset($custom['week4_date']))  { echo date( 'F j, Y', $custom["week4_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week4_passage" value="<?php if (isset($custom['week4_passage'])) { echo $custom["week4_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week4_speaker" value="<?php if (isset($custom['week4_speaker'])) { echo $custom["week4_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week4_audio" name="week4_audio" value="<?php if (isset($custom['week4_audio'])) { echo $custom["week4_audio"][0]; } ?>" /><a class="week4-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week4_pdf"   name="week4_pdf"   value="<?php if (isset($custom['week4_pdf']))   { echo $custom["week4_pdf"][0];   } ?>" /><a class="week4-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week4_vimeo_title" value="<?php if (isset($custom['week4_vimeo_title'])) { echo $custom["week4_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week4_vimeo_id"    value="<?php if (isset($custom['week4_vimeo_id']))    { echo $custom["week4_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
-
 
 /* Week 5 */
 function week5() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week5_title = $custom["week5_title"] [0];
-  $week5_passage = $custom["week5_passage"] [0];
-    $week5_date = $custom["week5_date"] [0];
-  $week5_speaker = $custom["week5_speaker"] [0];
-  $week5_audio = $custom["week5_audio"] [0];
-  $week5_vimeo_title = $custom["week5_vimeo_title"] [0];
-  $week5_vimeo_id = $custom["week5_vimeo_id"] [0];
-  $week5_pdf = $custom["week5_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week5_title" value="<?php echo $week5_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week5_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week5-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week5_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week5-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week5_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week5_date', true);
-    if (get_post_meta($post->ID, 'week5_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week5_date" id="week5_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week5_passage" value="<?php echo $week5_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week5_speaker" value="<?php echo $week5_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week5_audio" name="week5_audio" value="<?php echo $week5_audio; ?>" />  <a class="week5-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week5_pdf" name="week5_pdf" value="<?php echo $week5_pdf; ?>" />  <a class="week5-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week5_vimeo_title" value="<?php echo $week5_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week5_vimeo_id" value="<?php echo $week5_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week5_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week5-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week5_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week5-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week5_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week5_title" value="<?php if (isset($custom['week5_title'])) { echo                 $custom["week5_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week5_date"  value="<?php if (isset($custom['week5_date']))  { echo date( 'F j, Y', $custom["week5_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week5_passage" value="<?php if (isset($custom['week5_passage'])) { echo $custom["week5_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week5_speaker" value="<?php if (isset($custom['week5_speaker'])) { echo $custom["week5_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week5_audio" name="week5_audio" value="<?php if (isset($custom['week5_audio'])) { echo $custom["week5_audio"][0]; } ?>" /><a class="week5-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week5_pdf"   name="week5_pdf"   value="<?php if (isset($custom['week5_pdf']))   { echo $custom["week5_pdf"][0];   } ?>" /><a class="week5-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week5_vimeo_title" value="<?php if (isset($custom['week5_vimeo_title'])) { echo $custom["week5_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week5_vimeo_id"    value="<?php if (isset($custom['week5_vimeo_id']))    { echo $custom["week5_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1079,63 +901,32 @@ function week5() {
 function week6() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week6_title = $custom["week6_title"] [0];
-  $week6_passage = $custom["week6_passage"] [0];
-    $week6_date = $custom["week6_date"] [0];
-  $week6_speaker = $custom["week6_speaker"] [0];
-  $week6_audio = $custom["week6_audio"] [0];
-  $week6_vimeo_title = $custom["week6_vimeo_title"] [0];
-  $week6_vimeo_id = $custom["week6_vimeo_id"] [0];
-  $week6_pdf = $custom["week6_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week6_title" value="<?php echo $week6_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week6_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week6-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week6_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week6-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week6_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week6_date', true);
-    if (get_post_meta($post->ID, 'week6_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week6_date" id="week6_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week6_passage" value="<?php echo $week6_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week6_speaker" value="<?php echo $week6_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week6_audio" name="week6_audio" value="<?php echo $week6_audio; ?>" />  <a class="week6-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week6_pdf" name="week6_pdf" value="<?php echo $week6_pdf; ?>" />  <a class="week6-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week6_vimeo_title" value="<?php echo $week6_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week6_vimeo_id" value="<?php echo $week6_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week6_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week6-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week6_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week6-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week6_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week6_title" value="<?php if (isset($custom['week6_title'])) { echo                 $custom["week6_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week6_date"  value="<?php if (isset($custom['week6_date']))  { echo date( 'F j, Y', $custom["week6_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week6_passage" value="<?php if (isset($custom['week6_passage'])) { echo $custom["week6_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week6_speaker" value="<?php if (isset($custom['week6_speaker'])) { echo $custom["week6_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week6_audio" name="week6_audio" value="<?php if (isset($custom['week6_audio'])) { echo $custom["week6_audio"][0]; } ?>" /><a class="week6-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week6_pdf"   name="week6_pdf"   value="<?php if (isset($custom['week6_pdf']))   { echo $custom["week6_pdf"][0];   } ?>" /><a class="week6-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week6_vimeo_title" value="<?php if (isset($custom['week6_vimeo_title'])) { echo $custom["week6_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week6_vimeo_id"    value="<?php if (isset($custom['week6_vimeo_id']))    { echo $custom["week6_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1143,63 +934,32 @@ function week6() {
 function week7() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week7_title = $custom["week7_title"] [0];
-  $week7_passage = $custom["week7_passage"] [0];
-    $week7_date = $custom["week7_date"] [0];
-  $week7_speaker = $custom["week7_speaker"] [0];
-  $week7_audio = $custom["week7_audio"] [0];
-  $week7_vimeo_title = $custom["week7_vimeo_title"] [0];
-  $week7_vimeo_id = $custom["week7_vimeo_id"] [0];
-  $week7_pdf = $custom["week7_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week7_title" value="<?php echo $week7_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week7_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week7-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week7_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week7-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week7_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week7_date', true);
-    if (get_post_meta($post->ID, 'week7_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week7_date" id="week7_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week7_passage" value="<?php echo $week7_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week7_speaker" value="<?php echo $week7_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week7_audio" name="week7_audio" value="<?php echo $week7_audio; ?>" />  <a class="week7-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week7_pdf" name="week7_pdf" value="<?php echo $week7_pdf; ?>" />  <a class="week7-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week7_vimeo_title" value="<?php echo $week7_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week7_vimeo_id" value="<?php echo $week7_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week7_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week7-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week7_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week7-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week7_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week7_title" value="<?php if (isset($custom['week7_title'])) { echo                 $custom["week7_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week7_date"  value="<?php if (isset($custom['week7_date']))  { echo date( 'F j, Y', $custom["week7_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week7_passage" value="<?php if (isset($custom['week7_passage'])) { echo $custom["week7_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week7_speaker" value="<?php if (isset($custom['week7_speaker'])) { echo $custom["week7_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week7_audio" name="week7_audio" value="<?php if (isset($custom['week7_audio'])) { echo $custom["week7_audio"][0]; } ?>" /><a class="week7-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week7_pdf"   name="week7_pdf"   value="<?php if (isset($custom['week7_pdf']))   { echo $custom["week7_pdf"][0];   } ?>" /><a class="week7-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week7_vimeo_title" value="<?php if (isset($custom['week7_vimeo_title'])) { echo $custom["week7_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week7_vimeo_id"    value="<?php if (isset($custom['week7_vimeo_id']))    { echo $custom["week7_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1207,64 +967,32 @@ function week7() {
 function week8() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week8_title = $custom["week8_title"] [0];
-  $week8_passage = $custom["week8_passage"] [0];
-    $week8_date = $custom["week8_date"] [0];
-  $week8_speaker = $custom["week8_speaker"] [0];
-  $week8_audio = $custom["week8_audio"] [0];
-  $week8_vimeo_title = $custom["week8_vimeo_title"] [0];
-  $week8_vimeo_id = $custom["week8_vimeo_id"] [0];
-  $week8_pdf = $custom["week8_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week8_title" value="<?php echo $week8_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week8_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week8-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week8_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week8-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week8_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week8_date', true);
-    if (get_post_meta($post->ID, 'week8_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week8_date" id="week8_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week8_passage" value="<?php echo $week8_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week8_speaker" value="<?php echo $week8_speaker; ?>" /></p>
-
-  <p><label>MP3 File
-  <input type="text" size="25" id="week8_audio" name="week8_audio" value="<?php echo $week8_audio; ?>" />  <a class="week8-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week8_pdf" name="week8_pdf" value="<?php echo $week8_pdf; ?>" />  <a class="week8-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week8_vimeo_title" value="<?php echo $week8_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week8_vimeo_id" value="<?php echo $week8_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week8_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week8-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week8_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week8-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week8_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week8_title" value="<?php if (isset($custom['week8_title'])) { echo                 $custom["week8_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week8_date"  value="<?php if (isset($custom['week8_date']))  { echo date( 'F j, Y', $custom["week8_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week8_passage" value="<?php if (isset($custom['week8_passage'])) { echo $custom["week8_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week8_speaker" value="<?php if (isset($custom['week8_speaker'])) { echo $custom["week8_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week8_audio" name="week8_audio" value="<?php if (isset($custom['week8_audio'])) { echo $custom["week8_audio"][0]; } ?>" /><a class="week8-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week8_pdf"   name="week8_pdf"   value="<?php if (isset($custom['week8_pdf']))   { echo $custom["week8_pdf"][0];   } ?>" /><a class="week8-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week8_vimeo_title" value="<?php if (isset($custom['week8_vimeo_title'])) { echo $custom["week8_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week8_vimeo_id"    value="<?php if (isset($custom['week8_vimeo_id']))    { echo $custom["week8_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1272,63 +1000,32 @@ function week8() {
 function week9() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week9_title = $custom["week9_title"] [0];
-  $week9_passage = $custom["week9_passage"] [0];
-    $week9_date = $custom["week9_date"] [0];
-  $week9_speaker = $custom["week9_speaker"] [0];
-  $week9_audio = $custom["week9_audio"] [0];
-  $week9_vimeo_title = $custom["week9_vimeo_title"] [0];
-  $week9_vimeo_id = $custom["week9_vimeo_id"] [0];
-  $week9_pdf = $custom["week9_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week9_title" value="<?php echo $week9_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week9_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week9-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week9_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week9-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week9_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week9_date', true);
-    if (get_post_meta($post->ID, 'week9_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week9_date" id="week9_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week9_passage" value="<?php echo $week9_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week9_speaker" value="<?php echo $week9_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week9_audio" name="week9_audio" value="<?php echo $week9_audio; ?>" />  <a class="week9-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week9_pdf" name="week9_pdf" value="<?php echo $week9_pdf; ?>" />  <a class="week9-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week9_vimeo_title" value="<?php echo $week9_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week9_vimeo_id" value="<?php echo $week9_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week9_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week9-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week9_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week9-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week9_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week9_title" value="<?php if (isset($custom['week9_title'])) { echo                 $custom["week9_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week9_date"  value="<?php if (isset($custom['week9_date']))  { echo date( 'F j, Y', $custom["week9_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week9_passage" value="<?php if (isset($custom['week9_passage'])) { echo $custom["week9_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week9_speaker" value="<?php if (isset($custom['week9_speaker'])) { echo $custom["week9_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week9_audio" name="week9_audio" value="<?php if (isset($custom['week9_audio'])) { echo $custom["week9_audio"][0]; } ?>" /><a class="week9-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week9_pdf"   name="week9_pdf"   value="<?php if (isset($custom['week9_pdf']))   { echo $custom["week9_pdf"][0];   } ?>" /><a class="week9-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week9_vimeo_title" value="<?php if (isset($custom['week9_vimeo_title'])) { echo $custom["week9_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week9_vimeo_id"    value="<?php if (isset($custom['week9_vimeo_id']))    { echo $custom["week9_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1336,63 +1033,32 @@ function week9() {
 function week10() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week10_title = $custom["week10_title"] [0];
-  $week10_passage = $custom["week10_passage"] [0];
-    $week10_date = $custom["week10_date"] [0];
-  $week10_speaker = $custom["week10_speaker"] [0];
-  $week10_audio = $custom["week10_audio"] [0];
-  $week10_vimeo_title = $custom["week10_vimeo_title"] [0];
-  $week10_vimeo_id = $custom["week10_vimeo_id"] [0];
-  $week10_pdf = $custom["week10_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week10_title" value="<?php echo $week10_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week10_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week10-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week10_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week10-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week10_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week10_date', true);
-    if (get_post_meta($post->ID, 'week10_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week10_date" id="week10_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week10_passage" value="<?php echo $week10_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week10_speaker" value="<?php echo $week10_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week10_audio" name="week10_audio" value="<?php echo $week10_audio; ?>" />  <a class="week10-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week10_pdf" name="week10_pdf" value="<?php echo $week10_pdf; ?>" />  <a class="week10-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week10_vimeo_title" value="<?php echo $week10_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week10_vimeo_id" value="<?php echo $week10_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week10_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week10-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week10_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week10-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week10_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week10_title" value="<?php if (isset($custom['week10_title'])) { echo                 $custom["week10_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week10_date"  value="<?php if (isset($custom['week10_date']))  { echo date( 'F j, Y', $custom["week10_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week10_passage" value="<?php if (isset($custom['week10_passage'])) { echo $custom["week10_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week10_speaker" value="<?php if (isset($custom['week10_speaker'])) { echo $custom["week10_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week10_audio" name="week10_audio" value="<?php if (isset($custom['week10_audio'])) { echo $custom["week10_audio"][0]; } ?>" /><a class="week10-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week10_pdf"   name="week10_pdf"   value="<?php if (isset($custom['week10_pdf']))   { echo $custom["week10_pdf"][0];   } ?>" /><a class="week10-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week10_vimeo_title" value="<?php if (isset($custom['week10_vimeo_title'])) { echo $custom["week10_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week10_vimeo_id"    value="<?php if (isset($custom['week10_vimeo_id']))    { echo $custom["week10_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1400,63 +1066,32 @@ function week10() {
 function week11() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week11_title = $custom["week11_title"] [0];
-  $week11_passage = $custom["week11_passage"] [0];
-    $week11_date = $custom["week11_date"] [0];
-  $week11_speaker = $custom["week11_speaker"] [0];
-  $week11_audio = $custom["week11_audio"] [0];
-  $week11_vimeo_title = $custom["week11_vimeo_title"] [0];
-  $week11_vimeo_id = $custom["week11_vimeo_id"] [0];
-  $week11_pdf = $custom["week11_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week11_title" value="<?php echo $week11_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week11_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week11-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week11_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week11-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week11_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week11_date', true);
-    if (get_post_meta($post->ID, 'week11_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week11_date" id="week11_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week11_passage" value="<?php echo $week11_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week11_speaker" value="<?php echo $week11_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week11_audio" name="week11_audio" value="<?php echo $week11_audio; ?>" />  <a class="week11-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week11_pdf" name="week11_pdf" value="<?php echo $week11_pdf; ?>" />  <a class="week11-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week11_vimeo_title" value="<?php echo $week11_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week11_vimeo_id" value="<?php echo $week11_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week11_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week11-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week11_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week11-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week11_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week11_title" value="<?php if (isset($custom['week11_title'])) { echo                 $custom["week11_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week11_date"  value="<?php if (isset($custom['week11_date']))  { echo date( 'F j, Y', $custom["week11_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week11_passage" value="<?php if (isset($custom['week11_passage'])) { echo $custom["week11_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week11_speaker" value="<?php if (isset($custom['week11_speaker'])) { echo $custom["week11_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week11_audio" name="week11_audio" value="<?php if (isset($custom['week11_audio'])) { echo $custom["week11_audio"][0]; } ?>" /><a class="week11-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week11_pdf"   name="week11_pdf"   value="<?php if (isset($custom['week11_pdf']))   { echo $custom["week11_pdf"][0];   } ?>" /><a class="week11-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week11_vimeo_title" value="<?php if (isset($custom['week11_vimeo_title'])) { echo $custom["week11_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week11_vimeo_id"    value="<?php if (isset($custom['week11_vimeo_id']))    { echo $custom["week11_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1464,63 +1099,32 @@ function week11() {
 function week12() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week12_title = $custom["week12_title"] [0];
-  $week12_passage = $custom["week12_passage"] [0];
-    $week12_date = $custom["week12_date"] [0];
-  $week12_speaker = $custom["week12_speaker"] [0];
-  $week12_audio = $custom["week12_audio"] [0];
-  $week12_vimeo_title = $custom["week12_vimeo_title"] [0];
-  $week12_vimeo_id = $custom["week12_vimeo_id"] [0];
-  $week12_pdf = $custom["week12_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week12_title" value="<?php echo $week12_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week12_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week12-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week12_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week12-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week12_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week12_date', true);
-    if (get_post_meta($post->ID, 'week12_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week12_date" id="week12_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week12_passage" value="<?php echo $week12_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week12_speaker" value="<?php echo $week12_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week12_audio" name="week12_audio" value="<?php echo $week12_audio; ?>" />  <a class="week12-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week12_pdf" name="week12_pdf" value="<?php echo $week12_pdf; ?>" />  <a class="week12-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week12_vimeo_title" value="<?php echo $week12_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week12_vimeo_id" value="<?php echo $week12_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week12_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week12-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week12_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week12-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week12_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week12_title" value="<?php if (isset($custom['week12_title'])) { echo                 $custom["week12_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week12_date"  value="<?php if (isset($custom['week12_date']))  { echo date( 'F j, Y', $custom["week12_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week12_passage" value="<?php if (isset($custom['week12_passage'])) { echo $custom["week12_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week12_speaker" value="<?php if (isset($custom['week12_speaker'])) { echo $custom["week12_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week12_audio" name="week12_audio" value="<?php if (isset($custom['week12_audio'])) { echo $custom["week12_audio"][0]; } ?>" /><a class="week12-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week12_pdf"   name="week12_pdf"   value="<?php if (isset($custom['week12_pdf']))   { echo $custom["week12_pdf"][0];   } ?>" /><a class="week12-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week12_vimeo_title" value="<?php if (isset($custom['week12_vimeo_title'])) { echo $custom["week12_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week12_vimeo_id"    value="<?php if (isset($custom['week12_vimeo_id']))    { echo $custom["week12_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1528,63 +1132,32 @@ function week12() {
 function week13() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week13_title = $custom["week13_title"] [0];
-  $week13_passage = $custom["week13_passage"] [0];
-    $week13_date = $custom["week13_date"] [0];
-  $week13_speaker = $custom["week13_speaker"] [0];
-  $week13_audio = $custom["week13_audio"] [0];
-  $week13_vimeo_title = $custom["week13_vimeo_title"] [0];
-  $week13_vimeo_id = $custom["week13_vimeo_id"] [0];
-  $week13_pdf = $custom["week13_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week13_title" value="<?php echo $week13_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week13_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week13-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week13_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week13-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week13_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week13_date', true);
-    if (get_post_meta($post->ID, 'week13_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week13_date" id="week13_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week13_passage" value="<?php echo $week13_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week13_speaker" value="<?php echo $week13_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week13_audio" name="week13_audio" value="<?php echo $week13_audio; ?>" />  <a class="week13-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week13_pdf" name="week13_pdf" value="<?php echo $week13_pdf; ?>" />  <a class="week13-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week13_vimeo_title" value="<?php echo $week13_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week13_vimeo_id" value="<?php echo $week13_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week13_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week13-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week13_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week13-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week13_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week13_title" value="<?php if (isset($custom['week13_title'])) { echo                 $custom["week13_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week13_date"  value="<?php if (isset($custom['week13_date']))  { echo date( 'F j, Y', $custom["week13_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week13_passage" value="<?php if (isset($custom['week13_passage'])) { echo $custom["week13_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week13_speaker" value="<?php if (isset($custom['week13_speaker'])) { echo $custom["week13_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week13_audio" name="week13_audio" value="<?php if (isset($custom['week13_audio'])) { echo $custom["week13_audio"][0]; } ?>" /><a class="week13-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week13_pdf"   name="week13_pdf"   value="<?php if (isset($custom['week13_pdf']))   { echo $custom["week13_pdf"][0];   } ?>" /><a class="week13-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week13_vimeo_title" value="<?php if (isset($custom['week13_vimeo_title'])) { echo $custom["week13_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week13_vimeo_id"    value="<?php if (isset($custom['week13_vimeo_id']))    { echo $custom["week13_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1592,63 +1165,32 @@ function week13() {
 function week14() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week14_title = $custom["week14_title"] [0];
-  $week14_passage = $custom["week14_passage"] [0];
-    $week14_date = $custom["week14_date"] [0];
-  $week14_speaker = $custom["week14_speaker"] [0];
-  $week14_audio = $custom["week14_audio"] [0];
-  $week14_vimeo_title = $custom["week14_vimeo_title"] [0];
-  $week14_vimeo_id = $custom["week14_vimeo_id"] [0];
-  $week14_pdf = $custom["week14_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week14_title" value="<?php echo $week14_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week14_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week14-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week14_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week14-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week14_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week14_date', true);
-    if (get_post_meta($post->ID, 'week14_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week14_date" id="week14_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week14_passage" value="<?php echo $week14_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week14_speaker" value="<?php echo $week14_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week14_audio" name="week14_audio" value="<?php echo $week14_audio; ?>" />  <a class="week14-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week14_pdf" name="week14_pdf" value="<?php echo $week14_pdf; ?>" />  <a class="week14-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week14_vimeo_title" value="<?php echo $week14_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week14_vimeo_id" value="<?php echo $week14_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week14_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week14-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week14_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week14-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week14_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week14_title" value="<?php if (isset($custom['week14_title'])) { echo                 $custom["week14_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week14_date"  value="<?php if (isset($custom['week14_date']))  { echo date( 'F j, Y', $custom["week14_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week14_passage" value="<?php if (isset($custom['week14_passage'])) { echo $custom["week14_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week14_speaker" value="<?php if (isset($custom['week14_speaker'])) { echo $custom["week14_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week14_audio" name="week14_audio" value="<?php if (isset($custom['week14_audio'])) { echo $custom["week14_audio"][0]; } ?>" /><a class="week14-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week14_pdf"   name="week14_pdf"   value="<?php if (isset($custom['week14_pdf']))   { echo $custom["week14_pdf"][0];   } ?>" /><a class="week14-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week14_vimeo_title" value="<?php if (isset($custom['week14_vimeo_title'])) { echo $custom["week14_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week14_vimeo_id"    value="<?php if (isset($custom['week14_vimeo_id']))    { echo $custom["week14_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1656,63 +1198,32 @@ function week14() {
 function week15() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week15_title = $custom["week15_title"] [0];
-  $week15_passage = $custom["week15_passage"] [0];
-    $week15_date = $custom["week15_date"] [0];
-  $week15_speaker = $custom["week15_speaker"] [0];
-  $week15_audio = $custom["week15_audio"] [0];
-  $week15_vimeo_title = $custom["week15_vimeo_title"] [0];
-  $week15_vimeo_id = $custom["week15_vimeo_id"] [0];
-  $week15_pdf = $custom["week15_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week15_title" value="<?php echo $week15_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week15_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week15-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week15_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week15-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week15_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week15_date', true);
-    if (get_post_meta($post->ID, 'week15_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week15_date" id="week15_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week15_passage" value="<?php echo $week15_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week15_speaker" value="<?php echo $week15_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week15_audio" name="week15_audio" value="<?php echo $week15_audio; ?>" />  <a class="week15-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week15_pdf" name="week15_pdf" value="<?php echo $week15_pdf; ?>" />  <a class="week15-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week15_vimeo_title" value="<?php echo $week15_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week15_vimeo_id" value="<?php echo $week15_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week15_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week15-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week15_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week15-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week15_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week15_title" value="<?php if (isset($custom['week15_title'])) { echo                 $custom["week15_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week15_date"  value="<?php if (isset($custom['week15_date']))  { echo date( 'F j, Y', $custom["week15_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week15_passage" value="<?php if (isset($custom['week15_passage'])) { echo $custom["week15_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week15_speaker" value="<?php if (isset($custom['week15_speaker'])) { echo $custom["week15_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week15_audio" name="week15_audio" value="<?php if (isset($custom['week15_audio'])) { echo $custom["week15_audio"][0]; } ?>" /><a class="week15-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week15_pdf"   name="week15_pdf"   value="<?php if (isset($custom['week15_pdf']))   { echo $custom["week15_pdf"][0];   } ?>" /><a class="week15-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week15_vimeo_title" value="<?php if (isset($custom['week15_vimeo_title'])) { echo $custom["week15_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week15_vimeo_id"    value="<?php if (isset($custom['week15_vimeo_id']))    { echo $custom["week15_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1720,63 +1231,32 @@ function week15() {
 function week16() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week16_title = $custom["week16_title"] [0];
-  $week16_passage = $custom["week16_passage"] [0];
-    $week16_date = $custom["week16_date"] [0];
-  $week16_speaker = $custom["week16_speaker"] [0];
-  $week16_audio = $custom["week16_audio"] [0];
-  $week16_vimeo_title = $custom["week16_vimeo_title"] [0];
-  $week16_vimeo_id = $custom["week16_vimeo_id"] [0];
-  $week16_pdf = $custom["week16_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week16_title" value="<?php echo $week16_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week16_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week16-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week16_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week16-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week16_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week16_date', true);
-    if (get_post_meta($post->ID, 'week16_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week16_date" id="week16_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week16_passage" value="<?php echo $week16_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week16_speaker" value="<?php echo $week16_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week16_audio" name="week16_audio" value="<?php echo $week16_audio; ?>" />  <a class="week16-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week16_pdf" name="week16_pdf" value="<?php echo $week16_pdf; ?>" />  <a class="week16-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week16_vimeo_title" value="<?php echo $week16_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week16_vimeo_id" value="<?php echo $week16_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week16_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week16-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week16_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week16-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week16_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week16_title" value="<?php if (isset($custom['week16_title'])) { echo                 $custom["week16_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week16_date"  value="<?php if (isset($custom['week16_date']))  { echo date( 'F j, Y', $custom["week16_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week16_passage" value="<?php if (isset($custom['week16_passage'])) { echo $custom["week16_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week16_speaker" value="<?php if (isset($custom['week16_speaker'])) { echo $custom["week16_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week16_audio" name="week16_audio" value="<?php if (isset($custom['week16_audio'])) { echo $custom["week16_audio"][0]; } ?>" /><a class="week16-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week16_pdf"   name="week16_pdf"   value="<?php if (isset($custom['week16_pdf']))   { echo $custom["week16_pdf"][0];   } ?>" /><a class="week16-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week16_vimeo_title" value="<?php if (isset($custom['week16_vimeo_title'])) { echo $custom["week16_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week16_vimeo_id"    value="<?php if (isset($custom['week16_vimeo_id']))    { echo $custom["week16_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1784,63 +1264,32 @@ function week16() {
 function week17() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week17_title = $custom["week17_title"] [0];
-  $week17_passage = $custom["week17_passage"] [0];
-    $week17_date = $custom["week17_date"] [0];
-  $week17_speaker = $custom["week17_speaker"] [0];
-  $week17_audio = $custom["week17_audio"] [0];
-  $week17_vimeo_title = $custom["week17_vimeo_title"] [0];
-  $week17_vimeo_id = $custom["week17_vimeo_id"] [0];
-  $week17_pdf = $custom["week17_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week17_title" value="<?php echo $week17_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week17_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week17-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week17_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week17-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week17_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week17_date', true);
-    if (get_post_meta($post->ID, 'week17_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week17_date" id="week17_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week17_passage" value="<?php echo $week17_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week17_speaker" value="<?php echo $week17_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week17_audio" name="week17_audio" value="<?php echo $week17_audio; ?>" />  <a class="week17-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week17_pdf" name="week17_pdf" value="<?php echo $week17_pdf; ?>" />  <a class="week17-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week17_vimeo_title" value="<?php echo $week17_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week17_vimeo_id" value="<?php echo $week17_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week17_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week17-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week17_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week17-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week17_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week17_title" value="<?php if (isset($custom['week17_title'])) { echo                 $custom["week17_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week17_date"  value="<?php if (isset($custom['week17_date']))  { echo date( 'F j, Y', $custom["week17_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week17_passage" value="<?php if (isset($custom['week17_passage'])) { echo $custom["week17_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week17_speaker" value="<?php if (isset($custom['week17_speaker'])) { echo $custom["week17_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week17_audio" name="week17_audio" value="<?php if (isset($custom['week17_audio'])) { echo $custom["week17_audio"][0]; } ?>" /><a class="week17-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week17_pdf"   name="week17_pdf"   value="<?php if (isset($custom['week17_pdf']))   { echo $custom["week17_pdf"][0];   } ?>" /><a class="week17-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week17_vimeo_title" value="<?php if (isset($custom['week17_vimeo_title'])) { echo $custom["week17_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week17_vimeo_id"    value="<?php if (isset($custom['week17_vimeo_id']))    { echo $custom["week17_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1848,63 +1297,32 @@ function week17() {
 function week18() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week18_title = $custom["week18_title"] [0];
-  $week18_passage = $custom["week18_passage"] [0];
-    $week18_date = $custom["week18_date"] [0];
-  $week18_speaker = $custom["week18_speaker"] [0];
-  $week18_audio = $custom["week18_audio"] [0];
-  $week18_vimeo_title = $custom["week18_vimeo_title"] [0];
-  $week18_vimeo_id = $custom["week18_vimeo_id"] [0];
-  $week18_pdf = $custom["week18_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week18_title" value="<?php echo $week18_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week18_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week18-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week18_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week18-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week18_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week18_date', true);
-    if (get_post_meta($post->ID, 'week18_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week18_date" id="week18_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week18_passage" value="<?php echo $week18_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week18_speaker" value="<?php echo $week18_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week18_audio" name="week18_audio" value="<?php echo $week18_audio; ?>" />  <a class="week18-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week18_pdf" name="week18_pdf" value="<?php echo $week18_pdf; ?>" />  <a class="week18-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week18_vimeo_title" value="<?php echo $week18_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week18_vimeo_id" value="<?php echo $week18_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week18_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week18-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week18_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week18-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week18_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week18_title" value="<?php if (isset($custom['week18_title'])) { echo                 $custom["week18_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week18_date"  value="<?php if (isset($custom['week18_date']))  { echo date( 'F j, Y', $custom["week18_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week18_passage" value="<?php if (isset($custom['week18_passage'])) { echo $custom["week18_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week18_speaker" value="<?php if (isset($custom['week18_speaker'])) { echo $custom["week18_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week18_audio" name="week18_audio" value="<?php if (isset($custom['week18_audio'])) { echo $custom["week18_audio"][0]; } ?>" /><a class="week18-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week18_pdf"   name="week18_pdf"   value="<?php if (isset($custom['week18_pdf']))   { echo $custom["week18_pdf"][0];   } ?>" /><a class="week18-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week18_vimeo_title" value="<?php if (isset($custom['week18_vimeo_title'])) { echo $custom["week18_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week18_vimeo_id"    value="<?php if (isset($custom['week18_vimeo_id']))    { echo $custom["week18_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1912,63 +1330,32 @@ function week18() {
 function week19() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week19_title = $custom["week19_title"] [0];
-  $week19_passage = $custom["week19_passage"] [0];
-    $week19_date = $custom["week19_date"] [0];
-  $week19_speaker = $custom["week19_speaker"] [0];
-  $week19_audio = $custom["week19_audio"] [0];
-  $week19_vimeo_title = $custom["week19_vimeo_title"] [0];
-  $week19_vimeo_id = $custom["week19_vimeo_id"] [0];
-  $week19_pdf = $custom["week19_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week19_title" value="<?php echo $week19_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week19_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week19-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week19_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week19-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week19_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week19_date', true);
-    if (get_post_meta($post->ID, 'week19_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week19_date" id="week19_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week19_passage" value="<?php echo $week19_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week19_speaker" value="<?php echo $week19_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week19_audio" name="week19_audio" value="<?php echo $week19_audio; ?>" />  <a class="week19-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week19_pdf" name="week19_pdf" value="<?php echo $week19_pdf; ?>" />  <a class="week19-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week19_vimeo_title" value="<?php echo $week19_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week19_vimeo_id" value="<?php echo $week19_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week19_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week19-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week19_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week19-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week19_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week19_title" value="<?php if (isset($custom['week19_title'])) { echo                 $custom["week19_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week19_date"  value="<?php if (isset($custom['week19_date']))  { echo date( 'F j, Y', $custom["week19_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week19_passage" value="<?php if (isset($custom['week19_passage'])) { echo $custom["week19_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week19_speaker" value="<?php if (isset($custom['week19_speaker'])) { echo $custom["week19_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week19_audio" name="week19_audio" value="<?php if (isset($custom['week19_audio'])) { echo $custom["week19_audio"][0]; } ?>" /><a class="week19-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week19_pdf"   name="week19_pdf"   value="<?php if (isset($custom['week19_pdf']))   { echo $custom["week19_pdf"][0];   } ?>" /><a class="week19-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week19_vimeo_title" value="<?php if (isset($custom['week19_vimeo_title'])) { echo $custom["week19_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week19_vimeo_id"    value="<?php if (isset($custom['week19_vimeo_id']))    { echo $custom["week19_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -1976,63 +1363,32 @@ function week19() {
 function week20() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week20_title = $custom["week20_title"] [0];
-  $week20_passage = $custom["week20_passage"] [0];
-    $week20_date = $custom["week20_date"] [0];
-  $week20_speaker = $custom["week20_speaker"] [0];
-  $week20_audio = $custom["week20_audio"] [0];
-  $week20_vimeo_title = $custom["week20_vimeo_title"] [0];
-  $week20_vimeo_id = $custom["week20_vimeo_id"] [0];
-  $week20_pdf = $custom["week20_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week20_title" value="<?php echo $week20_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week20_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week20-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week20_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week20-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week20_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week20_date', true);
-    if (get_post_meta($post->ID, 'week20_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week20_date" id="week20_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week20_passage" value="<?php echo $week20_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week20_speaker" value="<?php echo $week20_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week20_audio" name="week20_audio" value="<?php echo $week20_audio; ?>" />  <a class="week20-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week20_pdf" name="week20_pdf" value="<?php echo $week20_pdf; ?>" />  <a class="week20-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week20_vimeo_title" value="<?php echo $week20_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week20_vimeo_id" value="<?php echo $week20_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week20_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week20-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week20_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week20-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week20_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week20_title" value="<?php if (isset($custom['week20_title'])) { echo                 $custom["week20_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week20_date"  value="<?php if (isset($custom['week20_date']))  { echo date( 'F j, Y', $custom["week20_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week20_passage" value="<?php if (isset($custom['week20_passage'])) { echo $custom["week20_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week20_speaker" value="<?php if (isset($custom['week20_speaker'])) { echo $custom["week20_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week20_audio" name="week20_audio" value="<?php if (isset($custom['week20_audio'])) { echo $custom["week20_audio"][0]; } ?>" /><a class="week20-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week20_pdf"   name="week20_pdf"   value="<?php if (isset($custom['week20_pdf']))   { echo $custom["week20_pdf"][0];   } ?>" /><a class="week20-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week20_vimeo_title" value="<?php if (isset($custom['week20_vimeo_title'])) { echo $custom["week20_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week20_vimeo_id"    value="<?php if (isset($custom['week20_vimeo_id']))    { echo $custom["week20_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -2040,63 +1396,32 @@ function week20() {
 function week21() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $week21_title = $custom["week21_title"] [0];
-  $week21_passage = $custom["week21_passage"] [0];
-        $week21_date = $custom["week21_date"] [0];
-  $week21_speaker = $custom["week21_speaker"] [0];
-  $week21_audio = $custom["week21_audio"] [0];
-  $week21_vimeo_title = $custom["week21_vimeo_title"] [0];
-  $week21_vimeo_id = $custom["week21_vimeo_id"] [0];
-  $week21_pdf = $custom["week21_pdf"] [0];
 ?>
-    <p><label>Title</label> 
-  <input type="text" size="40" name="week21_title" value="<?php echo $week21_title; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Date</label>
-  <script>jQuery(document).ready(function(){jQuery( "input[name='week21_date']" ).datepicker({ dateFormat: 'MM d, yy' }); jQuery( "#ui-datepicker-div" ).hide();});</script>
-    <script type="text/javascript">
-    jQuery(document).ready(function() {
-        jQuery('.week21-audio-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week21_audio').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    jQuery(document).ready(function() {
-        jQuery('.week21-pdf-upload').click(function() {
-            tb_show('', 'media-upload.php?TB_iframe=true');
-            window.send_to_editor = function(html) {
-                url = jQuery(html).attr('href');
-                jQuery('#week21_pdf').val(url);
-                tb_remove();
-            };
-        return false;
-        });
-    });
-    </script>
-  <?php 
-  $dateMeta = get_post_meta($post->ID, 'week21_date', true);
-    if (get_post_meta($post->ID, 'week21_date', true)) {
-  $displayDate = date('F j, Y', $dateMeta);
-  } else { $displayDate = '';
-  }
-  ?>
-  <input type="text" name="week21_date" id="week21_date" value="<?php echo $displayDate ?>" /></p>
-  <p><label>Passage</label> 
-  <input type="text" size="25" name="week21_passage" value="<?php echo $week21_passage; ?>" />&nbsp;&nbsp;&nbsp;
-  <label>Speaker</label> 
-  <input type="text" size="25" name="week21_speaker" value="<?php echo $week21_speaker; ?>" /></p>
-  <p><label>MP3 File
-  <input type="text" size="25" id="week21_audio" name="week21_audio" value="<?php echo $week21_audio; ?>" />  <a class="week21-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label>&nbsp;&nbsp;&nbsp;
-  <label>Presentation
-  <input type="text" size="25" id="week21_pdf" name="week21_pdf" value="<?php echo $week21_pdf; ?>" />  <a class="week21-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></strong></label></p>
-    <p><label>Vimeo Title</label> 
-  <input type="text" size="25" name="week21_vimeo_title" value="<?php echo $week21_vimeo_title; ?>" />&nbsp;&nbsp;&nbsp;
-    <label>Vimeo ID</label> 
-  <input type="text" size="25" name="week21_vimeo_id" value="<?php echo $week21_vimeo_id; ?>" /></p>
+  <script type="text/javascript">
+    jQuery(document).ready(function(){jQuery("input[name='week21_date']").datepicker({dateFormat:'MM d, yy'});jQuery("#ui-datepicker-div").hide();});
+    jQuery(document).ready(function(){jQuery('.week21-audio-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor=function(html){url=jQuery(html).attr('href');jQuery('#week21_audio').val(url);tb_remove();};return false;});});
+    jQuery(document).ready(function(){jQuery('.week21-pdf-upload').click(function(){tb_show('','media-upload.php?TB_iframe=true');window.send_to_editor = function(html){url = jQuery(html).attr('href');jQuery('#week21_pdf').val(url);tb_remove();};return false;});});
+  </script>
+  
+  <p>
+    <label>Title</label><input type="text" size="40" name="week21_title" value="<?php if (isset($custom['week21_title'])) { echo                 $custom["week21_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Date</label> <input type="text" size="25" name="week21_date"  value="<?php if (isset($custom['week21_date']))  { echo date( 'F j, Y', $custom["week21_date"][0]); } ?>" />
+  </p>
+  
+  <p>
+    <label>Passage</label><input type="text" size="25" name="week21_passage" value="<?php if (isset($custom['week21_passage'])) { echo $custom["week21_passage"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Speaker</label><input type="text" size="25" name="week21_speaker" value="<?php if (isset($custom['week21_speaker'])) { echo $custom["week21_speaker"][0]; } ?>" />
+  </p>
+  
+  <p>
+    <label>MP3 File    <input type="text" size="25" id="week21_audio" name="week21_audio" value="<?php if (isset($custom['week21_audio'])) { echo $custom["week21_audio"][0]; } ?>" /><a class="week21-audio-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>&nbsp;&nbsp;&nbsp;
+    <label>Presentation<input type="text" size="25" id="week21_pdf"   name="week21_pdf"   value="<?php if (isset($custom['week21_pdf']))   { echo $custom["week21_pdf"][0];   } ?>" /><a class="week21-pdf-upload menu-top menu-top-first menu-top-last button thickbox">Upload</a></label>
+  </p>
+  
+  <p>
+    <label>Vimeo Title</label><input type="text" size="25" name="week21_vimeo_title" value="<?php if (isset($custom['week21_vimeo_title'])) { echo $custom["week21_vimeo_title"][0]; } ?>" />&nbsp;&nbsp;&nbsp;
+    <label>Vimeo ID</label>   <input type="text" size="25" name="week21_vimeo_id"    value="<?php if (isset($custom['week21_vimeo_id']))    { echo $custom["week21_vimeo_id"][0];    } ?>" />
+  </p>
   <?php
 }
 
@@ -2104,12 +1429,8 @@ function week21() {
 function feed_cat() {
   global $post;
   $custom = get_post_custom($post->ID);
-  $feed_term = $custom["feed_term"] [0];
 ?>
-
-    <p><label>Category</label> 
-  <input type="text" size="15" name="feed_term" value="<?php echo $feed_term; ?>" /></p>
-  <?php
+	<p><label>Category</label><input type="text" size="15" name="feed_term" value="<?php if (isset($custom['feed_term'])) { echo $custom["feed_term"][0]; } ?>" /></p><?php
 }
 
 /* Save Details */
@@ -2130,208 +1451,208 @@ function save_details(){
   return $post_id;
   }
   // save all meta data
-  update_post_meta($post->ID, "ns1", $_POST["ns1"]);
-  update_post_meta($post->ID, "ns2", $_POST["ns2"]);
-  update_post_meta($post->ID, "ns3", $_POST["ns3"]);
+  if (isset($_POST['ns1'])) { update_post_meta($post->ID, "ns1", $_POST["ns1"]); }
+  if (isset($_POST['ns2'])) { update_post_meta($post->ID, "ns2", $_POST["ns2"]); }
+  if (isset($_POST['ns3'])) { update_post_meta($post->ID, "ns3", $_POST["ns3"]); }
   
-  update_post_meta($post->ID, "staff_title", $_POST["staff_title"]);
-  update_post_meta($post->ID, "staff_email", $_POST["staff_email"]);
-  update_post_meta($post->ID, "staff_phone", $_POST["staff_phone"]);
+  if (isset($_POST['staff_title'])) { update_post_meta($post->ID, "staff_title", $_POST["staff_title"]); }
+  if (isset($_POST['staff_email'])) { update_post_meta($post->ID, "staff_email", $_POST["staff_email"]); }
+  if (isset($_POST['staff_phone'])) { update_post_meta($post->ID, "staff_phone", $_POST["staff_phone"]); }
   
-  update_post_meta($post->ID, "elder_title", $_POST["elder_title"]);
-  update_post_meta($post->ID, "elder_email", $_POST["elder_email"]);
-  update_post_meta($post->ID, "elder_phone", $_POST["elder_phone"]);
+  if (isset($_POST['elder_title'])) { update_post_meta($post->ID, "elder_title", $_POST["elder_title"]); }
+  if (isset($_POST['elder_email'])) { update_post_meta($post->ID, "elder_email", $_POST["elder_email"]); }
+  if (isset($_POST['elder_phone'])) { update_post_meta($post->ID, "elder_phone", $_POST["elder_phone"]); }
   
-  update_post_meta($post->ID, "week1_title", $_POST["week1_title"]);
-  update_post_meta($post->ID, "week1_passage", $_POST["week1_passage"]);
-  update_post_meta($post->ID, "week1_speaker", $_POST["week1_speaker"]);
-  update_post_meta($post->ID, "week1_audio", $_POST["week1_audio"]);
-  update_post_meta($post->ID, "week1_vimeo_title", $_POST["week1_vimeo_title"]);
-  update_post_meta($post->ID, "week1_vimeo_id", $_POST["week1_vimeo_id"]);
-  update_post_meta($post->ID, "week1_pdf", $_POST["week1_pdf"]);
-  update_post_meta($post->ID, "week1_date", strtotime($_POST["week1_date"]));
+  if (isset($_POST['week1_title']))       { update_post_meta($post->ID, "week1_title",           $_POST["week1_title"]); }
+  if (isset($_POST['week1_passage']))     { update_post_meta($post->ID, "week1_passage",         $_POST["week1_passage"]); }
+  if (isset($_POST['week1_speaker']))     { update_post_meta($post->ID, "week1_speaker",         $_POST["week1_speaker"]); }
+  if (isset($_POST['week1_audio']))       { update_post_meta($post->ID, "week1_audio",           $_POST["week1_audio"]); }
+  if (isset($_POST['week1_vimeo_title'])) { update_post_meta($post->ID, "week1_vimeo_title",     $_POST["week1_vimeo_title"]); }
+  if (isset($_POST['week1_vimeo_id']))    { update_post_meta($post->ID, "week1_vimeo_id",        $_POST["week1_vimeo_id"]); }
+  if (isset($_POST['week1_pdf']))         { update_post_meta($post->ID, "week1_pdf",             $_POST["week1_pdf"]); }
+  if (isset($_POST['week1_date']))        { update_post_meta($post->ID, "week1_date", strtotime( $_POST["week1_date"] )); }
   
-  update_post_meta($post->ID, "week2_title", $_POST["week2_title"]);
-  update_post_meta($post->ID, "week2_passage", $_POST["week2_passage"]);
-  update_post_meta($post->ID, "week2_speaker", $_POST["week2_speaker"]);
-  update_post_meta($post->ID, "week2_audio", $_POST["week2_audio"]);
-  update_post_meta($post->ID, "week2_vimeo_title", $_POST["week2_vimeo_title"]);
-  update_post_meta($post->ID, "week2_vimeo_id", $_POST["week2_vimeo_id"]);
-  update_post_meta($post->ID, "week2_pdf", $_POST["week2_pdf"]);
-  update_post_meta($post->ID, "week2_date", strtotime($_POST["week2_date"]));
+  if (isset($_POST['week2_title']))       { update_post_meta($post->ID, "week2_title",           $_POST["week2_title"]); }
+  if (isset($_POST['week2_passage']))     { update_post_meta($post->ID, "week2_passage",         $_POST["week2_passage"]); }
+  if (isset($_POST['week2_speaker']))     { update_post_meta($post->ID, "week2_speaker",         $_POST["week2_speaker"]); }
+  if (isset($_POST['week2_audio']))       { update_post_meta($post->ID, "week2_audio",           $_POST["week2_audio"]); }
+  if (isset($_POST['week2_vimeo_title'])) { update_post_meta($post->ID, "week2_vimeo_title",     $_POST["week2_vimeo_title"]); }
+  if (isset($_POST['week2_vimeo_id']))    { update_post_meta($post->ID, "week2_vimeo_id",        $_POST["week2_vimeo_id"]); }
+  if (isset($_POST['week2_pdf']))         { update_post_meta($post->ID, "week2_pdf",             $_POST["week2_pdf"]); }
+  if (isset($_POST['week2_date']))        { update_post_meta($post->ID, "week2_date", strtotime( $_POST["week2_date"] )); }
   
-  update_post_meta($post->ID, "week3_title", $_POST["week3_title"]);
-  update_post_meta($post->ID, "week3_passage", $_POST["week3_passage"]);
-  update_post_meta($post->ID, "week3_speaker", $_POST["week3_speaker"]);
-  update_post_meta($post->ID, "week3_audio", $_POST["week3_audio"]);
-  update_post_meta($post->ID, "week3_vimeo_title", $_POST["week3_vimeo_title"]);
-  update_post_meta($post->ID, "week3_vimeo_id", $_POST["week3_vimeo_id"]);
-  update_post_meta($post->ID, "week3_pdf", $_POST["week3_pdf"]);
-  update_post_meta($post->ID, "week3_date", strtotime($_POST["week3_date"]));
+  if (isset($_POST['week3_title']))       { update_post_meta($post->ID, "week3_title",           $_POST["week3_title"]); }
+  if (isset($_POST['week3_passage']))     { update_post_meta($post->ID, "week3_passage",         $_POST["week3_passage"]); }
+  if (isset($_POST['week3_speaker']))     { update_post_meta($post->ID, "week3_speaker",         $_POST["week3_speaker"]); }
+  if (isset($_POST['week3_audio']))       { update_post_meta($post->ID, "week3_audio",           $_POST["week3_audio"]); }
+  if (isset($_POST['week3_vimeo_title'])) { update_post_meta($post->ID, "week3_vimeo_title",     $_POST["week3_vimeo_title"]); }
+  if (isset($_POST['week3_vimeo_id']))    { update_post_meta($post->ID, "week3_vimeo_id",        $_POST["week3_vimeo_id"]); }
+  if (isset($_POST['week3_pdf']))         { update_post_meta($post->ID, "week3_pdf",             $_POST["week3_pdf"]); }
+  if (isset($_POST['week3_date']))        { update_post_meta($post->ID, "week3_date", strtotime( $_POST["week3_date"] )); }
   
-  update_post_meta($post->ID, "week4_title", $_POST["week4_title"]);
-  update_post_meta($post->ID, "week4_passage", $_POST["week4_passage"]);
-  update_post_meta($post->ID, "week4_speaker", $_POST["week4_speaker"]);
-  update_post_meta($post->ID, "week4_audio", $_POST["week4_audio"]);
-  update_post_meta($post->ID, "week4_vimeo_title", $_POST["week4_vimeo_title"]);
-  update_post_meta($post->ID, "week4_vimeo_id", $_POST["week4_vimeo_id"]);
-  update_post_meta($post->ID, "week4_pdf", $_POST["week4_pdf"]);
-  update_post_meta($post->ID, "week4_date", strtotime($_POST["week4_date"]));
+  if (isset($_POST['week4_title']))       { update_post_meta($post->ID, "week4_title",           $_POST["week4_title"]); }
+  if (isset($_POST['week4_passage']))     { update_post_meta($post->ID, "week4_passage",         $_POST["week4_passage"]); }
+  if (isset($_POST['week4_speaker']))     { update_post_meta($post->ID, "week4_speaker",         $_POST["week4_speaker"]); }
+  if (isset($_POST['week4_audio']))       { update_post_meta($post->ID, "week4_audio",           $_POST["week4_audio"]); }
+  if (isset($_POST['week4_vimeo_title'])) { update_post_meta($post->ID, "week4_vimeo_title",     $_POST["week4_vimeo_title"]); }
+  if (isset($_POST['week4_vimeo_id']))    { update_post_meta($post->ID, "week4_vimeo_id",        $_POST["week4_vimeo_id"]); }
+  if (isset($_POST['week4_pdf']))         { update_post_meta($post->ID, "week4_pdf",             $_POST["week4_pdf"]); }
+  if (isset($_POST['week4_date']))        { update_post_meta($post->ID, "week4_date", strtotime( $_POST["week4_date"] )); }
   
-  update_post_meta($post->ID, "week5_title", $_POST["week5_title"]);
-  update_post_meta($post->ID, "week5_passage", $_POST["week5_passage"]);
-  update_post_meta($post->ID, "week5_speaker", $_POST["week5_speaker"]);
-  update_post_meta($post->ID, "week5_audio", $_POST["week5_audio"]);
-  update_post_meta($post->ID, "week5_vimeo_title", $_POST["week5_vimeo_title"]);
-  update_post_meta($post->ID, "week5_vimeo_id", $_POST["week5_vimeo_id"]);
-  update_post_meta($post->ID, "week5_pdf", $_POST["week5_pdf"]);
-  update_post_meta($post->ID, "week5_date", strtotime($_POST["week5_date"]));
+  if (isset($_POST['week5_title']))       { update_post_meta($post->ID, "week5_title",           $_POST["week5_title"]); }
+  if (isset($_POST['week5_passage']))     { update_post_meta($post->ID, "week5_passage",         $_POST["week5_passage"]); }
+  if (isset($_POST['week5_speaker']))     { update_post_meta($post->ID, "week5_speaker",         $_POST["week5_speaker"]); }
+  if (isset($_POST['week5_audio']))       { update_post_meta($post->ID, "week5_audio",           $_POST["week5_audio"]); }
+  if (isset($_POST['week5_vimeo_title'])) { update_post_meta($post->ID, "week5_vimeo_title",     $_POST["week5_vimeo_title"]); }
+  if (isset($_POST['week5_vimeo_id']))    { update_post_meta($post->ID, "week5_vimeo_id",        $_POST["week5_vimeo_id"]); }
+  if (isset($_POST['week5_pdf']))         { update_post_meta($post->ID, "week5_pdf",             $_POST["week5_pdf"]); }
+  if (isset($_POST['week5_date']))        { update_post_meta($post->ID, "week5_date", strtotime( $_POST["week5_date"] )); }
   
-  update_post_meta($post->ID, "week6_title", $_POST["week6_title"]);
-  update_post_meta($post->ID, "week6_passage", $_POST["week6_passage"]);
-  update_post_meta($post->ID, "week6_speaker", $_POST["week6_speaker"]);
-  update_post_meta($post->ID, "week6_audio", $_POST["week6_audio"]);
-  update_post_meta($post->ID, "week6_vimeo_title", $_POST["week6_vimeo_title"]);
-  update_post_meta($post->ID, "week6_vimeo_id", $_POST["week6_vimeo_id"]);
-  update_post_meta($post->ID, "week6_pdf", $_POST["week6_pdf"]);
-  update_post_meta($post->ID, "week6_date", strtotime($_POST["week6_date"]));
+  if (isset($_POST['week6_title']))       { update_post_meta($post->ID, "week6_title",           $_POST["week6_title"]); }
+  if (isset($_POST['week6_passage']))     { update_post_meta($post->ID, "week6_passage",         $_POST["week6_passage"]); }
+  if (isset($_POST['week6_speaker']))     { update_post_meta($post->ID, "week6_speaker",         $_POST["week6_speaker"]); }
+  if (isset($_POST['week6_audio']))       { update_post_meta($post->ID, "week6_audio",           $_POST["week6_audio"]); }
+  if (isset($_POST['week6_vimeo_title'])) { update_post_meta($post->ID, "week6_vimeo_title",     $_POST["week6_vimeo_title"]); }
+  if (isset($_POST['week6_vimeo_id']))    { update_post_meta($post->ID, "week6_vimeo_id",        $_POST["week6_vimeo_id"]); }
+  if (isset($_POST['week6_pdf']))         { update_post_meta($post->ID, "week6_pdf",             $_POST["week6_pdf"]); }
+  if (isset($_POST['week6_date']))        { update_post_meta($post->ID, "week6_date", strtotime( $_POST["week6_date"] )); }
   
-  update_post_meta($post->ID, "week7_title", $_POST["week7_title"]);
-  update_post_meta($post->ID, "week7_passage", $_POST["week7_passage"]);
-  update_post_meta($post->ID, "week7_speaker", $_POST["week7_speaker"]);
-  update_post_meta($post->ID, "week7_audio", $_POST["week7_audio"]);
-  update_post_meta($post->ID, "week7_vimeo_title", $_POST["week7_vimeo_title"]);
-  update_post_meta($post->ID, "week7_vimeo_id", $_POST["week7_vimeo_id"]);
-  update_post_meta($post->ID, "week7_pdf", $_POST["week7_pdf"]);
-  update_post_meta($post->ID, "week7_date", strtotime($_POST["week7_date"]));
+  if (isset($_POST['week7_title']))       { update_post_meta($post->ID, "week7_title",           $_POST["week7_title"]); }
+  if (isset($_POST['week7_passage']))     { update_post_meta($post->ID, "week7_passage",         $_POST["week7_passage"]); }
+  if (isset($_POST['week7_speaker']))     { update_post_meta($post->ID, "week7_speaker",         $_POST["week7_speaker"]); }
+  if (isset($_POST['week7_audio']))       { update_post_meta($post->ID, "week7_audio",           $_POST["week7_audio"]); }
+  if (isset($_POST['week7_vimeo_title'])) { update_post_meta($post->ID, "week7_vimeo_title",     $_POST["week7_vimeo_title"]); }
+  if (isset($_POST['week7_vimeo_id']))    { update_post_meta($post->ID, "week7_vimeo_id",        $_POST["week7_vimeo_id"]); }
+  if (isset($_POST['week7_pdf']))         { update_post_meta($post->ID, "week7_pdf",             $_POST["week7_pdf"]); }
+  if (isset($_POST['week7_date']))        { update_post_meta($post->ID, "week7_date", strtotime( $_POST["week7_date"] )); }
   
-  update_post_meta($post->ID, "week8_title", $_POST["week8_title"]);
-  update_post_meta($post->ID, "week8_passage", $_POST["week8_passage"]);
-  update_post_meta($post->ID, "week8_speaker", $_POST["week8_speaker"]);
-  update_post_meta($post->ID, "week8_audio", $_POST["week8_audio"]);
-  update_post_meta($post->ID, "week8_vimeo_title", $_POST["week8_vimeo_title"]);
-  update_post_meta($post->ID, "week8_vimeo_id", $_POST["week8_vimeo_id"]);
-  update_post_meta($post->ID, "week8_pdf", $_POST["week8_pdf"]);
-  update_post_meta($post->ID, "week8_date", strtotime($_POST["week8_date"]));
+  if (isset($_POST['week8_title']))       { update_post_meta($post->ID, "week8_title",           $_POST["week8_title"]); }
+  if (isset($_POST['week8_passage']))     { update_post_meta($post->ID, "week8_passage",         $_POST["week8_passage"]); }
+  if (isset($_POST['week8_speaker']))     { update_post_meta($post->ID, "week8_speaker",         $_POST["week8_speaker"]); }
+  if (isset($_POST['week8_audio']))       { update_post_meta($post->ID, "week8_audio",           $_POST["week8_audio"]); }
+  if (isset($_POST['week8_vimeo_title'])) { update_post_meta($post->ID, "week8_vimeo_title",     $_POST["week8_vimeo_title"]); }
+  if (isset($_POST['week8_vimeo_id']))    { update_post_meta($post->ID, "week8_vimeo_id",        $_POST["week8_vimeo_id"]); }
+  if (isset($_POST['week8_pdf']))         { update_post_meta($post->ID, "week8_pdf",             $_POST["week8_pdf"]); }
+  if (isset($_POST['week8_date']))        { update_post_meta($post->ID, "week8_date", strtotime( $_POST["week8_date"] )); }
   
-  update_post_meta($post->ID, "week9_title", $_POST["week9_title"]);
-  update_post_meta($post->ID, "week9_passage", $_POST["week9_passage"]);
-  update_post_meta($post->ID, "week9_speaker", $_POST["week9_speaker"]);
-  update_post_meta($post->ID, "week9_audio", $_POST["week9_audio"]);
-  update_post_meta($post->ID, "week9_vimeo_title", $_POST["week9_vimeo_title"]);
-  update_post_meta($post->ID, "week9_vimeo_id", $_POST["week9_vimeo_id"]);
-  update_post_meta($post->ID, "week9_pdf", $_POST["week9_pdf"]);
-  update_post_meta($post->ID, "week9_date", strtotime($_POST["week9_date"]));
+  if (isset($_POST['week9_title']))       { update_post_meta($post->ID, "week9_title",           $_POST["week9_title"]); }
+  if (isset($_POST['week9_passage']))     { update_post_meta($post->ID, "week9_passage",         $_POST["week9_passage"]); }
+  if (isset($_POST['week9_speaker']))     { update_post_meta($post->ID, "week9_speaker",         $_POST["week9_speaker"]); }
+  if (isset($_POST['week9_audio']))       { update_post_meta($post->ID, "week9_audio",           $_POST["week9_audio"]); }
+  if (isset($_POST['week9_vimeo_title'])) { update_post_meta($post->ID, "week9_vimeo_title",     $_POST["week9_vimeo_title"]); }
+  if (isset($_POST['week9_vimeo_id']))    { update_post_meta($post->ID, "week9_vimeo_id",        $_POST["week9_vimeo_id"]); }
+  if (isset($_POST['week9_pdf']))         { update_post_meta($post->ID, "week9_pdf",             $_POST["week9_pdf"]); }
+  if (isset($_POST['week9_date']))        { update_post_meta($post->ID, "week9_date", strtotime( $_POST["week9_date"] )); }
   
-  update_post_meta($post->ID, "week10_title", $_POST["week10_title"]);
-  update_post_meta($post->ID, "week10_passage", $_POST["week10_passage"]);
-  update_post_meta($post->ID, "week10_speaker", $_POST["week10_speaker"]);
-  update_post_meta($post->ID, "week10_audio", $_POST["week10_audio"]);
-  update_post_meta($post->ID, "week10_vimeo_title", $_POST["week10_vimeo_title"]);
-  update_post_meta($post->ID, "week10_vimeo_id", $_POST["week10_vimeo_id"]);
-  update_post_meta($post->ID, "week10_pdf", $_POST["week10_pdf"]);
-  update_post_meta($post->ID, "week10_date", strtotime($_POST["week10_date"]));
+  if (isset($_POST['week10_title']))       { update_post_meta($post->ID, "week10_title",           $_POST["week10_title"]); }
+  if (isset($_POST['week10_passage']))     { update_post_meta($post->ID, "week10_passage",         $_POST["week10_passage"]); }
+  if (isset($_POST['week10_speaker']))     { update_post_meta($post->ID, "week10_speaker",         $_POST["week10_speaker"]); }
+  if (isset($_POST['week10_audio']))       { update_post_meta($post->ID, "week10_audio",           $_POST["week10_audio"]); }
+  if (isset($_POST['week10_vimeo_title'])) { update_post_meta($post->ID, "week10_vimeo_title",     $_POST["week10_vimeo_title"]); }
+  if (isset($_POST['week10_vimeo_id']))    { update_post_meta($post->ID, "week10_vimeo_id",        $_POST["week10_vimeo_id"]); }
+  if (isset($_POST['week10_pdf']))         { update_post_meta($post->ID, "week10_pdf",             $_POST["week10_pdf"]); }
+  if (isset($_POST['week10_date']))        { update_post_meta($post->ID, "week10_date", strtotime( $_POST["week10_date"] )); }
   
-  update_post_meta($post->ID, "week11_title", $_POST["week11_title"]);
-  update_post_meta($post->ID, "week11_passage", $_POST["week11_passage"]);
-  update_post_meta($post->ID, "week11_speaker", $_POST["week11_speaker"]);
-  update_post_meta($post->ID, "week11_audio", $_POST["week11_audio"]);
-  update_post_meta($post->ID, "week11_vimeo_title", $_POST["week11_vimeo_title"]);
-  update_post_meta($post->ID, "week11_vimeo_id", $_POST["week11_vimeo_id"]);
-  update_post_meta($post->ID, "week11_pdf", $_POST["week11_pdf"]);
-  update_post_meta($post->ID, "week11_date", strtotime($_POST["week11_date"]));
+  if (isset($_POST['week11_title']))       { update_post_meta($post->ID, "week11_title",           $_POST["week11_title"]); }
+  if (isset($_POST['week11_passage']))     { update_post_meta($post->ID, "week11_passage",         $_POST["week11_passage"]); }
+  if (isset($_POST['week11_speaker']))     { update_post_meta($post->ID, "week11_speaker",         $_POST["week11_speaker"]); }
+  if (isset($_POST['week11_audio']))       { update_post_meta($post->ID, "week11_audio",           $_POST["week11_audio"]); }
+  if (isset($_POST['week11_vimeo_title'])) { update_post_meta($post->ID, "week11_vimeo_title",     $_POST["week11_vimeo_title"]); }
+  if (isset($_POST['week11_vimeo_id']))    { update_post_meta($post->ID, "week11_vimeo_id",        $_POST["week11_vimeo_id"]); }
+  if (isset($_POST['week11_pdf']))         { update_post_meta($post->ID, "week11_pdf",             $_POST["week11_pdf"]); }
+  if (isset($_POST['week11_date']))        { update_post_meta($post->ID, "week11_date", strtotime( $_POST["week11_date"] )); }
   
-  update_post_meta($post->ID, "week12_title", $_POST["week12_title"]);
-  update_post_meta($post->ID, "week12_passage", $_POST["week12_passage"]);
-  update_post_meta($post->ID, "week12_speaker", $_POST["week12_speaker"]);
-  update_post_meta($post->ID, "week12_audio", $_POST["week12_audio"]);
-  update_post_meta($post->ID, "week12_vimeo_title", $_POST["week12_vimeo_title"]);
-  update_post_meta($post->ID, "week12_vimeo_id", $_POST["week12_vimeo_id"]);
-  update_post_meta($post->ID, "week12_pdf", $_POST["week12_pdf"]);
-  update_post_meta($post->ID, "week12_date", strtotime($_POST["week12_date"]));
+  if (isset($_POST['week12_title']))       { update_post_meta($post->ID, "week12_title",           $_POST["week12_title"]); }
+  if (isset($_POST['week12_passage']))     { update_post_meta($post->ID, "week12_passage",         $_POST["week12_passage"]); }
+  if (isset($_POST['week12_speaker']))     { update_post_meta($post->ID, "week12_speaker",         $_POST["week12_speaker"]); }
+  if (isset($_POST['week12_audio']))       { update_post_meta($post->ID, "week12_audio",           $_POST["week12_audio"]); }
+  if (isset($_POST['week12_vimeo_title'])) { update_post_meta($post->ID, "week12_vimeo_title",     $_POST["week12_vimeo_title"]); }
+  if (isset($_POST['week12_vimeo_id']))    { update_post_meta($post->ID, "week12_vimeo_id",        $_POST["week12_vimeo_id"]); }
+  if (isset($_POST['week12_pdf']))         { update_post_meta($post->ID, "week12_pdf",             $_POST["week12_pdf"]); }
+  if (isset($_POST['week12_date']))        { update_post_meta($post->ID, "week12_date", strtotime( $_POST["week12_date"] )); }
   
-  update_post_meta($post->ID, "week13_title", $_POST["week13_title"]);
-  update_post_meta($post->ID, "week13_passage", $_POST["week13_passage"]);
-  update_post_meta($post->ID, "week13_speaker", $_POST["week13_speaker"]);
-  update_post_meta($post->ID, "week13_audio", $_POST["week13_audio"]);
-  update_post_meta($post->ID, "week13_vimeo_title", $_POST["week13_vimeo_title"]);
-  update_post_meta($post->ID, "week13_vimeo_id", $_POST["week13_vimeo_id"]);
-  update_post_meta($post->ID, "week13_pdf", $_POST["week13_pdf"]);
-  update_post_meta($post->ID, "week13_date", strtotime($_POST["week13_date"]));
+  if (isset($_POST['week13_title']))       { update_post_meta($post->ID, "week13_title",           $_POST["week13_title"]); }
+  if (isset($_POST['week13_passage']))     { update_post_meta($post->ID, "week13_passage",         $_POST["week13_passage"]); }
+  if (isset($_POST['week13_speaker']))     { update_post_meta($post->ID, "week13_speaker",         $_POST["week13_speaker"]); }
+  if (isset($_POST['week13_audio']))       { update_post_meta($post->ID, "week13_audio",           $_POST["week13_audio"]); }
+  if (isset($_POST['week13_vimeo_title'])) { update_post_meta($post->ID, "week13_vimeo_title",     $_POST["week13_vimeo_title"]); }
+  if (isset($_POST['week13_vimeo_id']))    { update_post_meta($post->ID, "week13_vimeo_id",        $_POST["week13_vimeo_id"]); }
+  if (isset($_POST['week13_pdf']))         { update_post_meta($post->ID, "week13_pdf",             $_POST["week13_pdf"]); }
+  if (isset($_POST['week13_date']))        { update_post_meta($post->ID, "week13_date", strtotime( $_POST["week13_date"] )); }
   
-  update_post_meta($post->ID, "week14_title", $_POST["week14_title"]);
-  update_post_meta($post->ID, "week14_passage", $_POST["week14_passage"]);
-  update_post_meta($post->ID, "week14_speaker", $_POST["week14_speaker"]);
-  update_post_meta($post->ID, "week14_audio", $_POST["week14_audio"]);
-  update_post_meta($post->ID, "week14_vimeo_title", $_POST["week14_vimeo_title"]);
-  update_post_meta($post->ID, "week14_vimeo_id", $_POST["week14_vimeo_id"]);
-  update_post_meta($post->ID, "week14_pdf", $_POST["week14_pdf"]);
-  update_post_meta($post->ID, "week14_date", strtotime($_POST["week14_date"]));
+  if (isset($_POST['week14_title']))       { update_post_meta($post->ID, "week14_title",           $_POST["week14_title"]); }
+  if (isset($_POST['week14_passage']))     { update_post_meta($post->ID, "week14_passage",         $_POST["week14_passage"]); }
+  if (isset($_POST['week14_speaker']))     { update_post_meta($post->ID, "week14_speaker",         $_POST["week14_speaker"]); }
+  if (isset($_POST['week14_audio']))       { update_post_meta($post->ID, "week14_audio",           $_POST["week14_audio"]); }
+  if (isset($_POST['week14_vimeo_title'])) { update_post_meta($post->ID, "week14_vimeo_title",     $_POST["week14_vimeo_title"]); }
+  if (isset($_POST['week14_vimeo_id']))    { update_post_meta($post->ID, "week14_vimeo_id",        $_POST["week14_vimeo_id"]); }
+  if (isset($_POST['week14_pdf']))         { update_post_meta($post->ID, "week14_pdf",             $_POST["week14_pdf"]); }
+  if (isset($_POST['week14_date']))        { update_post_meta($post->ID, "week14_date", strtotime( $_POST["week14_date"] )); }
   
-  update_post_meta($post->ID, "week15_title", $_POST["week15_title"]);
-  update_post_meta($post->ID, "week15_passage", $_POST["week15_passage"]);
-  update_post_meta($post->ID, "week15_speaker", $_POST["week15_speaker"]);
-  update_post_meta($post->ID, "week15_audio", $_POST["week15_audio"]);
-  update_post_meta($post->ID, "week15_vimeo_title", $_POST["week15_vimeo_title"]);
-  update_post_meta($post->ID, "week15_vimeo_id", $_POST["week15_vimeo_id"]);
-  update_post_meta($post->ID, "week15_pdf", $_POST["week15_pdf"]);
-  update_post_meta($post->ID, "week15_date", strtotime($_POST["week15_date"]));
+  if (isset($_POST['week15_title']))       { update_post_meta($post->ID, "week15_title",           $_POST["week15_title"]); }
+  if (isset($_POST['week15_passage']))     { update_post_meta($post->ID, "week15_passage",         $_POST["week15_passage"]); }
+  if (isset($_POST['week15_speaker']))     { update_post_meta($post->ID, "week15_speaker",         $_POST["week15_speaker"]); }
+  if (isset($_POST['week15_audio']))       { update_post_meta($post->ID, "week15_audio",           $_POST["week15_audio"]); }
+  if (isset($_POST['week15_vimeo_title'])) { update_post_meta($post->ID, "week15_vimeo_title",     $_POST["week15_vimeo_title"]); }
+  if (isset($_POST['week15_vimeo_id']))    { update_post_meta($post->ID, "week15_vimeo_id",        $_POST["week15_vimeo_id"]); }
+  if (isset($_POST['week15_pdf']))         { update_post_meta($post->ID, "week15_pdf",             $_POST["week15_pdf"]); }
+  if (isset($_POST['week15_date']))        { update_post_meta($post->ID, "week15_date", strtotime( $_POST["week15_date"] )); }
   
-  update_post_meta($post->ID, "week16_title", $_POST["week16_title"]);
-  update_post_meta($post->ID, "week16_passage", $_POST["week16_passage"]);
-  update_post_meta($post->ID, "week16_speaker", $_POST["week16_speaker"]);
-  update_post_meta($post->ID, "week16_audio", $_POST["week16_audio"]);
-  update_post_meta($post->ID, "week16_vimeo_title", $_POST["week16_vimeo_title"]);
-  update_post_meta($post->ID, "week16_vimeo_id", $_POST["week16_vimeo_id"]);
-  update_post_meta($post->ID, "week16_pdf", $_POST["week16_pdf"]);
-  update_post_meta($post->ID, "week16_date", strtotime($_POST["week16_date"]));
+  if (isset($_POST['week16_title']))       { update_post_meta($post->ID, "week16_title",           $_POST["week16_title"]); }
+  if (isset($_POST['week16_passage']))     { update_post_meta($post->ID, "week16_passage",         $_POST["week16_passage"]); }
+  if (isset($_POST['week16_speaker']))     { update_post_meta($post->ID, "week16_speaker",         $_POST["week16_speaker"]); }
+  if (isset($_POST['week16_audio']))       { update_post_meta($post->ID, "week16_audio",           $_POST["week16_audio"]); }
+  if (isset($_POST['week16_vimeo_title'])) { update_post_meta($post->ID, "week16_vimeo_title",     $_POST["week16_vimeo_title"]); }
+  if (isset($_POST['week16_vimeo_id']))    { update_post_meta($post->ID, "week16_vimeo_id",        $_POST["week16_vimeo_id"]); }
+  if (isset($_POST['week16_pdf']))         { update_post_meta($post->ID, "week16_pdf",             $_POST["week16_pdf"]); }
+  if (isset($_POST['week16_date']))        { update_post_meta($post->ID, "week16_date", strtotime( $_POST["week16_date"] )); }
   
-  update_post_meta($post->ID, "week17_title", $_POST["week17_title"]);
-  update_post_meta($post->ID, "week17_passage", $_POST["week17_passage"]);
-  update_post_meta($post->ID, "week17_speaker", $_POST["week17_speaker"]);
-  update_post_meta($post->ID, "week17_audio", $_POST["week17_audio"]);
-  update_post_meta($post->ID, "week17_vimeo_title", $_POST["week17_vimeo_title"]);
-  update_post_meta($post->ID, "week17_vimeo_id", $_POST["week17_vimeo_id"]);
-  update_post_meta($post->ID, "week17_pdf", $_POST["week17_pdf"]);
-  update_post_meta($post->ID, "week17_date", strtotime($_POST["week17_date"]));
+  if (isset($_POST['week17_title']))       { update_post_meta($post->ID, "week17_title",           $_POST["week17_title"]); }
+  if (isset($_POST['week17_passage']))     { update_post_meta($post->ID, "week17_passage",         $_POST["week17_passage"]); }
+  if (isset($_POST['week17_speaker']))     { update_post_meta($post->ID, "week17_speaker",         $_POST["week17_speaker"]); }
+  if (isset($_POST['week17_audio']))       { update_post_meta($post->ID, "week17_audio",           $_POST["week17_audio"]); }
+  if (isset($_POST['week17_vimeo_title'])) { update_post_meta($post->ID, "week17_vimeo_title",     $_POST["week17_vimeo_title"]); }
+  if (isset($_POST['week17_vimeo_id']))    { update_post_meta($post->ID, "week17_vimeo_id",        $_POST["week17_vimeo_id"]); }
+  if (isset($_POST['week17_pdf']))         { update_post_meta($post->ID, "week17_pdf",             $_POST["week17_pdf"]); }
+  if (isset($_POST['week17_date']))        { update_post_meta($post->ID, "week17_date", strtotime( $_POST["week17_date"] )); }
   
-  update_post_meta($post->ID, "week18_title", $_POST["week18_title"]);
-  update_post_meta($post->ID, "week18_passage", $_POST["week18_passage"]);
-  update_post_meta($post->ID, "week18_speaker", $_POST["week18_speaker"]);
-  update_post_meta($post->ID, "week18_audio", $_POST["week18_audio"]);
-  update_post_meta($post->ID, "week18_vimeo_title", $_POST["week18_vimeo_title"]);
-  update_post_meta($post->ID, "week18_vimeo_id", $_POST["week18_vimeo_id"]);
-  update_post_meta($post->ID, "week18_pdf", $_POST["week18_pdf"]);
-  update_post_meta($post->ID, "week18_date", strtotime($_POST["week18_date"]));
+  if (isset($_POST['week18_title']))       { update_post_meta($post->ID, "week18_title",           $_POST["week18_title"]); }
+  if (isset($_POST['week18_passage']))     { update_post_meta($post->ID, "week18_passage",         $_POST["week18_passage"]); }
+  if (isset($_POST['week18_speaker']))     { update_post_meta($post->ID, "week18_speaker",         $_POST["week18_speaker"]); }
+  if (isset($_POST['week18_audio']))       { update_post_meta($post->ID, "week18_audio",           $_POST["week18_audio"]); }
+  if (isset($_POST['week18_vimeo_title'])) { update_post_meta($post->ID, "week18_vimeo_title",     $_POST["week18_vimeo_title"]); }
+  if (isset($_POST['week18_vimeo_id']))    { update_post_meta($post->ID, "week18_vimeo_id",        $_POST["week18_vimeo_id"]); }
+  if (isset($_POST['week18_pdf']))         { update_post_meta($post->ID, "week18_pdf",             $_POST["week18_pdf"]); }
+  if (isset($_POST['week18_date']))        { update_post_meta($post->ID, "week18_date", strtotime( $_POST["week18_date"] )); }
   
-  update_post_meta($post->ID, "week19_title", $_POST["week19_title"]);
-  update_post_meta($post->ID, "week19_passage", $_POST["week19_passage"]);
-  update_post_meta($post->ID, "week19_speaker", $_POST["week19_speaker"]);
-  update_post_meta($post->ID, "week19_audio", $_POST["week19_audio"]);
-  update_post_meta($post->ID, "week19_vimeo_title", $_POST["week19_vimeo_title"]);
-  update_post_meta($post->ID, "week19_vimeo_id", $_POST["week19_vimeo_id"]);
-  update_post_meta($post->ID, "week19_pdf", $_POST["week19_pdf"]);
-  update_post_meta($post->ID, "week19_date", strtotime($_POST["week19_date"]));
+  if (isset($_POST['week19_title']))       { update_post_meta($post->ID, "week19_title",           $_POST["week19_title"]); }
+  if (isset($_POST['week19_passage']))     { update_post_meta($post->ID, "week19_passage",         $_POST["week19_passage"]); }
+  if (isset($_POST['week19_speaker']))     { update_post_meta($post->ID, "week19_speaker",         $_POST["week19_speaker"]); }
+  if (isset($_POST['week19_audio']))       { update_post_meta($post->ID, "week19_audio",           $_POST["week19_audio"]); }
+  if (isset($_POST['week19_vimeo_title'])) { update_post_meta($post->ID, "week19_vimeo_title",     $_POST["week19_vimeo_title"]); }
+  if (isset($_POST['week19_vimeo_id']))    { update_post_meta($post->ID, "week19_vimeo_id",        $_POST["week19_vimeo_id"]); }
+  if (isset($_POST['week19_pdf']))         { update_post_meta($post->ID, "week19_pdf",             $_POST["week19_pdf"]); }
+  if (isset($_POST['week19_date']))        { update_post_meta($post->ID, "week19_date", strtotime( $_POST["week19_date"] )); }
   
-  update_post_meta($post->ID, "week20_title", $_POST["week20_title"]);
-  update_post_meta($post->ID, "week20_passage", $_POST["week20_passage"]);
-  update_post_meta($post->ID, "week20_speaker", $_POST["week20_speaker"]);
-  update_post_meta($post->ID, "week20_audio", $_POST["week20_audio"]);
-  update_post_meta($post->ID, "week20_vimeo_title", $_POST["week20_vimeo_title"]);
-  update_post_meta($post->ID, "week20_vimeo_id", $_POST["week20_vimeo_id"]);
-  update_post_meta($post->ID, "week20_pdf", $_POST["week20_pdf"]);
-  update_post_meta($post->ID, "week20_date", strtotime($_POST["week20_date"]));
+  if (isset($_POST['week20_title']))       { update_post_meta($post->ID, "week20_title",           $_POST["week20_title"]); }
+  if (isset($_POST['week20_passage']))     { update_post_meta($post->ID, "week20_passage",         $_POST["week20_passage"]); }
+  if (isset($_POST['week20_speaker']))     { update_post_meta($post->ID, "week20_speaker",         $_POST["week20_speaker"]); }
+  if (isset($_POST['week20_audio']))       { update_post_meta($post->ID, "week20_audio",           $_POST["week20_audio"]); }
+  if (isset($_POST['week20_vimeo_title'])) { update_post_meta($post->ID, "week20_vimeo_title",     $_POST["week20_vimeo_title"]); }
+  if (isset($_POST['week20_vimeo_id']))    { update_post_meta($post->ID, "week20_vimeo_id",        $_POST["week20_vimeo_id"]); }
+  if (isset($_POST['week20_pdf']))         { update_post_meta($post->ID, "week20_pdf",             $_POST["week20_pdf"]); }
+  if (isset($_POST['week20_date']))        { update_post_meta($post->ID, "week20_date", strtotime( $_POST["week20_date"] )); }
   
-  update_post_meta($post->ID, "week21_title", $_POST["week21_title"]);
-  update_post_meta($post->ID, "week21_passage", $_POST["week21_passage"]);
-  update_post_meta($post->ID, "week21_speaker", $_POST["week21_speaker"]);
-  update_post_meta($post->ID, "week21_audio", $_POST["week21_audio"]);
-  update_post_meta($post->ID, "week21_vimeo_title", $_POST["week21_vimeo_title"]);
-  update_post_meta($post->ID, "week21_vimeo_id", $_POST["week21_vimeo_id"]);
-  update_post_meta($post->ID, "week21_pdf", $_POST["week21_pdf"]);
-  update_post_meta($post->ID, "week21_date", strtotime($_POST["week21_date"]));
+  if (isset($_POST['week21_title']))       { update_post_meta($post->ID, "week21_title",           $_POST["week21_title"]); }
+  if (isset($_POST['week21_passage']))     { update_post_meta($post->ID, "week21_passage",         $_POST["week21_passage"]); }
+  if (isset($_POST['week21_speaker']))     { update_post_meta($post->ID, "week21_speaker",         $_POST["week21_speaker"]); }
+  if (isset($_POST['week21_audio']))       { update_post_meta($post->ID, "week21_audio",           $_POST["week21_audio"]); }
+  if (isset($_POST['week21_vimeo_title'])) { update_post_meta($post->ID, "week21_vimeo_title",     $_POST["week21_vimeo_title"]); }
+  if (isset($_POST['week21_vimeo_id']))    { update_post_meta($post->ID, "week21_vimeo_id",        $_POST["week21_vimeo_id"]); }
+  if (isset($_POST['week21_pdf']))         { update_post_meta($post->ID, "week21_pdf",             $_POST["week21_pdf"]); }
+  if (isset($_POST['week21_date']))        { update_post_meta($post->ID, "week21_date", strtotime( $_POST["week21_date"] )); }
   
-  update_post_meta($post->ID, "feed_term", $_POST["feed_term"]);
+  if (isset($_POST['week21_date'])) { update_post_meta($post->ID, "feed_term", $_POST["feed_term"]); }
 
 }
 // END - Custom Fields
