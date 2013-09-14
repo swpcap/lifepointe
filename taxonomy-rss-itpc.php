@@ -171,7 +171,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week21_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week21_file; ?>" length="<?php echo $week21_length; ?>" type="audio/mpeg" />
               
@@ -207,7 +207,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week20_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week20_file; ?>" length="<?php echo $week20_length; ?>" type="audio/mpeg" />
               
@@ -243,7 +243,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week19_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week19_file; ?>" length="<?php echo $week19_length; ?>" type="audio/mpeg" />
               
@@ -279,7 +279,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week18_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week18_file; ?>" length="<?php echo $week18_length; ?>" type="audio/mpeg" />
               
@@ -315,7 +315,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week17_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week17_file; ?>" length="<?php echo $week17_length; ?>" type="audio/mpeg" />
               
@@ -351,7 +351,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week16_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week16_file; ?>" length="<?php echo $week16_length; ?>" type="audio/mpeg" />
               
@@ -387,7 +387,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week15_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week15_file; ?>" length="<?php echo $week15_length; ?>" type="audio/mpeg" />
               
@@ -423,7 +423,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week14_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week14_file; ?>" length="<?php echo $week14_length; ?>" type="audio/mpeg" />
               
@@ -459,7 +459,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week13_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week13_file; ?>" length="<?php echo $week13_length; ?>" type="audio/mpeg" />
               
@@ -495,7 +495,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week12_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week12_file; ?>" length="<?php echo $week12_length; ?>" type="audio/mpeg" />
               
@@ -531,7 +531,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week11_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week11_file; ?>" length="<?php echo $week11_length; ?>" type="audio/mpeg" />
               
@@ -567,7 +567,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week10_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week10_file; ?>" length="<?php echo $week10_length; ?>" type="audio/mpeg" />
               
@@ -603,7 +603,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week9_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week9_file; ?>" length="<?php echo $week9_length; ?>" type="audio/mpeg" />
               
@@ -639,7 +639,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week8_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week8_file; ?>" length="<?php echo $week8_length; ?>" type="audio/mpeg" />
               
@@ -675,7 +675,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week7_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week7_file; ?>" length="<?php echo $week7_length; ?>" type="audio/mpeg" />
               
@@ -711,7 +711,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week6_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week6_file; ?>" length="<?php echo $week6_length; ?>" type="audio/mpeg" />
               
@@ -747,7 +747,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week5_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week5_file; ?>" length="<?php echo $week5_length; ?>" type="audio/mpeg" />
               
@@ -783,7 +783,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week4_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week4_file; ?>" length="<?php echo $week4_length; ?>" type="audio/mpeg" />
               
@@ -819,7 +819,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week3_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week3_file; ?>" length="<?php echo $week3_length; ?>" type="audio/mpeg" />
               
@@ -855,7 +855,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week2_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week2_file; ?>" length="<?php echo $week2_length; ?>" type="audio/mpeg" />
               
@@ -891,7 +891,7 @@ $more = 1; ?>
               
               <itunes:summary><?php echo $week1_summary; ?></itunes:summary>
               
-              <itunes:image href="<?php echo $series_img[0]; ?>" />
+              <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
               
               <enclosure url="<?php echo $week1_file; ?>" length="<?php echo $week1_length; ?>" type="audio/mpeg" />
               
