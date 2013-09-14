@@ -39,7 +39,14 @@ get_header(); ?>
 
         <?php /* Start the Loop */ ?>
         <?php global $wp_query;
-              $args = array_merge( $wp_query->query, array( 'post_type' => 'sermon', 'posts_per_page' => 99, 'orderby' => 'date', 'order' => 'DESC' ) );
+              $args = array_merge( $wp_query->query, array( 'post_type' => 'sermon', 'posts_per_page' => 99, 'orderby' => 'date', 'order' => 'DESC', 'tax_query' => array(
+                array(
+                  'taxonomy' => 'sermon-topics',
+                  'field' => 'slug',
+                  'terms' => 'academy',
+                  'operator' => 'NOT IN'
+                )
+              )));
               query_posts( $args ); ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
