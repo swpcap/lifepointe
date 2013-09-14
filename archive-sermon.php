@@ -13,18 +13,18 @@
 
 get_header(); ?>
 
-        <div id="buttons" class="buttons-side">
-          <?php $settings = get_option('lifepointe_general');?>
-            <div id="row1">
-              <a id="fb" href="<?php echo $settings['fb_url']; ?>/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/fb.png" /></a>
-              <a id="podcast" href="<?php echo $settings['pod_url']; ?>/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/podcast.png" /></a>
-              <a id="rss" href="http://sharethelife.org/podcast/itpc/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/rss.png" /></a>
-                   </div>
-                   <div id="row2">
-              <a class="lbpModal" id="contact" href="/<?php echo $settings['contact_slug']; ?>/" target="">Contact Us</a>
-                    <a class="lbpModal" id="prayer" href="/<?php echo $settings['prayer_slug']; ?>/" target="">Prayer</a>
-                  </div>
-        </div>
+    <div id="buttons" class="buttons-side">
+      <?php $settings = get_option('lifepointe_general');?>
+      <div id="row1">
+        <a id="fb" href="<?php echo $settings['fb_url']; ?>/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/fb.png" /></a>
+        <a id="podcast" href="<?php echo $settings['pod_url']; ?>/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/podcast.png" /></a>
+        <a id="rss" href="http://sharethelife.org/podcast/itpc/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/rss.png" /></a>
+      </div>
+      <div id="row2">
+        <a class="lbpModal" id="contact" href="/<?php echo $settings['contact_slug']; ?>/" target="">Contact Us</a>
+        <a class="lbpModal" id="prayer" href="/<?php echo $settings['prayer_slug']; ?>/" target="">Prayer</a>
+      </div>
+    </div>
 
     <section id="primary">
       <a id="rss" href="http://sharethelife.org/podcast/itpc/" target="_blank"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/rss2.png" /></a>
@@ -50,13 +50,7 @@ get_header(); ?>
               query_posts( $args ); ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
-          <?php
-            /* Include the Post-Format-specific template for the content.
-             * If you want to overload this in a child theme then include a file
-             * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-             */
-            get_template_part( 'content', 'sermon' );
-          ?>
+          <?php get_template_part( 'type', 'sermon' ); ?>
 
         <?php endwhile; ?>
 
@@ -81,56 +75,59 @@ get_header(); ?>
 <?php /* Load Sidebar */ ?>
     <div id="secondary" class="widget-area" role="complementary">
       <?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>
-
+        
         <aside id="ns1">
           <?php
             $settings = get_option('lifepointe_sermons');
             $ns1_slug = $settings['sermonns1'];
-            $ns1_page = get_page_by_path($ns1_slug);
-            $ns1_value = $ns1_page->ID;
-            if ( has_post_thumbnail($ns1_value)) {
-              echo '<a href="' . get_permalink( $ns1_value ) . '" title="' . esc_attr( $ns1_value->post_title ) . '">';
-              echo get_the_post_thumbnail($ns1_value, 'next-steps');
-              echo '</a>';
-              echo '<a href="' . get_permalink( $ns1_value ) . '" title="' . esc_attr( $ns1_value->post_title ) . '"><div class="ns-title">';
-              echo get_the_title($ns1_value);
-              echo '</div></a>';
+            if (!empty($ns1_slug)) {
+              $ns1_page = get_page_by_path($ns1_slug);
+              if ( has_post_thumbnail($ns1_page->ID)) {
+                echo '<a href="' . get_permalink( $ns1_page->ID ) . '" title="' . esc_attr( $ns1_page->ID->post_title ) . '">';
+                echo get_the_post_thumbnail($ns1_page->ID, 'next-steps');
+                echo '</a>';
+                echo '<a href="' . get_permalink( $ns1_page->ID ) . '" title="' . esc_attr( $ns1_page->ID->post_title ) . '"><div class="ns-title">';
+                echo get_the_title($ns1_page->ID);
+                echo '</div></a>';
+              }
             }
           ?>  
         </aside>
 
-        <aside id="ns2" class="widget">
+        <aside id="ns2">
           <?php
             $settings = get_option('lifepointe_sermons');
             $ns2_slug = $settings['sermonns2'];
-            $ns2_page = get_page_by_path($ns2_slug);
-            $ns2_value = $ns2_page->ID;
-            if ( has_post_thumbnail($ns2_value)) {
-              echo '<a href="' . get_permalink( $ns2_value ) . '" title="' . esc_attr( $ns2_value->post_title ) . '">';
-              echo get_the_post_thumbnail($ns2_value, 'next-steps');
-              echo '</a>';
-              echo '<a href="' . get_permalink( $ns2_value ) . '" title="' . esc_attr( $ns2_value->post_title ) . '"><div class="ns-title">';
-              echo get_the_title($ns2_value);
-              echo '</div></a>';
+            if (!empty($ns2_slug)) {
+              $ns2_page = get_page_by_path($ns2_slug);
+              if ( has_post_thumbnail($ns2_page->ID)) {
+                echo '<a href="' . get_permalink( $ns2_page->ID ) . '" title="' . esc_attr( $ns2_page->ID->post_title ) . '">';
+                echo get_the_post_thumbnail($ns2_page->ID, 'next-steps');
+                echo '</a>';
+                echo '<a href="' . get_permalink( $ns2_page->ID ) . '" title="' . esc_attr( $ns2_page->ID->post_title ) . '"><div class="ns-title">';
+                echo get_the_title($ns2_page->ID);
+                echo '</div></a>';
+              }
             }
-          ?>
+          ?>  
         </aside>
-
-        <aside id="ns3" class="widget">
+        
+        <aside id="ns3">
           <?php
             $settings = get_option('lifepointe_sermons');
             $ns3_slug = $settings['sermonns3'];
-            $ns3_page = get_page_by_path($ns3_slug);
-            $ns3_value = $ns3_page->ID;
-            if ( has_post_thumbnail($ns3_value)) {
-              echo '<a href="' . get_permalink( $ns3_value ) . '" title="' . esc_attr( $ns3_value->post_title ) . '">';
-              echo get_the_post_thumbnail($ns3_value, 'next-steps');
-              echo '</a>';
-              echo '<a href="' . get_permalink( $ns3_value ) . '" title="' . esc_attr( $ns3_value->post_title ) . '"><div class="ns-title">';
-              echo get_the_title($ns3_value);
-              echo '</div></a>';
+            if (!empty($ns3_slug)) {
+              $ns3_page = get_page_by_path($ns3_slug);
+              if ( has_post_thumbnail($ns3_page->ID)) {
+                echo '<a href="' . get_permalink( $ns3_page->ID ) . '" title="' . esc_attr( $ns3_page->ID->post_title ) . '">';
+                echo get_the_post_thumbnail($ns3_page->ID, 'next-steps');
+                echo '</a>';
+                echo '<a href="' . get_permalink( $ns3_page->ID ) . '" title="' . esc_attr( $ns3_page->ID->post_title ) . '"><div class="ns-title">';
+                echo get_the_title($ns3_page->ID);
+                echo '</div></a>';
+              }
             }
-          ?>
+          ?>  
         </aside>
 
       <?php endif; // end sidebar widget area ?>
