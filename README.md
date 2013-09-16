@@ -1,4 +1,4 @@
-#LifePointe 0.8.0
+#LifePointe 0.8.1
 Theme Name: LifePointe
 
 Author: Star Verte LLC
@@ -7,7 +7,7 @@ Author URI: http://starverte.com
 
 Description: A theme built for LifePointe Church of Fort Collins, Colorado featuring custom post types for Staff and Sermon Archives, "next steps" sidebars, custom menus to appear on left and right of logo image, and custom page template for pages displayed only in Modal windows. Built to work with Nivo Slider, Formidable Forms, Lightbox Plus, and Time.ly Calendar Plugin. Also supports "thmx" mime-type for uploads.
 
-Version: 0.8.0
+Version: 0.8.1
 
 License: GPLv2 or later
 
