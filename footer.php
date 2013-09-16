@@ -13,11 +13,8 @@
 
   <footer id="colophon" role="contentinfo">
     <div id="contactinfo">
-    <h2>Sunday Worship @ 9:30am and LifeGroups @ 11:00am</h2>
+      <h2>Sunday Worship @ 9:30am and LifeGroups @ 11:00am</h2>
       <a href="https://maps.google.com/maps?q=900+e+prospect+road,+fort+collins,co&ie=UTF-8&hq=&hnear=0x87694b1d990c0693:0x7047e73d198dc92b,900+E+Prospect+Rd,+Fort+Collins,+CO+80525&gl=us&ei=_hE2UvTwEMWhqgGbkYDwBg&ved=0CC4Q8gEwAA" target="_blank">LifePointe Church<span class="sep"> | </span>900 E Prospect Rd<span class="sep"> | </span>Fort Collins, CO 80524<span class="sep"> | </span>970.484.405</a>
-    <div id="site-generator">
-      <?php do_action( 'lifepointe_credits' ); ?>
-      <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'lifepointe' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'lifepointe' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'lifepointe' ), 'WordPress' ); ?></a>
     </div>
   </footer><!-- #colophon -->
     
