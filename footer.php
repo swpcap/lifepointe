@@ -12,14 +12,14 @@
   </div><!-- #main -->
 
   <footer id="colophon" role="contentinfo">
+  <?php $settings = get_option('lifepointe_general');?>
     <div id="contactinfo">
-      <h2>Sunday Worship @ 9:30am and LifeGroups @ 11:00am</h2>
-      <a href="https://maps.google.com/maps?q=900+e+prospect+road,+fort+collins,co&ie=UTF-8&hq=&hnear=0x87694b1d990c0693:0x7047e73d198dc92b,900+E+Prospect+Rd,+Fort+Collins,+CO+80525&gl=us&ei=_hE2UvTwEMWhqgGbkYDwBg&ved=0CC4Q8gEwAA" target="_blank">LifePointe Church<span class="sep"> | </span>900 E Prospect Rd<span class="sep"> | </span>Fort Collins, CO 80524<span class="sep"> | </span>970.484.405</a>
+      <h2><?php echo $settings['footer_heading']; ?></h2>
+      <?php echo stripslashes($settings['footer_text']); ?>
     </div>
   </footer><!-- #colophon -->
     
     <footer id="buttons">
-    <?php $settings = get_option('lifepointe_general');?>
   <div id="row1">
           <a class="lbpModal" id="contact" href="/<?php echo $settings['contact_slug']; ?>/" target="">Contact Us</a>
     <a href="<?php echo $settings['fb_url']; ?>/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/facebook2.png" /></a>
