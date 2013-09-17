@@ -168,6 +168,28 @@ function theme_general_options() {
       <label class="description" for="lifepointe_general[prayer_slug]"><?php _e( 'ex. &copy 2011 Star Verte LLC', 'lifepointetheme' ); ?></label>
     </td>
   </tr>
+  
+  <?php
+  /**
+   * Footer Heading
+   */
+  ?>
+  <tr valign="top"><th scope="row"><?php _e( 'Footer Heading', 'lifepointetheme' ); ?></th>
+    <td>
+      <input id="lifepointe_general[footer_heading]" class="regular-text" type="text" name="lifepointe_general[footer_heading]" value="<?php esc_attr_e( $settings['footer_heading'] ); ?>" />
+    </td>
+  </tr>
+  
+  <?php
+  /**
+   * Footer Text
+   */
+  ?>
+  <tr valign="top"><th scope="row"><?php _e( 'Footer Text', 'lifepointetheme' ); ?></th>
+    <td>
+      <textarea id="lifepointe_general[footer_text]" class="text-field" name="lifepointe_general[footer_text]" rows="8" style="width:80%;max-width:400px;"><?php echo stripslashes($settings['footer_text']); ?></textarea>
+    </td>
+  </tr>
 
   </table>
 
@@ -193,7 +215,7 @@ function theme_staff_options() {
   // This shows the page's name and an icon if one has been provided ?>
 
   <?php if ( false !== $_REQUEST['updated'] ) : ?>
-  <div class="updated fade"><p><strong><?php _e( 'Options lifepointeved' ); ?></strong></p></div>
+  <div class="updated fade"><p><strong><?php _e( 'Options saved' ); ?></strong></p></div>
   <?php endif; // If the form has just been submitted, this shows the notification ?>
 
   <form method="post" action="options.php">
@@ -549,6 +571,9 @@ function lifepointe_validate_general( $input ) {
   global $lifepointe_general;
 
   $settings = get_option( 'lifepointe_general', $lifepointe_general );
+	
+	// Say our textarea option must be safe text with the allowed tags for posts
+  $input['footer_text'] = wp_filter_post_kses( $input['footer_text'] );
   
   return $input;
 }
