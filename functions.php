@@ -18,8 +18,10 @@
  *
  * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.8.0
+ * 
+ * @TODO: Add @since to each function
  */
 
 /**

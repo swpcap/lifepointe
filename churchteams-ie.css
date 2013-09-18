@@ -1,3 +1,10 @@
+/*
+ * ChurchTeams stylesheet for Internet Explorer
+ *
+ * @package LifePointe
+ * @since 0.7.7
+ */
+
 body a:link {
   color: #9dc3e6;
   text-decoration: none;

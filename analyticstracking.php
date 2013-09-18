@@ -1,3 +1,12 @@
+<?php
+/**
+ * The Google Analytics code
+ *
+ * @package LifePointe
+ * @since 0.7.7
+ */
+?>
+
 <script type="text/javascript">
 
   var _gaq = _gaq || [];

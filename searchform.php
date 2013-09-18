@@ -1,5 +1,12 @@
 <?php
-  $settings = get_option('lifepointe_general');
+/**
+ * Template for default searchform
+ *
+ * @package LifePointe
+ * @since 0.8.0
+ */
+
+$settings = get_option('lifepointe_general');
 ?>
 
 <form role="search" method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">

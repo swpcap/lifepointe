@@ -1,7 +1,10 @@
 <?php
-/* 
+/**
  * Theme Options Page
  * Source: http://digitalraindrops.net/2011/02/tabbed-options-page/
+ *
+ * @package LifePointe
+ * @since 0.8.2
  */
 
 // Default options values
