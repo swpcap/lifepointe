@@ -2,8 +2,8 @@
 /**
  * The template for displaying image attachments.
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.7.7
  */
 
 get_header(); ?>

@@ -1,8 +1,10 @@
 <?php
-  /**
-  * @package WordPress
-  * @subpackage LifePointe
-  */
+/**
+ * @package LifePointe
+ * @since 0.7.7
+ *
+ * @TODO: Remove in 0.9
+ */
 ?>
 
 <div id="tabs" class="widget-area" role="complementary">

@@ -2,8 +2,8 @@
 /**
  * The template for displaying Category Archive pages.
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.8.0
  */
 
 get_header(); ?>

@@ -2,10 +2,11 @@
 /**
  * Template Name: Audio Attachment
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.8.0
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
 <![endif]-->

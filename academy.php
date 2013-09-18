@@ -2,8 +2,8 @@
 /**
  * Template Name: Academy Audio
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.8.3
  */
 
 get_header(); ?>
@@ -20,7 +20,7 @@ get_header(); ?>
         
         <?php while ( $academy->have_posts() ) : $academy->the_post(); ?>
 
-          <?php get_template_part( 'content', 'sermon' ); ?>
+          <?php get_template_part( 'type', 'sermon' ); ?>
 
         <?php endwhile; ?>
 

@@ -1,3 +1,10 @@
+/*
+ * Stylesheet for admin screens
+ *
+ * @package LifePointe
+ * @since 0.8.0
+ */
+
 #adminmenu .wp-menu-image img {
   max-height: 20px;
   max-width: 15px;

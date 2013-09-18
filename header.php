@@ -1,16 +1,18 @@
-<?php global  $post;
-if  ($post->post_parent && post_password_required($post->post_parent))
-  wp_redirect(get_permalink($post->post_parent));?>
-<?php
+<?php global $post;
+if ($post->post_parent && post_password_required($post->post_parent)) {
+  wp_redirect(get_permalink($post->post_parent));
+}
+
 /**
  * The Header for our theme.
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.7.9
  */
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
 <![endif]-->
