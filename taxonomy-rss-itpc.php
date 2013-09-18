@@ -1,48 +1,41 @@
 <?php
 /**
-*
-* @package WordPress
-* @subpackage LifePointe
-*/
+ * The template for displaying podcast feed
+ *
+ * @package LifePointe
+ * @since 0.8.3
+ */
+
 header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
-$more = 1; ?>
+$more = 1;
+$settings = get_option('lifepointe_podcast');
+?>
 
 <rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
 
 <channel>
-<?php //Define keys
-      $settings = get_option('lifepointe_podcast');
-      $pod_title = $settings['pod_title'];
-      $pod_copy = $settings['pod_copy'];
-      $pod_subtitle = $settings['pod_subtitle'];
-      $pod_author = $settings['pod_author'];
-      $pod_summary = $settings['pod_summary'];
-      $pod_desc = $settings['pod_desc'];
-      $pod_owner = $settings['pod_owner'];
-      $pod_owner_email = $settings['pod_owner_email'];
-?>
 
-  <title><?php echo $pod_title; ?></title>
+  <title><?php if (!empty($settings['pod_title'])) { echo $settings['pod_title']; } ?></title>
   
   <link>http://www.sharethelife.org/series/</link>
   
   <language>en-us</language>
   
-  <copyright><?php echo $pod_copy; ?></copyright>
+  <copyright><?php       if (!empty($settings['pod_copy']))        { echo $settings['pod_copy'];        } ?></copyright>
   
-  <itunes:subtitle><?php echo $pod_subtitle; ?></itunes:subtitle>
+  <itunes:subtitle><?php if (!empty($settings['pod_subtitle']))    { echo $settings['pod_subtitle'];    } ?></itunes:subtitle>
   
-  <itunes:author><?php echo $pod_author; ?></itunes:author>
+  <itunes:author><?php   if (!empty($settings['pod_author']))      { echo $settings['pod_author'];      } ?></itunes:author>
   
-  <itunes:summary><?php echo $pod_summary; ?></itunes:summary>
+  <itunes:summary><?php  if (!empty($settings['pod_summary']))     { echo $settings['pod_summary'];     } ?></itunes:summary>
   
-  <description><?php echo $pod_desc; ?></description>
+  <description><?php     if (!empty($settings['pod_desc']))        { echo $settings['pod_desc'];        } ?></description>
   
   <itunes:owner>
   
-    <itunes:name><?php echo $pod_owner; ?></itunes:name>
+    <itunes:name><?php   if (!empty($settings['pod_owner']))       { echo $settings['pod_owner'];       } ?></itunes:name>
     
-    <itunes:email><?php echo $pod_owner_email; ?></itunes:email>
+    <itunes:email><?php  if (!empty($settings['pod_owner_email'])) { echo $settings['pod_owner_email']; } ?></itunes:email>
   
   </itunes:owner>
   
