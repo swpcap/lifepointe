@@ -3,7 +3,7 @@
  * The template for displaying Search Results pages.
  *
  * @package LifePointe
- * @since 0.8.0
+ * @since 0.8.4
  */
 
 get_header(); ?>
@@ -22,7 +22,9 @@ get_header(); ?>
         <?php /* Start the Loop */ ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
-          <?php get_template_part( 'type', 'search' ); ?>
+          <?php if ( 'post' == get_post_type() ) { get_template_part( 'format', get_post_format() ); }
+                if ( 'page' == get_post_type() ) { get_template_part( 'type', 'page' ); }
+                else { get_template_part( 'type', get_post_type() ); } ?>
 
         <?php endwhile; ?>
 

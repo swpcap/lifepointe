@@ -5,7 +5,7 @@
  * Learn more: http://codex.wordpress.org/Post_Formats
  *
  * @package LifePointe
- * @since 0.8.0
+ * @since 0.8.4
  */
 ?>
 
@@ -18,14 +18,9 @@
     </div><!-- .entry-meta -->
   </header><!-- .entry-header -->
 
-  <?php if ( is_search() ) : // Only display Excerpts for search pages ?>
-  <div class="entry-summary">
-    <?php the_excerpt(); ?>
-  </div><!-- .entry-summary -->
-  <?php else : ?>
   <div class="entry-content">
     <?php if ( post_password_required() ) : ?>
-      <?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'lifepointe' ) ); ?>
+      <?php the_content( __( 'Read more', 'lifepointe' ) ); ?>
 
       <?php else : ?>
         <?php
@@ -49,7 +44,6 @@
     <?php endif; ?>
     <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'lifepointe' ), 'after' => '</div>' ) ); ?>
   </div><!-- .entry-content -->
-  <?php endif; ?>
 
   <footer class="entry-meta">
     <?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
