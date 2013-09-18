@@ -19,7 +19,7 @@
  * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
  * @package LifePointe
- * @since 0.8.0
+ * @since 0.8.5
  * 
  * @TODO: Add @since to each function
  */
@@ -1935,12 +1935,6 @@ function lbutton_shortcode( $atts, $content = null ) {
   return '<a class="lbutton '. esc_attr($color) .' '. esc_attr($class) .'" href="'. esc_attr($link) .'" target="'. esc_attr($target) .'">' . $content . '</a>';
 }
 add_shortcode( 'lbutton', 'lbutton_shortcode' );
-
-function excerpt_read_more_link($output) {
- global $post;
- return $output . '<a class="lbutton blue" href="'. get_permalink($post->ID) . '">Read More</a>';
-}
-add_filter('the_excerpt', 'excerpt_read_more_link');
 
 function add_lifepointe_caps() {
     $role = get_role( 'administrator' );
