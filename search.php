@@ -23,8 +23,8 @@ get_header(); ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
           <?php if ( 'post' == get_post_type() ) { get_template_part( 'format', get_post_format() ); }
-					      if ( 'page' == get_post_type() ) { get_template_part( 'type', 'page' ); }
-					      else { get_template_part( 'type', get_post_type() ); } ?>
+                if ( 'page' == get_post_type() ) { get_template_part( 'type', 'page' ); }
+                else { get_template_part( 'type', get_post_type() ); } ?>
 
         <?php endwhile; ?>
 
