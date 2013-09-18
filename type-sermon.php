@@ -1,10 +1,10 @@
 <?php
-  /**
-  * The template used for displaying sermons
-  *
-  * @package WordPress
-  * @subpackage LifePointe
-  */
+/**
+ * The template used for displaying sermons
+ *
+ * @package LifePointe
+ * @since 0.8.0
+ */
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

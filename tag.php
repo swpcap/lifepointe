@@ -2,7 +2,8 @@
 /**
  * The template used to display Tag Archive pages
  *
- * @package WordPress
+ * @package LifePointe
+ * @since 0.8.0
  */
 
 get_header(); ?>

@@ -2,8 +2,8 @@
 /**
  * The Sidebar containing the main widget areas.
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.7.9
  */
 ?>
     <div id="secondary" class="widget-area" role="complementary">

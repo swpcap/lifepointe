@@ -4,8 +4,8 @@
  *
  * Learn more: http://codex.wordpress.org/Post_Formats
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.8.0
  */
 ?>
 

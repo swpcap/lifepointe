@@ -2,8 +2,8 @@
 /**
  * The template for displaying 404 pages (Not Found).
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.8.0
  */
 
 get_header(); ?>

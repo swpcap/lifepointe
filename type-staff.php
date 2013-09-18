@@ -1,9 +1,9 @@
 <?php
 /**
- * The template used for displaying page content in page.php
+ * The template used for displaying staff content
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.8.0
  */
 ?>
 

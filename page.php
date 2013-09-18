@@ -7,8 +7,8 @@
  * and that other 'pages' on your WordPress site will use a
  * different template.
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.8.0
  */
 
 get_header(); ?>
