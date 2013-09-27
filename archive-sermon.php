@@ -3,7 +3,7 @@
  * The template for displaying sermon "archive" pages.
  *
  * @package LifePointe
- * @since 0.8.0
+ * @since 0.8.6
  */
 
 get_header(); ?>
