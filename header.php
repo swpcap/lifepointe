@@ -9,7 +9,7 @@ if ($post->post_parent && post_password_required($post->post_parent)) {
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package LifePointe
- * @since 0.7.9
+ * @since 0.8.6
  */
 ?>
 <!DOCTYPE html>
@@ -64,6 +64,7 @@ if ($post->post_parent && post_password_required($post->post_parent)) {
 <link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/images/ios-icon-114.png">
 <link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/ios-icon-72.png">
 <link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/ios-icon-57.png">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <link rel="stylesheet" type="text/css" media="all" href="<?php echo get_template_directory_uri(); ?>/style-ie.css" />

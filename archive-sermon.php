@@ -3,7 +3,7 @@
  * The template for displaying sermon "archive" pages.
  *
  * @package LifePointe
- * @since 0.8.0
+ * @since 0.8.6
  */
 
 get_header(); ?>
@@ -11,9 +11,9 @@ get_header(); ?>
     <div id="buttons" class="buttons-side">
       <?php $settings = get_option('lifepointe_general');?>
       <div id="row1">
-        <a id="fb" href="<?php echo $settings['fb_url']; ?>/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/fb.png" /></a>
-        <a id="podcast" href="<?php echo $settings['pod_url']; ?>/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/podcast.png" /></a>
-        <a id="rss" href="http://sharethelife.org/podcast/itpc/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/rss.png" /></a>
+        <a id="fb" href="<?php echo $settings['fb_url']; ?>/" target="_blank"><i class="icon-facebook-sign icon-2x"></i></a>
+        <a id="podcast" href="<?php echo $settings['pod_url']; ?>/" target="_blank"><span class="icon-stack"><i class="icon-circle-blank icon-stack-base icon-2x"></i><i class="icon-music icon-2x"></i></span></a>
+        <a id="rss" href="http://sharethelife.org/podcast/itpc/" target="_blank"><i class="icon-rss-sign icon-2x"></i></a>
       </div>
       <div id="row2">
         <a class="lbpModal" id="contact" href="/<?php echo $settings['contact_slug']; ?>/" target="">Contact Us</a>
@@ -22,8 +22,8 @@ get_header(); ?>
     </div>
 
     <section id="primary">
-      <a id="rss" href="http://sharethelife.org/podcast/itpc/" target="_blank"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/rss2.png" /></a>
-      <a id="podcast" href="<?php echo $settings['pod_url']; ?>/" target="_blank"><img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/podcast2.png" /></a>
+      <a id="rss" href="http://sharethelife.org/podcast/itpc/" target="_blank"><i class="icon icon-rss-sign icon-2x"></i></a>
+      <a id="podcast" href="<?php echo $settings['pod_url']; ?>/" target="_blank"><span class="icon icon-stack"><i class="icon-circle-blank icon-2x icon-stack-base"></i><i class="icon-music icon-2x"></i></span></a>
       <div id="content" role="main">
 
       <?php if ( have_posts() ) : ?>

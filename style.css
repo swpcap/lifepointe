@@ -3,7 +3,7 @@ Theme Name: LifePointe
 Author: Matt Beall
 Author URI: http://mattbeall.me
 Description: A theme built for LifePointe Church of Fort Collins, Colorado featuring custom post types for Staff and Sermon Archives, "next steps" sidebars, custom menus to appear on left and right of logo image, and custom page template for pages displayed only in Modal windows. Built to work with Nivo Slider, Formidable Forms, Lightbox Plus, and Time.ly Calendar Plugin. Also supports "thmx" mime-type for uploads.
-Version: 0.8.5
+Version: 0.8.6
 License: GPLv2 or later
 License URI: license.txt
 Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-ready, full-width-template, post-formats, theme-options, custom-post-type, custom-sidebars, lightbox-plus-ready, nivo-slider-ready
@@ -80,6 +80,18 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+a .icon-2x,
+a .icon-3x {
+	color: #fff;
+}
+a:hover .icon-2x,
+a:hover .icon-3x {
+	color: #9bdbf6;
+	text-decoration: none;
+}
+.icon-stack {
+	vertical-align: -15%!important;
 }
 article {
   margin-top: 1em;
@@ -788,6 +800,9 @@ footer#buttons {
   top: -36px;
   position: relative;
 }
+#buttons.buttons-side #row1 {
+	text-align: center;
+}
 #buttons #fb,
 #buttons #podcast,
 #buttons #rss {
@@ -1186,6 +1201,7 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
 }
 .sermons {
   padding: 0.5em 0;
+	border-bottom: 1px solid;
 }
 .sermons .title {
   padding: 0 0 0.125em;
@@ -1204,12 +1220,7 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
 .sermon-details {
   padding-bottom: 0.25em;
   margin-bottom: 0.25em;
-  border-bottom: 1px solid;
-}
-#week1 .sermon-details {
-  padding-bottom: 0.25em;
-  margin-bottom: 0;
-  border-bottom: none;
+  max-width: 85%;
 }
 .passage a {
   font-weight: 700;
@@ -1220,7 +1231,7 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
   top: -3.5em;
   position: relative;
 }
-.sermon-media img {
+.sermon-media a {
   padding: 0 0.5em;
 }
 
@@ -1404,11 +1415,4 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
 
 .postid-1536 .byline {
   display: none;
-}
-
-
-/* =Events
--------------------------------------------------------------- */
-.ai1ec-category {
-  text-transform: none;
 }
