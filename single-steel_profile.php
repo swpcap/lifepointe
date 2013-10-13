@@ -2,8 +2,9 @@
 /**
  * The Template for displaying all single posts.
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ *
+ * @since 0.9.1
  */
 
 get_header(); ?>

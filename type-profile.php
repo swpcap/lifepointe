@@ -1,9 +1,9 @@
 <?php
 /**
- * The template used for displaying staff content
+ * The template used for displaying profile content
  *
  * @package LifePointe
- * @since 0.8.0
+ * @since 0.9.1
  */
 ?>
 
@@ -16,9 +16,8 @@
     ?>
     
     <h1 class="entry-title"><?php the_title(); ?></h1>
-    <p><span class="staff-title"><?php profile_title(); ?></span><br />
-       <span class="staff-email"><?php profile_email(); ?></span><br />
-       <span class="staff-phone"><?php profile_phone(); ?></span></p>
+    <p><span class="profile-title"><?php profile_title(); ?></span><br />
+       <span class="profile-email"><?php profile_email(); ?></span>
   </header><!-- .entry-header -->
 
   <div class="entry-content">
