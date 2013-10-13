@@ -3,7 +3,6 @@
  * Template Name: Modal
  *
  * @package LifePointe
- *
  * @since 0.8.0
  */
 
