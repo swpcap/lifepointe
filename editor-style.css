@@ -2,7 +2,7 @@
  * Stylesheet for content editing
  *
  * @package LifePointe
- * @since 0.7.7
+ * @since 0.9.1
  */
 
 /* =CSS Reset by Eric Meyer
@@ -230,17 +230,7 @@ strong, b {
 
 /* =Content
 -------------------------------------------------------------- */
-.entry-title {
-  font: 3em "SurfaceMedium";
-}
-.page-title {
-  font: 3em "SurfaceMedium";
-}
-.type-staff .entry-title {
-  font: 2em "SurfaceMedium";
-}
-.sticky {
-}
+
 .entry-meta {
   clear: both;
   display: block;
