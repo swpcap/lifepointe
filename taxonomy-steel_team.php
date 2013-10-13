@@ -1,9 +1,9 @@
 <?php
 /**
- * The template for displaying staff "archive" pages
+ * The template for displaying team pages
  *
  * @package LifePointe
- * @since 0.8.0
+ * @since 0.9.0
  */
 
 get_header(); ?>
