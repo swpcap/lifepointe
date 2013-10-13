@@ -361,139 +361,6 @@ function lifepointe_enhanced_image_navigation( $url ) {
 }
 add_filter( 'attachment_link', 'lifepointe_enhanced_image_navigation' );
 
-/**
- * Custom Post Type - Staff
- */
-add_action( 'init', 'codex_custom_init' );
-function codex_custom_init() {
-  $directory = get_stylesheet_directory_uri();
-  $labels = array(
-    'name'               => _x('Staff Members', 'post type general name'),
-    'singular_name'      => _x('Staff Member', 'post type singular name'),
-    'add_new'            => _x('Add New', 'staff'),
-    'add_new_item'       => __('Add New Staff Member'),
-    'edit_item'          => __('Edit Staff Member'),
-    'new_item'           => __('New Staff Member'),
-    'all_items'          => __('All Staff'),
-    'view_item'          => __('View profile'),
-    'search_items'       => __('Search Staff'),
-    'not_found'          => __('No Staff Members found'),
-    'not_found_in_trash' => __('No Staff Members were thrown away'), 
-    'parent_item_colon'  => '',
-    'menu_name'          => 'Staff List'
-
-  );
-  $args = array(
-    'labels'             => $labels,
-    'public'             => true,
-    'publicly_queryable' => true,
-    'show_ui'            => true, 
-    'show_in_menu'       => true, 
-    'query_var'          => true,
-    'rewrite'            => true,
-    'capability_type'    => 'staff',
-    'has_archive'        => true, 
-    'hierarchical'       => true,
-    'menu_icon'          => $directory . '/images/staff.png',
-    'menu_position'      => 5,
-    'supports'           => array( 'title', 'editor', 'thumbnail', 'page-attributes' )
-  ); 
-  register_post_type('staff',$args);
-}
-
-//add filter to ensure the text Staff Member, or staff, is displayed when user updates a staff 
-add_filter( 'post_updated_messages', 'codex_staff_updated_messages' );
-function codex_staff_updated_messages( $messages ) {
-  global $post, $post_ID;
-
-  $messages['staff'] = array(
-    0 => '', // Unused. Messages start at index 1.
-    1 => sprintf( __('Staff Member updated. <a href="%s">View profile</a>'), esc_url( get_permalink($post_ID) ) ),
-    2 => __('Custom field updated.'),
-    3 => __('Custom field deleted.'),
-    4 => __('Staff Member updated.'),
-    /* translators: %s: date and time of the revision */
-    5 => isset($_GET['revision']) ? sprintf( __('Staff Member restored to revision from %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-    6 => sprintf( __('Staff Member published. <a href="%s">View profile</a>'), esc_url( get_permalink($post_ID) ) ),
-    7 => __('Staff Member was saved. At least in our database.'),
-    8 => sprintf( __('Staff Member submitted. <a target="_blank" href="%s">Preview profile</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-    9 => sprintf( __('Staff Member scheduled to go public: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview profile</a>'),
-      // translators: Publish box date format, see http://php.net/date
-      date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
-    10 => sprintf( __('Staff Member (private) updated. <a target="_blank" href="%s">Preview profile</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-  );
-
-  return $messages;
-}
-
-
-/**
- * Custom Post Type - Elder
- */
-add_action( 'init', 'create_elder_type' );
-function create_elder_type() {
-  $directory = get_stylesheet_directory_uri();
-  $labels = array(
-    'name'               => _x('Elders', 'post type general name'),
-    'singular_name'      => _x('Elder', 'post type singular name'),
-    'add_new'            => _x('Add New', 'elder'),
-    'add_new_item'       => __('Add New Elder'),
-    'edit_item'          => __('Edit Elder'),
-    'new_item'           => __('New Elder'),
-    'all_items'          => __('All Elders'),
-    'view_item'          => __('View profile'),
-    'search_items'       => __('Search Elders'),
-    'not_found'          => __('No Elders found'),
-    'not_found_in_trash' => __('No Elders were thrown away'), 
-    'parent_item_colon'  => '',
-    'menu_name'          => 'Elder List'
-
-  );
-  $args = array(
-    'labels'             => $labels,
-    'public'             => true,
-    'publicly_queryable' => true,
-    'show_ui'            => true, 
-    'show_in_menu'       => true, 
-    'query_var'          => true,
-    'rewrite'            => true,
-    'capability_type'    => 'staff',
-    'has_archive'        => true, 
-    'hierarchical'       => true,
-    'menu_icon'          => $directory . '/images/staff.png',
-    'menu_position'      => 5,
-    'supports'           => array( 'title', 'editor', 'thumbnail', 'page-attributes' )
-  ); 
-  register_post_type('elder',$args);
-}
-
-//add filter to ensure the text elder Member, or elder, is displayed when user updates a elder
-add_filter( 'post_updated_messages', 'codex_elder_updated_messages' );
-function codex_elder_updated_messages( $messages ) {
-  global $post, $post_ID;
-
-  $messages['elder'] = array(
-    0 => '', // Unused. Messages start at index 1.
-    1 => sprintf( __('Elder Member updated. <a href="%s">View profile</a>'), esc_url( get_permalink($post_ID) ) ),
-    2 => __('Custom field updated.'),
-    3 => __('Custom field deleted.'),
-    4 => __('Elder Member updated.'),
-    /* translators: %s: date and time of the revision */
-    5 => isset($_GET['revision']) ? sprintf( __('Elder Member restored to revision from %s'), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-    6 => sprintf( __('Elder Member published. <a href="%s">View profile</a>'), esc_url( get_permalink($post_ID) ) ),
-    7 => __('Elder Member was saved. At least in our database.'),
-    8 => sprintf( __('Elder Member submitted. <a target="_blank" href="%s">Preview profile</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-    9 => sprintf( __('Elder Member scheduled to go public: <strong>%1$s</strong>. <a target="_blank" href="%2$s">Preview profile</a>'),
-      // translators: Publish box date format, see http://php.net/date
-      date_i18n( __( 'M j, Y @ G:i' ), strtotime( $post->post_date ) ), esc_url( get_permalink($post_ID) ) ),
-    10 => sprintf( __('Elder Member (private) updated. <a target="_blank" href="%s">Preview profile</a>'), esc_url( add_query_arg( 'preview', 'true', get_permalink($post_ID) ) ) ),
-  );
-
-  return $messages;
-}
-
-
-
 /*
  * Code based on Sermon Manager for WordPress by WP for Church
  */
@@ -687,9 +554,6 @@ function my_meta_boxes() {
   
   add_meta_box('ns_meta', 'Next Steps', 'ns_meta', 'post', 'side', 'high');
   add_meta_box('ns_meta', 'Next Steps', 'ns_meta', 'page', 'side', 'high');
-  
-  add_meta_box('staff_meta', 'Details', 'staff_meta', 'staff', 'side', 'high');
-  add_meta_box('elder_meta', 'Details', 'elder_meta', 'elder', 'side', 'high');
 
   $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
   $template_file = get_post_meta($post_id,'_wp_page_template',TRUE);
@@ -712,26 +576,6 @@ function ns_meta() {
     <p><label>First Box</label> <input type="text" size="15" name="ns1" value="<?php if (isset($custom['ns1'])) { echo $custom["ns1"][0]; } ?>" /></p>
     <p><label>Second Box</label><input type="text" size="15" name="ns2" value="<?php if (isset($custom['ns2'])) { echo $custom["ns2"][0]; } ?>" /></p>
     <p><label>Third Box</label> <input type="text" size="15" name="ns3" value="<?php if (isset($custom['ns3'])) { echo $custom["ns3"][0]; } ?>" /></p><?php
-}
-
-/* Staff Details */
-function staff_meta() {
-  global $post;
-  $custom = get_post_custom($post->ID); ?>
-  
-  <p><label>Name</label> <input type="text"  size="10" name="staff_title" value="<?php if (isset($custom['staff_title'])) { echo $custom["staff_title"][0]; } ?>" /></p>
-  <p><label>Phone</label><input type="tel"   size="10" name="staff_phone" value="<?php if (isset($custom['staff_phone'])) { echo $custom["staff_phone"][0]; } ?>" /></p>
-  <p><label>Email</label><input type="email" size="10" name="staff_email" value="<?php if (isset($custom['staff_email'])) { echo $custom["staff_email"][0]; } ?>" /></p><?php
-}
-
-/* Elder Details */
-function elder_meta() {
-  global $post;
-  $custom = get_post_custom($post->ID); ?>
-  
-  <p><label>Name</label> <input type="text"  size="10" name="elder_title" value="<?php if (isset($custom['elder_title'])) { echo $custom["elder_title"][0]; } ?>" /></p>
-  <p><label>Phone</label><input type="tel"   size="10" name="elder_phone" value="<?php if (isset($custom['elder_phone'])) { echo $custom["elder_phone"][0]; } ?>" /></p>
-  <p><label>Email</label><input type="email" size="10" name="elder_email" value="<?php if (isset($custom['elder_email'])) { echo $custom["elder_email"][0]; } ?>" /></p><?php
 }
 
 /* Week 1 */
@@ -1457,14 +1301,6 @@ function save_details(){
   if (isset($_POST['ns2'])) { update_post_meta($post->ID, "ns2", $_POST["ns2"]); }
   if (isset($_POST['ns3'])) { update_post_meta($post->ID, "ns3", $_POST["ns3"]); }
   
-  if (isset($_POST['staff_title'])) { update_post_meta($post->ID, "staff_title", $_POST["staff_title"]); }
-  if (isset($_POST['staff_email'])) { update_post_meta($post->ID, "staff_email", $_POST["staff_email"]); }
-  if (isset($_POST['staff_phone'])) { update_post_meta($post->ID, "staff_phone", $_POST["staff_phone"]); }
-  
-  if (isset($_POST['elder_title'])) { update_post_meta($post->ID, "elder_title", $_POST["elder_title"]); }
-  if (isset($_POST['elder_email'])) { update_post_meta($post->ID, "elder_email", $_POST["elder_email"]); }
-  if (isset($_POST['elder_phone'])) { update_post_meta($post->ID, "elder_phone", $_POST["elder_phone"]); }
-  
   if (isset($_POST['week1_title']))       { update_post_meta($post->ID, "week1_title",           $_POST["week1_title"]); }
   if (isset($_POST['week1_passage']))     { update_post_meta($post->ID, "week1_passage",         $_POST["week1_passage"]); }
   if (isset($_POST['week1_speaker']))     { update_post_meta($post->ID, "week1_speaker",         $_POST["week1_speaker"]); }
@@ -1938,12 +1774,6 @@ add_shortcode( 'lbutton', 'lbutton_shortcode' );
 
 function add_lifepointe_caps() {
     $role = get_role( 'administrator' );
-    $role->add_cap( 'read_staff' );
-    $role->add_cap( 'delete_staff' );
-    $role->add_cap( 'edit_staffs' );
-    $role->add_cap( 'edit_others_staffs' );
-    $role->add_cap( 'publish_staffs' );
-    $role->add_cap( 'read_private_staffs' );
     $role->add_cap( 'read_sermon' );
     $role->add_cap( 'delete_sermon' );
     $role->add_cap( 'edit_sermons' );
