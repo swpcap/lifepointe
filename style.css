@@ -512,6 +512,12 @@ a .entry-title {
 	left: -270px;
 	width: 90px;
 }
+.c-program-logo {
+  float: right;
+  position: relative;
+  left: -325px;
+  width: 110px;
+}
 #flipside {
 	top: 35px;
 }
