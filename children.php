@@ -9,7 +9,7 @@
 get_header(); ?>
 
 		<div id="primary">
-			<img class="program-logo" id="kidconnection" src="<?php echo get_template_directory_uri(); ?>/images/kidconnection-logo.png" />
+			<img class="c-program-logo" id="kidconnection" src="<?php echo get_template_directory_uri(); ?>/images/kidconnection-logo.png" />
 			<div id="content" role="main">
 				
 				<?php while ( have_posts() ) : the_post(); ?>
