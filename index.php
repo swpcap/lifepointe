@@ -8,51 +8,45 @@
  * E.g., it puts together the home page when no home.php file exists.
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @package WordPress
- * @subpackage LifePointe
+ * @package LifePointe
+ * @since 0.8.0
  */
 
 get_header(); ?>
 
-		<div id="primary">
-			<div id="content" role="main">
+    <div id="primary">
+      <div id="content" role="main">
 
-			<?php if ( have_posts() ) : ?>
+      <?php if ( have_posts() ) : ?>
 
-				<?php lifepointe_content_nav( 'nav-above' ); ?>
+        <?php lifepointe_content_nav( 'nav-above' ); ?>
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+        <?php /* Start the Loop */ ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-					<?php
-						/* Include the Post-Format-specific template for the content.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
-					?>
+          <?php get_template_part( 'format', get_post_format() ); ?>
 
-				<?php endwhile; ?>
+        <?php endwhile; ?>
 
-				<?php lifepointe_content_nav( 'nav-below' ); ?>
+        <?php lifepointe_content_nav( 'nav-below' ); ?>
 
-			<?php else : ?>
+      <?php else : ?>
 
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title"><?php _e( 'Nothing Found', 'lifepointe' ); ?></h1>
-					</header><!-- .entry-header -->
+        <article id="post-0" class="post no-results not-found">
+          <header class="entry-header">
+            <h1 class="entry-title"><?php _e( 'Nothing Found', 'lifepointe' ); ?></h1>
+          </header><!-- .entry-header -->
 
-					<div class="entry-content">
-						<p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'lifepointe' ); ?></p>
-						<?php get_search_form(); ?>
-					</div><!-- .entry-content -->
-				</article><!-- #post-0 -->
+          <div class="entry-content">
+            <p><?php _e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'lifepointe' ); ?></p>
+            <?php get_search_form(); ?>
+          </div><!-- .entry-content -->
+        </article><!-- #post-0 -->
 
-			<?php endif; ?>
+      <?php endif; ?>
 
-			</div><!-- #content -->
-		</div><!-- #primary -->
+      </div><!-- #content -->
+    </div><!-- #primary -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
