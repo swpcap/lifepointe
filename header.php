@@ -9,7 +9,7 @@ if ($post->post_parent && post_password_required($post->post_parent)) {
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package LifePointe
- * @since 0.8.6
+ * @since 0.9.3
  */
 ?>
 <!DOCTYPE html>
