@@ -1409,3 +1409,11 @@ div[style="overflow-x: visible; overflow-y: visible; "] {
 .postid-1536 .byline {
   display: none;
 }
+
+/* =Override Bootstrap Styles
+-------------------------------------------------------------- */
+*, *:before, *:after {
+  -webkit-box-sizing: initial;
+     -moz-box-sizing: initial;
+          box-sizing: initial;
+}
