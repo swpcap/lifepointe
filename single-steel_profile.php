@@ -3,7 +3,6 @@
  * The Template for displaying all single posts.
  *
  * @package LifePointe
- *
  * @since 0.9.1
  */
 
