@@ -19,7 +19,7 @@
  * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
  * @package LifePointe
- * @since 0.8.5
+ * @since 0.9.3
  * 
  * @TODO: Add @since to each function
  */
@@ -77,6 +77,14 @@ function lifepointe_setup() {
   add_theme_support( 'post-formats', array( 'aside', 'image', 'gallery' ) );
 }
 endif; // lifepointe_setup
+
+/**
+ * Enqueue stylesheet correct way
+ */
+function lifepointe_scripts() {
+  wp_enqueue_style( 'lifepointe-style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'lifepointe_scripts' );
 
 /**
  * Support Featured Images
@@ -391,7 +399,7 @@ function create_sermon_types()
     'show_ui'            => true, 
     'show_in_menu'       => true, 
     'query_var'          => true,
-    'menu_icon'          => $directory . '/images/sermon.png',
+    'menu_icon'          => 'dashicons-rss',
     'capability_type'    => 'sermon',
     'has_archive'        => true, 
     'rewrite'            => array('slug' => 'series'),
