@@ -79,6 +79,14 @@ function lifepointe_setup() {
 endif; // lifepointe_setup
 
 /**
+ * Enqueue stylesheet correct way
+ */
+function lifepointe_scripts() {
+  wp_enqueue_style( 'lifepointe-style', get_stylesheet_uri() );
+}
+add_action( 'wp_enqueue_scripts', 'lifepointe_scripts' );
+
+/**
  * Support Featured Images
  */
 if ( function_exists( 'add_theme_support' ) ) {
@@ -391,7 +399,7 @@ function create_sermon_types()
     'show_ui'            => true, 
     'show_in_menu'       => true, 
     'query_var'          => true,
-    'menu_icon'          => $directory . '/images/sermon.png',
+    'menu_icon'          => 'dashicons-rss',
     'capability_type'    => 'sermon',
     'has_archive'        => true, 
     'rewrite'            => array('slug' => 'series'),
