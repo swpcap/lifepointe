@@ -2,7 +2,7 @@
  * ChurchTeams stylesheet
  *
  * @package LifePointe
- * @since 0.7.7
+ * @since 0.9.4
  */
 
 body a:link {
@@ -98,7 +98,7 @@ div.groups {
   float: right;
   clear: none;
   left: -15px;
-  text-align: left;
+  text-align: right;
   width: 70%;
 }
 div.groups div.groupshead {
