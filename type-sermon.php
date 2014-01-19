@@ -3,7 +3,7 @@
  * The template used for displaying sermons
  *
  * @package LifePointe
- * @since 0.8.6
+ * @since 0.9.5
  */
 ?>
 
