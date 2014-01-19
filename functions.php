@@ -19,7 +19,7 @@
  * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
  * @package LifePointe
- * @since 0.9.3
+ * @since 0.9.5
  * 
  * @TODO: Add @since to each function
  */
