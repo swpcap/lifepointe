@@ -19,7 +19,7 @@
  * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
  * @package LifePointe
- * @since 0.9.3
+ * @since 0.9.5
  * 
  * @TODO: Add @since to each function
  */
@@ -355,19 +355,6 @@ function lifepointe_category_transient_flusher() {
 }
 add_action( 'edit_category', 'lifepointe_category_transient_flusher' );
 add_action( 'save_post', 'lifepointe_category_transient_flusher' );
-
-/**
- * Filter in a link to a content ID attribute for the next/previous image links on image attachment pages
- */
-function lifepointe_enhanced_image_navigation( $url ) {
-  global $post;
-
-  if ( wp_attachment_is_image( $post->ID ) )
-    $url = $url . '#main';
-
-  return $url;
-}
-add_filter( 'attachment_link', 'lifepointe_enhanced_image_navigation' );
 
 /*
  * Code based on Sermon Manager for WordPress by WP for Church

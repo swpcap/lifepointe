@@ -3,7 +3,7 @@
  * The template used for displaying sermons
  *
  * @package LifePointe
- * @since 0.8.6
+ * @since 0.9.5
  */
 ?>
 
@@ -202,11 +202,11 @@
   
   <div class="entry-content">
     <?php echo the_content(); ?>
-    <?php if (is_archive()) {?><a class="lbutton gray" href="#" onclick="Effect.toggle('sermon-list-<?php the_ID(); ?>', 'slide'); return false;"><?php
-			echo has_term('academy', 'sermon-topics') ? 'Sessions' : 'Sermon List'; ?></a><?php } ?>
+    <a class="lbutton gray" href="#" onclick="Effect.toggle('sermon-list-<?php the_ID(); ?>', 'slide'); return false;"><?php
+			echo has_term('academy', 'sermon-topics') ? 'Sessions' : 'Sermon List'; ?></a>
   </div><!-- .entry-content -->
   
-  <div id="sermon-list-<?php the_ID(); ?>" class="sermon-list" <?php if (is_archive()) {?>style="display:none;<?php } ?>">
+  <div id="sermon-list-<?php the_ID(); ?>" class="sermon-list" style="display:none;">
   
     <?php if ( get_post_meta($post->ID, 'week1_audio', true) ) : ?>
     <div id="week1" class="sermons">
