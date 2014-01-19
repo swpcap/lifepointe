@@ -3,7 +3,7 @@
  * Template Name: Splash
  *
  * @package LifePointe
- * @since 0.7.7
+ * @since 0.9.5
  */
 
 get_header(); ?>
