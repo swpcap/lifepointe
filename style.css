@@ -307,7 +307,7 @@ strong, b {
 -------------------------------------------------------------- */
 #access,
 #access2 {
-  font-size: 13px;
+  font-size: 15px;
   display: block;
   float: left;
   position: absolute;  
@@ -316,7 +316,7 @@ strong, b {
 #access {
   margin: 0 0 0 0;
   padding: 0 0px 0 10px;
-  width: 300px;
+  width: 320px;
 }
 #access2 {
   margin-left: 640px;
