@@ -1,4 +1,4 @@
-#LifePointe 0.9.7
+#LifePointe 0.9.8
 Theme Name: LifePointe
 
 Author: Matt Beall
@@ -7,7 +7,7 @@ Author URI: http://mattbeall.me
 
 Description: A theme built for LifePointe Church of Fort Collins, Colorado featuring custom post types for Sermon Archives, "next steps" sidebars, custom menus to appear on left and right of logo image, and custom page template for pages displayed only in Modal windows. Built to work with Steel, Formidable Forms, Lightbox Plus, and Time.ly Calendar Plugin. Also supports "thmx" mime-type for uploads.
 
-Version: 0.9.7
+Version: 0.9.8
 
 License: GPLv2 or later
 
@@ -15,7 +15,7 @@ License URI: license.txt
 
 Tags: custom-menu, sticky-post, microformats, rtl-language-support, translation-ready, full-width-template, post-formats, theme-options, custom-post-type, custom-sidebars, lightbox-plus-ready, steel-ready
 
-	Copyright (C) 2013  Star Verte LLC
+	Copyright (C) 2014  Star Verte LLC
 	
 	This program is free software; you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
