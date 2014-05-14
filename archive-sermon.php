@@ -70,7 +70,7 @@ get_header(); ?>
 <?php /* Load Sidebar */ ?>
     <div id="secondary" class="widget-area" role="complementary">
       <?php if ( ! dynamic_sidebar( 'sidebar' ) ) : ?>
-        
+
         <aside id="ns1">
           <?php
             $settings = get_option('lifepointe_sermons');
@@ -86,7 +86,7 @@ get_header(); ?>
                 echo '</div></a>';
               }
             }
-          ?>  
+          ?>
         </aside>
 
         <aside id="ns2">
@@ -104,9 +104,9 @@ get_header(); ?>
                 echo '</div></a>';
               }
             }
-          ?>  
+          ?>
         </aside>
-        
+
         <aside id="ns3">
           <?php
             $settings = get_option('lifepointe_sermons');
@@ -122,7 +122,7 @@ get_header(); ?>
                 echo '</div></a>';
               }
             }
-          ?>  
+          ?>
         </aside>
 
       <?php endif; // end sidebar widget area ?>
