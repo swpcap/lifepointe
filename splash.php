@@ -14,7 +14,7 @@ get_header(); ?>
         <?php while ( have_posts() ) : the_post(); ?>
 
           <?php echo do_shortcode('[steel_slideshow name="splash"]'); ?>
-                  
+
           <?php comments_template( '', true ); ?>
 
         <?php endwhile; // end of the loop. ?>
