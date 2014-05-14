@@ -54,6 +54,9 @@
 
 <body <?php body_class(); ?>>
   <?php the_title(); ?>
-  <?php $audio = wp_get_attachment_url(); echo do_shortcode( '[audio ' .  $audio .']' ) ?>
+  <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+  <audio preload="auto" controls="controls" style="width:100%;">
+    <source type="audio/mpeg" src="<?php echo wp_get_attachment_url(); ?>"><a href="<?php echo wp_get_attachment_url(); ?>">Link</a
+  </audio>
 </body>
 </html>

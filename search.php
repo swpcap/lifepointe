@@ -68,7 +68,7 @@ get_header(); ?>
                 echo '</div></a>';
               }
             }
-          ?>  
+          ?>
         </aside>
 
         <aside id="ns2">
@@ -87,7 +87,7 @@ get_header(); ?>
                 echo '</div></a>';
               }
             }
-          ?>  
+          ?>
         </aside>
 
         <aside id="ns3">
@@ -106,9 +106,9 @@ get_header(); ?>
                 echo '</div></a>';
               }
             }
-          ?>  
+          ?>
         </aside>
-                
+
         <aside id="ns4">
           <?php
             $settings = get_option('lifepointe_search_results');
@@ -125,9 +125,9 @@ get_header(); ?>
                 echo '</div></a>';
               }
             }
-          ?>  
+          ?>
         </aside>
-                
+
         <aside id="ns5">
           <?php
             $settings = get_option('lifepointe_search_results');
@@ -144,7 +144,7 @@ get_header(); ?>
                 echo '</div></a>';
               }
             }
-          ?>  
+          ?>
         </aside>
 
       <?php endif; // end sidebar widget area ?>

@@ -42,16 +42,16 @@ function lifepointe_theme_options() {
 
 add_action( 'admin_menu', 'lifepointe_theme_options' );
 
-function lifepointe_admin_tabs( $current = 'general' ) { 
-    $tabs = array( 'general' => 'General', 'staff' => 'Staff', 'sermons' => 'Sermon Archives', 'search_results' => 'Search Results', 'podcast' => 'Podcast' ); 
-    $links = array(); 
-    foreach( $tabs as $tab => $name ) : 
-        $links[] = "<a class='nav-tab' href='?page=theme_options&tab=$tab'>$name</a>"; 
-    endforeach; 
-    echo '<h2>'; 
-    foreach ( $links as $link ) 
-        echo $link; 
-    echo '</h2>'; 
+function lifepointe_admin_tabs( $current = 'general' ) {
+    $tabs = array( 'general' => 'General', 'staff' => 'Staff', 'sermons' => 'Sermon Archives', 'search_results' => 'Search Results', 'podcast' => 'Podcast' );
+    $links = array();
+    foreach( $tabs as $tab => $name ) :
+        $links[] = "<a class='nav-tab' href='?page=theme_options&tab=$tab'>$name</a>";
+    endforeach;
+    echo '<h2>';
+    foreach ( $links as $link )
+        echo $link;
+    echo '</h2>';
 }
 
 // Function to generate options page
@@ -59,30 +59,30 @@ function lifepointe_theme_home_page() {
   global $pagenow;
 
   lifepointe_admin_tabs();
-  
-  if ( $pagenow == 'themes.php' && $_GET['page'] == 'theme_options' ) : 
-    if ( isset ( $_GET['tab'] ) ) : 
-        $tab = $_GET['tab']; 
-    else: 
-        $tab = 'general'; 
-    endif; 
-    switch ( $tab ) : 
-        case 'general' : 
-            theme_general_options(); 
-            break; 
-        case 'staff' : 
-            theme_staff_options(); 
+
+  if ( $pagenow == 'themes.php' && $_GET['page'] == 'theme_options' ) :
+    if ( isset ( $_GET['tab'] ) ) :
+        $tab = $_GET['tab'];
+    else:
+        $tab = 'general';
+    endif;
+    switch ( $tab ) :
+        case 'general' :
+            theme_general_options();
             break;
-    case 'sermons' : 
-            theme_sermons_options(); 
-            break;  
-        case 'search_results' : 
-            theme_search_results_options(); 
+        case 'staff' :
+            theme_staff_options();
             break;
-    case 'podcast' : 
-            theme_podcast_options(); 
-            break; 
-    endswitch; 
+    case 'sermons' :
+            theme_sermons_options();
+            break;
+        case 'search_results' :
+            theme_search_results_options();
+            break;
+    case 'podcast' :
+            theme_podcast_options();
+            break;
+    endswitch;
   endif;
 }
 
@@ -94,7 +94,7 @@ function theme_general_options() {
     $_REQUEST['updated'] = false; // This checks whether the form has just been submitted. ?>
 
   <div class="wrap">
-    
+
   <?php screen_icon(); echo "<h2>" . get_current_theme() . __( ' Theme Options' ) . "</h2>";
   // This shows the page's name and an icon if one has been provided ?>
 
@@ -103,9 +103,9 @@ function theme_general_options() {
   <?php endif; // If the form has just been submitted, this shows the notification ?>
 
   <form method="post" action="options.php">
-    
+
   <?php $settings = get_option( 'lifepointe_general', $lifepointe_general ); ?>
-  
+
   <?php settings_fields( 'lifepointe_theme_general' );
   /* This function outputs some hidden fields required by the form,
   including a nonce, a unique number used to ensure the form has been submitted from the admin page
@@ -171,7 +171,7 @@ function theme_general_options() {
       <label class="description" for="lifepointe_general[prayer_slug]"><?php _e( 'ex. &copy 2011 Star Verte LLC', 'lifepointetheme' ); ?></label>
     </td>
   </tr>
-  
+
   <?php
   /**
    * Footer Heading
@@ -182,7 +182,7 @@ function theme_general_options() {
       <input id="lifepointe_general[footer_heading]" class="regular-text" type="text" name="lifepointe_general[footer_heading]" value="<?php esc_attr_e( $settings['footer_heading'] ); ?>" />
     </td>
   </tr>
-  
+
   <?php
   /**
    * Footer Text
@@ -222,9 +222,9 @@ function theme_staff_options() {
   <?php endif; // If the form has just been submitted, this shows the notification ?>
 
   <form method="post" action="options.php">
-    
+
     <?php $settings = get_option( 'lifepointe_staff', $lifepointe_staff ); ?>
-  
+
   <?php settings_fields( 'lifepointe_theme_staff' );
   /* This function outputs some hidden fields required by the form,
   including a nonce, a unique number used to ensure the form has been submitted from the admin page
@@ -293,9 +293,9 @@ function theme_sermons_options() {
   <?php endif; // If the form has just been submitted, this shows the notification ?>
 
   <form method="post" action="options.php">
-    
+
     <?php $settings = get_option( 'lifepointe_sermons', $lifepointe_sermon ); ?>
-  
+
   <?php settings_fields( 'lifepointe_theme_sermons' );
   /* This function outputs some hidden fields required by the form,
   including a nonce, a unique number used to ensure the form has been submitted from the admin page
@@ -365,9 +365,9 @@ function theme_search_results_options() {
   <?php endif; // If the form has just been submitted, this shows the notification ?>
 
   <form method="post" action="options.php">
-    
+
     <?php $settings = get_option( 'lifepointe_search_results', $lifepointe_search_results ); ?>
-  
+
   <?php settings_fields( 'lifepointe_theme_search_results' );
   /* This function outputs some hidden fields required by the form,
   including a nonce, a unique number used to ensure the form has been submitted from the admin page
@@ -459,9 +459,9 @@ function theme_podcast_options() {
   <?php endif; // If the form has just been submitted, this shows the notification ?>
 
   <form method="post" action="options.php">
-    
+
     <?php $settings = get_option( 'lifepointe_podcast', $lifepointe_podcast ); ?>
-  
+
   <?php settings_fields( 'lifepointe_theme_podcast' );
   /* This function outputs some hidden fields required by the form,
   including a nonce, a unique number used to ensure the form has been submitted from the admin page
@@ -480,7 +480,7 @@ function theme_podcast_options() {
       <label class="description" for="lifepointe_podcast[pod_title]"><?php _e( 'i.e. LifePointe Sermon Podcast', 'lifepointetheme' ); ?></label>
     </td>
   </tr>
-  
+
   <?php
   /**
    * Podcast Sub-Title
@@ -492,7 +492,7 @@ function theme_podcast_options() {
       <label class="description" for="lifepointe_podcast[pod_subtitle]"><?php _e( '(optional)', 'lifepointetheme' ); ?></label>
     </td>
   </tr>
-    
+
     <?php
   /**
    * Podcast Copyright Notice
@@ -504,7 +504,7 @@ function theme_podcast_options() {
       <label class="description" for="lifepointe_podcast[pod_copy]"><?php _e( 'i.e. &#xA9;2012 LifePointe Church', 'lifepointetheme' ); ?></label>
     </td>
   </tr>
-  
+
   <?php
   /**
    * Podcast Author
@@ -516,7 +516,7 @@ function theme_podcast_options() {
       <label class="description" for="lifepointe_podcast[pod_author]"><?php _e( 'i.e. LifePointe Church', 'lifepointetheme' ); ?></label>
     </td>
   </tr>
-  
+
   <?php
   /**
    * Podcast Summary
@@ -527,7 +527,7 @@ function theme_podcast_options() {
       <textarea id="lifepointe_podcast[pod_summary]" class="text-field" name="lifepointe_podcast[pod_summary]" rows="2" style="width:80%;max-width:400px;"><?php echo stripslashes($settings['pod_summary']); ?></textarea>
     </td>
   </tr>
-  
+
   <?php
   /**
    * Podcast Description
@@ -538,9 +538,9 @@ function theme_podcast_options() {
       <textarea id="lifepointe_podcast[pod_desc]" class="text-field" name="lifepointe_podcast[pod_desc]" rows="5" style="width:80%;max-width:400px;"><?php echo stripslashes($settings['pod_desc']); ?></textarea>
     </td>
   </tr>
-  
+
   <tr valign="top"><th scope="row"><h3>Podcast Owner</h3></th></tr>
-  
+
   <?php
   /**
    * Podcast Owner
@@ -574,10 +574,10 @@ function lifepointe_validate_general( $input ) {
   global $lifepointe_general;
 
   $settings = get_option( 'lifepointe_general', $lifepointe_general );
-	
-	// Say our textarea option must be safe text with the allowed tags for posts
+
+  // Say our textarea option must be safe text with the allowed tags for posts
   $input['footer_text'] = wp_filter_post_kses( $input['footer_text'] );
-  
+
   return $input;
 }
 
@@ -585,7 +585,7 @@ function lifepointe_validate_staff( $input ) {
   global $lifepointe_staff;
 
   $settings = get_option( 'lifepointe_staff', $lifepointe_staff );
-  
+
   return $input;
 }
 
@@ -593,7 +593,7 @@ function lifepointe_validate_sermons( $input ) {
   global $lifepointe_sermons;
 
   $settings = get_option( 'lifepointe_sermons', $lifepointe_sermons );
-  
+
   return $input;
 }
 
@@ -601,7 +601,7 @@ function lifepointe_validate_search_results( $input ) {
   global $lifepointe_search_results;
 
   $settings = get_option( 'lifepointe_search_results', $lifepointe_search_results );
-    
+
   return $input;
 }
 
@@ -609,11 +609,11 @@ function lifepointe_validate_podcast( $input ) {
   global $lifepointe_podcast;
 
   $settings = get_option( 'lifepointe_podcast', $lifepointe_podcast );
-  
+
   // Say our textarea option must be safe text with the allowed tags for posts
   $input['pod_summary'] = wp_filter_post_kses( $input['pod_summary'] );
   $input['pod_desc'] = wp_filter_post_kses( $input['pod_desc'] );
-    
+
   return $input;
 }
 

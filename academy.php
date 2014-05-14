@@ -12,12 +12,12 @@ get_header(); ?>
       <div id="content" role="main">
       <?php $args = array( 'post_type' => 'sermon', 'posts_per_page' => 99, 'orderby' => 'date', 'order' => 'DESC', 'sermon-topics' => 'academy' );
             $academy = new WP_Query( $args ); ?>
-            
+
       <?php if ( $academy->have_posts() ) : ?>
         <header>
           <h1 class="page-title">LifePointe Academy</h1>
         </header>
-        
+
         <?php while ( $academy->have_posts() ) : $academy->the_post(); ?>
 
           <?php get_template_part( 'type', 'sermon' ); ?>
@@ -60,7 +60,7 @@ get_header(); ?>
               echo get_the_title($ns1_value);
               echo '</div></a>';
             }
-          ?>  
+          ?>
         </aside>
 
         <aside id="ns2" class="widget">

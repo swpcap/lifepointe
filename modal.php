@@ -51,7 +51,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<?php if ( is_single('76') ): 
+<?php if ( is_single('76') ):
   echo '<meta http-equiv="refresh" content="0; url=http://www.churchteams.com/Login.asp?oID=8895&amp;secID=bktxaTN1aWJhSXA5OFd4d3JSbmg3MlExMjZmUmEwam0%3D&amp;page=GroupBrowseNew.asp?filter=y~q34726=164211~Title=" />';
   endif ?>
 <![endif]-->
