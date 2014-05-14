@@ -13,7 +13,7 @@
       <?php $disable_feature = get_post_meta( $post->ID, '_disable_feature', true );
             $link_class = "class=\"lbpModal\"";
             $link_target = "target=\"_blank\"";
-            
+
             if ( 'on' == $disable_feature ) {
               $linkbehavior = $link_target;
             }
@@ -21,8 +21,8 @@
               $linkbehavior = $link_class;
             } ?>
       <?php if ( has_post_thumbnail() ) { the_post_thumbnail('small-title'); } ?>
-    </a>    
-    
+    </a>
+
     <?php //Define keys
       if ( get_post_meta($post->ID, 'week1_date', true) ) {
         $dateMeta1 = get_post_meta($post->ID, 'week1_date', true);
@@ -109,9 +109,9 @@
         $week21_date = date('M. j', $dateMeta21);
       }
     ?>
-    
+
     <h1 class="entry-title"><?php the_title(); ?></h1>
-    
+
     <h2 class="series-date">
       <?php echo date('F j', $dateMeta1); ?>
       <?php if ( get_post_meta($post->ID, 'week21_date', true) ) {
@@ -199,15 +199,15 @@
             } ?>
     </h2>
   </header><!-- .entry-header -->
-  
+
   <div class="entry-content">
     <?php echo the_content(); ?>
     <a class="lbutton gray" href="#" onclick="Effect.toggle('sermon-list-<?php the_ID(); ?>', 'slide'); return false;"><?php
-			echo has_term('academy', 'sermon-topics') ? 'Sessions' : 'Sermon List'; ?></a>
+      echo has_term('academy', 'sermon-topics') ? 'Sessions' : 'Sermon List'; ?></a>
   </div><!-- .entry-content -->
-  
+
   <div id="sermon-list-<?php the_ID(); ?>" class="sermon-list" style="display:none;">
-  
+
     <?php if ( get_post_meta($post->ID, 'week1_audio', true) ) : ?>
     <div id="week1" class="sermons">
       <?php $audioMeta1 = get_post_meta($post->ID, 'week1_audio', true);
@@ -217,10 +217,10 @@
             $week1_pdf_id = url_to_postid( $pdfMeta1 );
             $week1_pdf_file = wp_get_attachment_url( $week1_pdf_id );
             $week1_pdf_title = $week1_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week1_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week1_date; ?></span> | <span class="speaker"><?php meta('week1_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week1_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week1_title') ?>" href="<?php meta('week1_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week1_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week1_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -229,7 +229,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week1 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week2_audio', true) ) : ?>
     <div id="week2" class="sermons">
       <?php $audioMeta2 = get_post_meta($post->ID, 'week2_audio', true);
@@ -239,10 +239,10 @@
             $week2_pdf_id = url_to_postid( $pdfMeta2 );
             $week2_pdf_file = wp_get_attachment_url( $week2_pdf_id );
             $week2_pdf_title = $week2_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week2_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week2_date; ?></span> | <span class="speaker"><?php meta('week2_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week2_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week2_title') ?>" href="<?php meta('week2_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week2_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week2_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -251,7 +251,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week2 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week3_audio', true) ) : ?>
     <div id="week3" class="sermons">
       <?php $audioMeta3 = get_post_meta($post->ID, 'week3_audio', true);
@@ -261,10 +261,10 @@
             $week3_pdf_id = url_to_postid( $pdfMeta3 );
             $week3_pdf_file = wp_get_attachment_url( $week3_pdf_id );
             $week3_pdf_title = $week3_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week3_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week3_date; ?></span> | <span class="speaker"><?php meta('week3_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week3_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week3_title') ?>" href="<?php meta('week3_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week3_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week3_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -273,7 +273,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week3 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week4_audio', true) ) : ?>
     <div id="week4" class="sermons">
       <?php $audioMeta4 = get_post_meta($post->ID, 'week4_audio', true);
@@ -283,10 +283,10 @@
             $week4_pdf_id = url_to_postid( $pdfMeta4 );
             $week4_pdf_file = wp_get_attachment_url( $week4_pdf_id );
             $week4_pdf_title = $week4_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week4_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week4_date; ?></span> | <span class="speaker"><?php meta('week4_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week4_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week4_title') ?>" href="<?php meta('week4_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week4_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week4_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -295,7 +295,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week4 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week5_audio', true) ) : ?>
     <div id="week5" class="sermons">
       <?php $audioMeta5 = get_post_meta($post->ID, 'week5_audio', true);
@@ -305,10 +305,10 @@
             $week5_pdf_id = url_to_postid( $pdfMeta5 );
             $week5_pdf_file = wp_get_attachment_url( $week5_pdf_id );
             $week5_pdf_title = $week5_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week5_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week5_date; ?></span> | <span class="speaker"><?php meta('week5_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week5_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week5_title') ?>" href="<?php meta('week5_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week5_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week5_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -317,7 +317,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week5 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week6_audio', true) ) : ?>
     <div id="week6" class="sermons">
       <?php $audioMeta6 = get_post_meta($post->ID, 'week6_audio', true);
@@ -327,10 +327,10 @@
             $week6_pdf_id = url_to_postid( $pdfMeta6 );
             $week6_pdf_file = wp_get_attachment_url( $week6_pdf_id );
             $week6_pdf_title = $week6_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week6_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week6_date; ?></span> | <span class="speaker"><?php meta('week6_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week6_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week6_title') ?>" href="<?php meta('week6_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week6_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week6_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -339,7 +339,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week6 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week7_audio', true) ) : ?>
     <div id="week7" class="sermons">
       <?php $audioMeta7 = get_post_meta($post->ID, 'week7_audio', true);
@@ -349,10 +349,10 @@
             $week7_pdf_id = url_to_postid( $pdfMeta7 );
             $week7_pdf_file = wp_get_attachment_url( $week7_pdf_id );
             $week7_pdf_title = $week7_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week7_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week7_date; ?></span> | <span class="speaker"><?php meta('week7_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week7_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week7_title') ?>" href="<?php meta('week7_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week7_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week7_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -361,7 +361,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week7 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week8_audio', true) ) : ?>
     <div id="week8" class="sermons">
       <?php $audioMeta8 = get_post_meta($post->ID, 'week8_audio', true);
@@ -371,10 +371,10 @@
             $week8_pdf_id = url_to_postid( $pdfMeta8 );
             $week8_pdf_file = wp_get_attachment_url( $week8_pdf_id );
             $week8_pdf_title = $week8_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week8_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week8_date; ?></span> | <span class="speaker"><?php meta('week8_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week8_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week8_title') ?>" href="<?php meta('week8_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week8_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week8_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -383,7 +383,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week8 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week9_audio', true) ) : ?>
     <div id="week9" class="sermons">
       <?php $audioMeta9 = get_post_meta($post->ID, 'week9_audio', true);
@@ -393,10 +393,10 @@
             $week9_pdf_id = url_to_postid( $pdfMeta9 );
             $week9_pdf_file = wp_get_attachment_url( $week9_pdf_id );
             $week9_pdf_title = $week9_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week9_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week9_date; ?></span> | <span class="speaker"><?php meta('week9_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week9_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week9_title') ?>" href="<?php meta('week9_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week9_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week9_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -405,7 +405,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week9 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week10_audio', true) ) : ?>
     <div id="week10" class="sermons">
       <?php $audioMeta10 = get_post_meta($post->ID, 'week10_audio', true);
@@ -415,10 +415,10 @@
             $week10_pdf_id = url_to_postid( $pdfMeta10 );
             $week10_pdf_file = wp_get_attachment_url( $week10_pdf_id );
             $week10_pdf_title = $week10_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week10_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week10_date; ?></span> | <span class="speaker"><?php meta('week10_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week10_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week10_title') ?>" href="<?php meta('week10_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week10_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week10_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -427,7 +427,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week10 -->
     <?php endif; ?>
-  
+
     <?php if ( get_post_meta($post->ID, 'week11_audio', true) ) : ?>
     <div id="week11" class="sermons">
       <?php $audioMeta11 = get_post_meta($post->ID, 'week11_audio', true);
@@ -437,10 +437,10 @@
             $week11_pdf_id = url_to_postid( $pdfMeta11 );
             $week11_pdf_file = wp_get_attachment_url( $week11_pdf_id );
             $week11_pdf_title = $week11_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week11_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week11_date; ?></span> | <span class="speaker"><?php meta('week11_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week11_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week11_title') ?>" href="<?php meta('week11_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week11_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week11_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -449,7 +449,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week11 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week12_audio', true) ) : ?>
     <div id="week12" class="sermons">
       <?php $audioMeta12 = get_post_meta($post->ID, 'week12_audio', true);
@@ -459,10 +459,10 @@
             $week12_pdf_id = url_to_postid( $pdfMeta12 );
             $week12_pdf_file = wp_get_attachment_url( $week12_pdf_id );
             $week12_pdf_title = $week12_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week12_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week12_date; ?></span> | <span class="speaker"><?php meta('week12_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week12_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week12_title') ?>" href="<?php meta('week12_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week12_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week12_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -471,7 +471,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week12 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week13_audio', true) ) : ?>
     <div id="week13" class="sermons">
       <?php $audioMeta13 = get_post_meta($post->ID, 'week13_audio', true);
@@ -481,10 +481,10 @@
             $week13_pdf_id = url_to_postid( $pdfMeta13 );
             $week13_pdf_file = wp_get_attachment_url( $week13_pdf_id );
             $week13_pdf_title = $week13_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week13_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week13_date; ?></span> | <span class="speaker"><?php meta('week13_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week13_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week13_title') ?>" href="<?php meta('week13_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week13_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week13_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -493,7 +493,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week13 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week14_audio', true) ) : ?>
     <div id="week14" class="sermons">
       <?php $audioMeta14 = get_post_meta($post->ID, 'week14_audio', true);
@@ -503,10 +503,10 @@
             $week14_pdf_id = url_to_postid( $pdfMeta14 );
             $week14_pdf_file = wp_get_attachment_url( $week14_pdf_id );
             $week14_pdf_title = $week14_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week14_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week14_date; ?></span> | <span class="speaker"><?php meta('week14_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week14_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week14_title') ?>" href="<?php meta('week14_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week14_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week14_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -515,7 +515,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week14 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week15_audio', true) ) : ?>
     <div id="week15" class="sermons">
       <?php $audioMeta15 = get_post_meta($post->ID, 'week15_audio', true);
@@ -525,10 +525,10 @@
             $week15_pdf_id = url_to_postid( $pdfMeta15 );
             $week15_pdf_file = wp_get_attachment_url( $week15_pdf_id );
             $week15_pdf_title = $week15_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week15_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week15_date; ?></span> | <span class="speaker"><?php meta('week15_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week15_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week15_title') ?>" href="<?php meta('week15_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week15_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week15_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -537,7 +537,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week15 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week16_audio', true) ) : ?>
     <div id="week16" class="sermons">
       <?php $audioMeta16 = get_post_meta($post->ID, 'week16_audio', true);
@@ -547,10 +547,10 @@
             $week16_pdf_id = url_to_postid( $pdfMeta16 );
             $week16_pdf_file = wp_get_attachment_url( $week16_pdf_id );
             $week16_pdf_title = $week16_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week16_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week16_date; ?></span> | <span class="speaker"><?php meta('week16_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week16_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week16_title') ?>" href="<?php meta('week16_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week16_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week16_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -559,7 +559,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week16 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week17_audio', true) ) : ?>
     <div id="week17" class="sermons">
       <?php $audioMeta17 = get_post_meta($post->ID, 'week17_audio', true);
@@ -569,10 +569,10 @@
             $week17_pdf_id = url_to_postid( $pdfMeta17 );
             $week17_pdf_file = wp_get_attachment_url( $week17_pdf_id );
             $week17_pdf_title = $week17_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week17_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week17_date; ?></span> | <span class="speaker"><?php meta('week17_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week17_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week17_title') ?>" href="<?php meta('week17_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week17_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week17_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -581,7 +581,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week17 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week18_audio', true) ) : ?>
     <div id="week18" class="sermons">
       <?php $audioMeta18 = get_post_meta($post->ID, 'week18_audio', true);
@@ -591,10 +591,10 @@
             $week18_pdf_id = url_to_postid( $pdfMeta18 );
             $week18_pdf_file = wp_get_attachment_url( $week18_pdf_id );
             $week18_pdf_title = $week18_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week18_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week18_date; ?></span> | <span class="speaker"><?php meta('week18_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week18_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week18_title') ?>" href="<?php meta('week18_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week18_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week18_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -603,7 +603,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week18 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week19_audio', true) ) : ?>
     <div id="week19" class="sermons">
       <?php $audioMeta19 = get_post_meta($post->ID, 'week19_audio', true);
@@ -613,10 +613,10 @@
             $week19_pdf_id = url_to_postid( $pdfMeta19 );
             $week19_pdf_file = wp_get_attachment_url( $week19_pdf_id );
             $week19_pdf_title = $week19_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week19_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week19_date; ?></span> | <span class="speaker"><?php meta('week19_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week19_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week19_title') ?>" href="<?php meta('week19_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week19_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week19_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -625,7 +625,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week19 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week20_audio', true) ) : ?>
     <div id="week20" class="sermons">
       <?php $audioMeta20 = get_post_meta($post->ID, 'week20_audio', true);
@@ -635,10 +635,10 @@
             $week20_pdf_id = url_to_postid( $pdfMeta20 );
             $week20_pdf_file = wp_get_attachment_url( $week20_pdf_id );
             $week20_pdf_title = $week20_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week20_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week20_date; ?></span> | <span class="speaker"><?php meta('week20_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week20_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week20_title') ?>" href="<?php meta('week20_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week20_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week20_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -647,7 +647,7 @@
       </div><!-- .sermon-media -->
     </div><!-- #week20 -->
     <?php endif; ?>
-    
+
     <?php if ( get_post_meta($post->ID, 'week21_audio', true) ) : ?>
     <div id="week21" class="sermons">
       <?php $audioMeta21 = get_post_meta($post->ID, 'week21_audio', true);
@@ -657,10 +657,10 @@
             $week21_pdf_id = url_to_postid( $pdfMeta21 );
             $week21_pdf_file = wp_get_attachment_url( $week21_pdf_id );
             $week21_pdf_title = $week21_pdf_id->post_title; ?>
-          
+
       <h4 class="title"><?php meta('week21_title') ?></h4>
       <p class="sermon-details"><span class="date"><?php echo $week21_date; ?></span> | <span class="speaker"><?php meta('week21_speaker') ?></span> | <span class="passage"><?php echo has_term('academy', 'sermon-topics') ? 'Assignment: ' : 'Scripture: '; ?><?php meta('week21_passage') ?></span></p>
-      
+
       <div class="sermon-media">
         <a title="Listen to <?php meta('week21_title') ?>" href="<?php meta('week21_audio') ?>" onclick="popUp(this.href); return false"><i class="icon-music icon-2x"></i></a>
         <a title="Download <?php meta('week21_title') ?>" href="<?php echo get_template_directory_uri(); ?>/download.php?file=<?php echo $week21_audio_file; ?>"><i class="icon-download icon-2x"></i></a>
@@ -669,9 +669,9 @@
       </div><!-- .sermon-media -->
     </div><!-- #week21 -->
     <?php endif; ?>
-  
+
   </div><!-- #sermon-list-<?php the_ID(); ?> -->
-  
+
   <?php edit_post_link( __( 'Edit', 'lifepointe' ), '<span class="edit-link">', '</span>' ); ?>
 
 </article><!-- #post-<?php the_ID(); ?> -->

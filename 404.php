@@ -51,7 +51,7 @@ get_header(); ?>
               echo get_the_title($ns1_value);
               echo '</div></a>';
             }
-          ?>  
+          ?>
         </aside>
 
         <aside id="ns2" class="widget">
