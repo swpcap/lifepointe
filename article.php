@@ -12,7 +12,7 @@ get_header(); ?>
 
       <?php
       $cat_slug = get_post_meta( $wp_query->post->ID , 'feed_term', true);
-      $idObj = get_category_by_slug( $cat_slug ); 
+      $idObj = get_category_by_slug( $cat_slug );
         $feed_term = $idObj->term_id;
 
       global $post;
@@ -42,8 +42,8 @@ elseif ( has_post_thumbnail() )
 
       <div id="content" role="main">
 
-      <?php while ( have_posts() ) : the_post(); ?>  
-      
+      <?php while ( have_posts() ) : the_post(); ?>
+
           <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
             <header class="entry-header">
               <h1 class="entry-title"><?php the_title(); ?></h1>
