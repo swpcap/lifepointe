@@ -12,7 +12,7 @@
   "element-case": "lower",
   "eof-newline": true,
   "leading-zero": true,
-  "quotes": double,
+  "quotes": "single",
   "remove-empty-rulesets": false,
   "rule-indent": 2,
   "stick-brace": true,
