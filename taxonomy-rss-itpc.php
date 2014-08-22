@@ -16,42 +16,42 @@ $settings = get_option('lifepointe_podcast');
 <channel>
 
   <title><?php if (!empty($settings['pod_title'])) { echo $settings['pod_title']; } ?></title>
-  
+
   <link>http://www.sharethelife.org/series/</link>
-  
+
   <language>en-us</language>
-  
+
   <copyright><?php       if (!empty($settings['pod_copy']))        { echo $settings['pod_copy'];        } ?></copyright>
-  
+
   <itunes:subtitle><?php if (!empty($settings['pod_subtitle']))    { echo $settings['pod_subtitle'];    } ?></itunes:subtitle>
-  
+
   <itunes:author><?php   if (!empty($settings['pod_author']))      { echo $settings['pod_author'];      } ?></itunes:author>
-  
+
   <itunes:summary><?php  if (!empty($settings['pod_summary']))     { echo $settings['pod_summary'];     } ?></itunes:summary>
-  
+
   <description><?php     if (!empty($settings['pod_desc']))        { echo $settings['pod_desc'];        } ?></description>
-  
+
   <itunes:owner>
-  
+
     <itunes:name><?php   if (!empty($settings['pod_owner']))       { echo $settings['pod_owner'];       } ?></itunes:name>
-    
+
     <itunes:email><?php  if (!empty($settings['pod_owner_email'])) { echo $settings['pod_owner_email']; } ?></itunes:email>
-  
+
   </itunes:owner>
-  
+
   <itunes:image href="http://sharethelife.org/podcast-icon.jpg"></itunes:image>
-  
+
   <itunes:category text="Religion &amp; Spirituality">
-  
+
   <itunes:category text="Christianity"></itunes:category>
-  
+
   </itunes:category>
-  
+
   <?php if ( have_posts() ) : ?>
-  
+
     <?php global $wp_query; $args = array_merge( $wp_query->query, array( 'post_type' => 'sermon', 'posts_per_page' => 999, 'orderby' => 'date', 'order' => 'DESC' ) ); query_posts( $args ); ?>
     <?php while ( have_posts() ) : the_post(); ?>
-    
+
       <?php if ( has_post_thumbnail() ) {
               $id = get_post_thumbnail_id();
               $series_img = wp_get_attachment_image_src( $id, 'podcast' );
@@ -157,25 +157,25 @@ $settings = get_option('lifepointe_podcast');
                     $week21_summary = strip_tags($week21_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week21_title') ?></title>
-              
+
               <itunes:author><?php meta('week21_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week21_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week21_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week21_file; ?>" length="<?php echo $week21_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week21_file; ?></guid>
-              
+
               <pubDate><?php echo $week21_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week21_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week21_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week20_audio', true) ) : ?>
@@ -193,25 +193,25 @@ $settings = get_option('lifepointe_podcast');
                     $week20_summary = strip_tags($week20_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week20_title') ?></title>
-              
+
               <itunes:author><?php meta('week20_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week20_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week20_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week20_file; ?>" length="<?php echo $week20_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week20_file; ?></guid>
-              
+
               <pubDate><?php echo $week20_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week20_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week20_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week19_audio', true) ) : ?>
@@ -229,25 +229,25 @@ $settings = get_option('lifepointe_podcast');
                     $week19_summary = strip_tags($week19_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week19_title') ?></title>
-              
+
               <itunes:author><?php meta('week19_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week19_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week19_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week19_file; ?>" length="<?php echo $week19_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week19_file; ?></guid>
-              
+
               <pubDate><?php echo $week19_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week19_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week19_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week18_audio', true) ) : ?>
@@ -265,25 +265,25 @@ $settings = get_option('lifepointe_podcast');
                     $week18_summary = strip_tags($week18_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week18_title') ?></title>
-              
+
               <itunes:author><?php meta('week18_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week18_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week18_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week18_file; ?>" length="<?php echo $week18_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week18_file; ?></guid>
-              
+
               <pubDate><?php echo $week18_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week18_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week18_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week17_audio', true) ) : ?>
@@ -301,25 +301,25 @@ $settings = get_option('lifepointe_podcast');
                     $week17_summary = strip_tags($week17_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week17_title') ?></title>
-              
+
               <itunes:author><?php meta('week17_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week17_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week17_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week17_file; ?>" length="<?php echo $week17_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week17_file; ?></guid>
-              
+
               <pubDate><?php echo $week17_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week17_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week17_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week16_audio', true) ) : ?>
@@ -337,25 +337,25 @@ $settings = get_option('lifepointe_podcast');
                     $week16_summary = strip_tags($week16_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week16_title') ?></title>
-              
+
               <itunes:author><?php meta('week16_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week16_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week16_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week16_file; ?>" length="<?php echo $week16_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week16_file; ?></guid>
-              
+
               <pubDate><?php echo $week16_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week16_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week16_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week15_audio', true) ) : ?>
@@ -373,25 +373,25 @@ $settings = get_option('lifepointe_podcast');
                     $week15_summary = strip_tags($week15_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week15_title') ?></title>
-              
+
               <itunes:author><?php meta('week15_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week15_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week15_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week15_file; ?>" length="<?php echo $week15_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week15_file; ?></guid>
-              
+
               <pubDate><?php echo $week15_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week15_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week15_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week14_audio', true) ) : ?>
@@ -409,25 +409,25 @@ $settings = get_option('lifepointe_podcast');
                     $week14_summary = strip_tags($week14_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week14_title') ?></title>
-              
+
               <itunes:author><?php meta('week14_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week14_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week14_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week14_file; ?>" length="<?php echo $week14_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week14_file; ?></guid>
-              
+
               <pubDate><?php echo $week14_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week14_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week14_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week13_audio', true) ) : ?>
@@ -445,25 +445,25 @@ $settings = get_option('lifepointe_podcast');
                     $week13_summary = strip_tags($week13_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week13_title') ?></title>
-              
+
               <itunes:author><?php meta('week13_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week13_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week13_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week13_file; ?>" length="<?php echo $week13_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week13_file; ?></guid>
-              
+
               <pubDate><?php echo $week13_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week13_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week13_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week12_audio', true) ) : ?>
@@ -481,25 +481,25 @@ $settings = get_option('lifepointe_podcast');
                     $week12_summary = strip_tags($week12_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week12_title') ?></title>
-              
+
               <itunes:author><?php meta('week12_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week12_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week12_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week12_file; ?>" length="<?php echo $week12_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week12_file; ?></guid>
-              
+
               <pubDate><?php echo $week12_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week12_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week12_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week11_audio', true) ) : ?>
@@ -517,25 +517,25 @@ $settings = get_option('lifepointe_podcast');
                     $week11_summary = strip_tags($week11_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week11_title') ?></title>
-              
+
               <itunes:author><?php meta('week11_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week11_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week11_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week11_file; ?>" length="<?php echo $week11_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week11_file; ?></guid>
-              
+
               <pubDate><?php echo $week11_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week11_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week11_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week10_audio', true) ) : ?>
@@ -553,25 +553,25 @@ $settings = get_option('lifepointe_podcast');
                     $week10_summary = strip_tags($week10_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week10_title') ?></title>
-              
+
               <itunes:author><?php meta('week10_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week10_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week10_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week10_file; ?>" length="<?php echo $week10_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week10_file; ?></guid>
-              
+
               <pubDate><?php echo $week10_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week10_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week10_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week9_audio', true) ) : ?>
@@ -589,25 +589,25 @@ $settings = get_option('lifepointe_podcast');
                     $week9_summary = strip_tags($week9_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week9_title') ?></title>
-              
+
               <itunes:author><?php meta('week9_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week9_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week9_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week9_file; ?>" length="<?php echo $week9_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week9_file; ?></guid>
-              
+
               <pubDate><?php echo $week9_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week9_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week9_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week8_audio', true) ) : ?>
@@ -625,25 +625,25 @@ $settings = get_option('lifepointe_podcast');
                     $week8_summary = strip_tags($week8_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week8_title') ?></title>
-              
+
               <itunes:author><?php meta('week8_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week8_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week8_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week8_file; ?>" length="<?php echo $week8_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week8_file; ?></guid>
-              
+
               <pubDate><?php echo $week8_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week8_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week8_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week7_audio', true) ) : ?>
@@ -661,25 +661,25 @@ $settings = get_option('lifepointe_podcast');
                     $week7_summary = strip_tags($week7_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week7_title') ?></title>
-              
+
               <itunes:author><?php meta('week7_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week7_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week7_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week7_file; ?>" length="<?php echo $week7_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week7_file; ?></guid>
-              
+
               <pubDate><?php echo $week7_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week7_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week7_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week6_audio', true) ) : ?>
@@ -697,25 +697,25 @@ $settings = get_option('lifepointe_podcast');
                     $week6_summary = strip_tags($week6_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week6_title') ?></title>
-              
+
               <itunes:author><?php meta('week6_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week6_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week6_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week6_file; ?>" length="<?php echo $week6_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week6_file; ?></guid>
-              
+
               <pubDate><?php echo $week6_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week6_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week6_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week5_audio', true) ) : ?>
@@ -733,25 +733,25 @@ $settings = get_option('lifepointe_podcast');
                     $week5_summary = strip_tags($week5_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week5_title') ?></title>
-              
+
               <itunes:author><?php meta('week5_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week5_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week5_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week5_file; ?>" length="<?php echo $week5_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week5_file; ?></guid>
-              
+
               <pubDate><?php echo $week5_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week5_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week5_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week4_audio', true) ) : ?>
@@ -769,25 +769,25 @@ $settings = get_option('lifepointe_podcast');
                     $week4_summary = strip_tags($week4_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week4_title') ?></title>
-              
+
               <itunes:author><?php meta('week4_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week4_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week4_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week4_file; ?>" length="<?php echo $week4_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week4_file; ?></guid>
-              
+
               <pubDate><?php echo $week4_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week4_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week4_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week3_audio', true) ) : ?>
@@ -805,25 +805,25 @@ $settings = get_option('lifepointe_podcast');
                     $week3_summary = strip_tags($week3_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week3_title') ?></title>
-              
+
               <itunes:author><?php meta('week3_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week3_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week3_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week3_file; ?>" length="<?php echo $week3_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week3_file; ?></guid>
-              
+
               <pubDate><?php echo $week3_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week3_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week3_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week2_audio', true) ) : ?>
@@ -841,25 +841,25 @@ $settings = get_option('lifepointe_podcast');
                     $week2_summary = strip_tags($week2_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week2_title') ?></title>
-              
+
               <itunes:author><?php meta('week2_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week2_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week2_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week2_file; ?>" length="<?php echo $week2_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week2_file; ?></guid>
-              
+
               <pubDate><?php echo $week2_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week2_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week2_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
             <?php if ( get_post_meta($post->ID, 'week1_audio', true) ) : ?>
@@ -877,32 +877,32 @@ $settings = get_option('lifepointe_podcast');
                     $week1_summary = strip_tags($week1_content);
               ?>
               <title><?php the_title(); ?> - <?php meta('week1_title') ?></title>
-              
+
               <itunes:author><?php meta('week1_speaker') ?></itunes:author>
-              
+
               <itunes:subtitle>Scripture: <?php meta('week1_passage') ?></itunes:subtitle>
-              
+
               <itunes:summary><?php echo $week1_summary; ?></itunes:summary>
-              
+
               <itunes:image href="<?php if (!empty($series_img[0])) { echo $series_img[0]; } ?>" />
-              
+
               <enclosure url="<?php echo $week1_file; ?>" length="<?php echo $week1_length; ?>" type="audio/mpeg" />
-              
+
               <guid><?php echo $week1_file; ?></guid>
-              
+
               <pubDate><?php echo $week1_date; ?> 11:00:00 MDT</pubDate>
-              
+
               <itunes:duration><?php echo $week1_duration; ?></itunes:duration>
-              
+
               <itunes:keywords><?php echo $week1_keywords; ?></itunes:keywords>
-            
+
             </item>
             <?php endif; ?>
-    
+
     <?php endwhile; ?>
-  
+
   <?php endif; ?>
-  
+
 </channel>
 
 </rss>

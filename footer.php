@@ -18,7 +18,7 @@
       <?php echo stripslashes($settings['footer_text']); ?>
     </div>
   </footer><!-- #colophon -->
-    
+
     <footer id="buttons">
   <div id="row1">
           <a class="lbpModal" id="contact" href="/<?php echo $settings['contact_slug']; ?>/" target="">Contact Us</a>
@@ -31,7 +31,7 @@
   </footer><!-- #colophon -->
 </div><!-- #page -->
 
-        
+
 <script>$(function() {$( "#accordion" ).accordion({collapsible: true});});</script>
 <!-- RefTagger from Logos. Visit http://www.logos.com/reftagger. This code should appear directly before the </body> tag. -->
 <script src="http://bible.logos.com/jsapi/referencetagging.js" type="text/javascript"></script>

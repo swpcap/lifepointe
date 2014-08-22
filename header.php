@@ -9,7 +9,7 @@ if ($post->post_parent && post_password_required($post->post_parent)) {
  * Displays all of the <head> section and everything up till <div id="main">
  *
  * @package LifePointe
- * @since 0.8.6
+ * @since 0.9.3
  */
 ?>
 <!DOCTYPE html>
@@ -51,15 +51,13 @@ if ($post->post_parent && post_password_required($post->post_parent)) {
 
   ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+
 <?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php if ( is_single('192') ): 
+<?php if ( is_single('192') ):
   echo '<meta http-equiv="refresh" content="0; url=http://bit.ly/rFpQJi" />';
   endif ?>
-<link rel="icon" 
-      type="image/png" 
-      href="<?php echo get_template_directory_uri(); ?>/images/icon-32.png">
+<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/images/icon-32.png">
 <link rel="apple-touch-icon" sizes="144x144" href="<?php echo get_template_directory_uri(); ?>/images/ios-icon-144.png">
 <link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/images/ios-icon-114.png">
 <link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/ios-icon-72.png">
@@ -100,7 +98,7 @@ function popUp (c) {
       <h1 id="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
       <h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
     </hgroup>
-        
+
         <aside id="search" class="widget widget_search">
       <?php get_search_form(); ?>
     </aside>

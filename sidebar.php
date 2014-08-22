@@ -19,7 +19,7 @@
                   }
                 } ?>
         </aside>
-        
+
         <aside id="ns2">
           <?php $ns2_slug = get_post_meta($post->ID, 'ns2', true);
                 if (!empty($ns2_slug)) {
@@ -29,9 +29,9 @@
                     echo '<a href="' . get_permalink( $ns2_value ) . '" title="' . esc_attr( $ns2_value->post_title ) . '">' . get_the_post_thumbnail($ns2_value, 'next-steps') . '</a>';
                     echo '<a href="' . get_permalink( $ns2_value ) . '" title="' . esc_attr( $ns2_value->post_title ) . '"><div class="ns-title">' . get_the_title($ns2_value) . '</div></a>';
                   }
-                } ?>  
+                } ?>
         </aside>
-        
+
         <aside id="ns3">
           <?php $ns3_slug = get_post_meta($post->ID, 'ns3', true);
                 if (!empty($ns3_slug)) {
@@ -41,14 +41,14 @@
                     echo '<a href="' . get_permalink( $ns3_value ) . '" title="' . esc_attr( $ns3_value->post_title ) . '">' . get_the_post_thumbnail($ns3_value, 'next-steps') . '</a>';
                     echo '<a href="' . get_permalink( $ns3_value ) . '" title="' . esc_attr( $ns3_value->post_title ) . '"><div class="ns-title">' . get_the_title($ns3_value) . '</div></a>';
                   }
-                }?>  
+                }?>
         </aside>
 
     <?php /* if ( is_active_sidebar( 'next-steps' ) ) :  */?>
     <?php dynamic_sidebar( 'next-steps' ); ?>
     <?php /* endif; // end sidebar widget area */ ?>
     </div><!-- #secondary .widget-area -->
-    
+
     <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
     <div id="tertiary" class="widget-area" role="complementary">
     <?php dynamic_sidebar( 'sidebar-2' ); ?>

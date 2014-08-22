@@ -18,7 +18,7 @@ get_header(); ?>
             <header class="entry-header">
               <h1 class="entry-title"><?php the_title(); ?></h1>
             </header><!-- .entry-header -->
-          
+
             <div class="entry-content">
               <?php the_content(); ?>
               <?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'lifepointe' ), 'after' => '</div>' ) ); ?>

@@ -3,7 +3,7 @@
  * Template Name: Splash
  *
  * @package LifePointe
- * @since 0.7.7
+ * @since 0.9.5
  */
 
 get_header(); ?>
@@ -13,8 +13,8 @@ get_header(); ?>
 
         <?php while ( have_posts() ) : the_post(); ?>
 
-          <?php echo nivo_slider('splash'); ?>
-                  
+          <?php echo do_shortcode('[steel_slideshow name="splash"]'); ?>
+
           <?php comments_template( '', true ); ?>
 
         <?php endwhile; // end of the loop. ?>

@@ -18,9 +18,9 @@ body a:hover {
   text-decoration: underline;
 }
 body {
-  color: #fff;
+  font: 12px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1;
-  font: 12px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #fff;
   background: #004193;
 }
 h2 {
@@ -34,39 +34,39 @@ h3 {
   text-align: left;
 }
 div#tophead {
-  text-align: center;
   width: 95%;
+  text-align: center;
 }
 div#tophead h2 {
-  padding: 0;
-  border: 0;
-  clear: both;
   top: -75px;
+  padding: 0;
+  clear: both;
   text-align: center;
+  border: 0;
 }
 #GroupNameSearch {
+  padding: 0;
+  clear: both;
   font-size: 12px;
   font-weight: bold;
-  padding: 0;
-  border: 0;
-  clear: both;
   text-align: left;
+  border: 0;
 }
 div#leftnav {
+  left: 20px;
   float: left;
   width: 260px;
-  clear: none;
-  color: #fff;
-  line-height: 140%;
   padding: 0;
+  clear: none;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 11px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  left: 20px;
+  line-height: 140%;
+  color: #fff;
   text-align: left;
 }
 select {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 11px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
   text-align: left;
 }
 select.FilterSelect {
@@ -74,47 +74,47 @@ select.FilterSelect {
   text-align: left;
 }
 input {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 11px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
   text-align: left;
 }
 table.filtertable {
-  border-radius: 5px;
-  font-size: 11px;
-  font-family: "Helvetica Neue", Arial, sans-serif;
   left: -5px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
   color: #fff;
   text-align: left;
+  border-radius: 5px;
 }
 div.groups {
-  padding: 0px 0px 0px 20px;
   width: 95%;
+  padding: 0 0 0 20px;
 }
 
 /* Group Name link */
 div.groups h3 {
+  display: inline;
+  padding: 0 4px 0 0;
+  margin: 0 0 4px;
   font-size: 14px;
   font-weight: 700;
   line-height: 133%;
-  margin: 0 0 4px;
   text-transform: none;
-  padding: 0 4px 0 0;
-  border-bottom: #95a0b1 0px solid;
-  display: inline;
+  border-bottom: #95a0b1 0 solid;
 }
 div.groups h4 {
+  display: block;
+  padding: 0 4px 0 0;
+  margin: 0 0 4px;
   font-size: 14px;
   font-weight: 700;
   line-height: 133%;
-  margin: 0 0 4px;
   text-transform: none;
-  padding: 0 4px 0 0;
-  border-bottom: #95a0b1 0px solid;
-  display: block;
+  border-bottom: #95a0b1 0 solid;
 }
 div.groups ol#groups {
-  margin: 0  12px;
   padding: 0 0 10;
+  margin: 0  12px;
 }
 
 /* Group Attributes (i.e. Meeting Day, Study topic etc) */
@@ -132,9 +132,9 @@ div.groups ol.grouplist .al {
   text-align: left;
 }
 div.groups div.groupshead {
-  border-bottom: 3px solid #e0e6e9;
-  padding: 3px 5px;
   width: 100%;
+  padding: 3px 5px;
+  border-bottom: 3px solid #e0e6e9;
 }
 span.rightjustify {
   float: right;
@@ -145,12 +145,10 @@ div.photo {
 
 /* rounded corners for group photos */
 img {
-  -moz-border-radius:    10px;
-  -webkit-border-radius: 10px;
-  border-radius:         10px;
+  border-radius: 10px;
 }
 .logo {
-  border: 0;
-  margin: 20px auto;
   width: 250px;
+  margin: 20px auto;
+  border: 0;
 }
